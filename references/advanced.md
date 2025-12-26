@@ -304,6 +304,35 @@ class HighQualityScene(Scene):
         config.pixel_width = 3840
 ```
 
+## Scene Sections
+
+Divide a scene into sections for separate video files or presentation systems.
+
+```python
+class MyScene(Scene):
+    def construct(self):
+        # First section (auto-created)
+        self.play(Create(circle))
+
+        # Create a new section
+        self.next_section("intro")  # Named section
+        self.play(Write(text))
+
+        # Section with custom type (for presentation systems)
+        self.next_section(section_type="loop")
+        self.play(Indicate(text))
+
+        # Skip rendering a section (code still runs)
+        self.next_section(skip_animations=True)
+        self.play(FadeOut(text))  # Only final frame computed
+
+        # Resume normal rendering
+        self.next_section()
+        self.play(Create(square))
+```
+
+**Note:** Each section produces a separate video file, then they're concatenated. Final output is the same as without sections.
+
 ## Debugging Tips
 
 ### Quick Preview
@@ -509,6 +538,100 @@ manim --flush_cache scene.py SceneName
 | `ZoomedScene` | Picture-in-picture zoom |
 | `ThreeDScene` | 3D animations |
 | `VectorScene` | Vector field visualizations |
+
+## v0.18 Changes
+
+### ManimColor System
+
+v0.18 replaced the `colour` library with `ManimColor`:
+
+```python
+from manim import ManimColor, RED, BLUE
+
+# Create from hex
+color = ManimColor.from_hex("#FF5733")
+
+# Convert between formats
+rgb = color.to_rgb()        # [0-1, 0-1, 0-1]
+rgba = color.to_rgba()      # [0-1, 0-1, 0-1, 0-1]
+int_rgb = color.to_int_rgb() # [0-255, 0-255, 0-255]
+hex_str = color.to_hex()     # "#FF5733"
+
+# Create from RGB
+color = ManimColor.from_rgb([1.0, 0.5, 0.2])
+color = ManimColor.from_rgba([1.0, 0.5, 0.2, 0.8])
+```
+
+### Health Check Command
+
+```bash
+# Check installation is correct
+manim checkhealth
+```
+
+## v0.19 Breaking Changes
+
+**IMPORTANT:** These changes may break existing code when upgrading.
+
+### Parameter Renames
+
+```python
+# ManimColor.from_hex: hex → hex_str
+# OLD (broken): ManimColor.from_hex(hex="#FFFFFF")
+# NEW (correct):
+ManimColor.from_hex(hex_str="#FFFFFF")
+
+# Scene.next_section: type → section_type
+# OLD (broken): self.next_section(type="intro")
+# NEW (correct):
+self.next_section(section_type="intro")
+```
+
+### SurroundingRectangle Positional Args
+
+```python
+# v0.19 now accepts *mobjects, so positional args after first must be keywords
+# OLD (broken): SurroundingRectangle(mob, RED, 0.3)
+# NEW (correct):
+SurroundingRectangle(mob, color=RED, buff=0.3)
+
+# Multiple mobjects now supported
+SurroundingRectangle(mob1, mob2, mob3, color=YELLOW)
+```
+
+### Sector Constructor
+
+```python
+# inner_radius and outer_radius removed from Sector
+# OLD (broken): Sector(inner_radius=0.5, outer_radius=1)
+# NEW: Use AnnularSector for ring sectors
+from manim import AnnularSector
+sector = AnnularSector(inner_radius=0.5, outer_radius=1, angle=PI/3)
+
+# For simple sectors, use radius and angle
+from manim import Sector
+sector = Sector(outer_radius=1, angle=PI/3)
+```
+
+### Code Mobject Rewrite
+
+The Code mobject was completely rewritten. Use `code_string` not `code`:
+
+```python
+# OLD (broken): Code(code="print('hello')")
+# NEW (correct):
+Code(code_string="print('hello')", language="python")
+```
+
+### Square.side_length Property
+
+`side_length` is now a property, not just an attribute:
+
+```python
+square = Square(side_length=2)
+current = square.side_length  # Getter
+square.side_length = 3        # Setter (updates geometry)
+```
 
 ## v0.19 New Features
 

@@ -400,36 +400,79 @@ self.play(
 
 ### AnimationGroup
 
-More control over simultaneous animations.
+Base class for combining animations with `lag_ratio` control.
 
 ```python
+from manim import AnimationGroup
+
+# lag_ratio controls timing:
+# 0 = all start together
+# 1 = each starts when previous ends
+# 0.5 = each starts when previous is 50% done
 self.play(AnimationGroup(
     Create(circle),
     Write(text),
-    lag_ratio=0.5  # Stagger start times
+    FadeIn(arrow),
+    lag_ratio=0.5
+))
+
+# Nested groups with different timings
+self.play(AnimationGroup(
+    AnimationGroup(FadeIn(a), FadeIn(b), lag_ratio=0),  # Simultaneous
+    AnimationGroup(FadeIn(c), FadeIn(d), lag_ratio=1),  # Sequential
+    lag_ratio=0.5
 ))
 ```
 
 ### LaggedStart
 
-Staggered start with lag.
+Same as `AnimationGroup` but with default `lag_ratio=0.05`.
 
 ```python
+from manim import LaggedStart
+
 self.play(LaggedStart(
     *[FadeIn(mob) for mob in group],
-    lag_ratio=0.2
+    lag_ratio=0.2  # Override default
 ))
+```
+
+### LaggedStartMap
+
+Shorthand for applying the same animation to all items.
+
+```python
+from manim import LaggedStartMap
+
+# Instead of: LaggedStart(*[FadeIn(m) for m in group])
+self.play(LaggedStartMap(FadeIn, group))
+
+# With animation kwargs
+self.play(LaggedStartMap(FadeIn, group, shift=UP, lag_ratio=0.1))
+
+# With Indicate
+self.play(LaggedStartMap(Indicate, items, run_time=4, rate_func=linear))
 ```
 
 ### Succession
 
-Sequential animations in one play call.
+Sequential animations (like `AnimationGroup` with `lag_ratio=1`).
 
 ```python
+from manim import Succession
+
+# Each animation starts after the previous ends
 self.play(Succession(
     Create(circle),
     Write(text),
     FadeIn(arrow)
+))
+
+# With run_time, the total time is divided among animations
+self.play(Succession(
+    Create(circle),
+    Write(text),
+    run_time=4  # 2 seconds each
 ))
 ```
 

@@ -1,7 +1,7 @@
 ---
 name: manim
 description: This skill should be used when the user asks to "create an animation", "make a manim video", "animate this concept", "visualize this process", "create a GIF for my blog", or mentions "manim", "mathematical animation", "code animation", "process visualization", "technical animation", "3D scene", "camera animation". Provides ManimCE (Community Edition) syntax, patterns, and best practices for creating programmatic animations.
-version: 1.2.0
+version: 1.3.0
 ---
 
 # Manim Animation Skill
@@ -19,9 +19,14 @@ uv pip install manim
 
 # Or pip (still works)
 pip install manim
+
+# Check installation
+manim checkhealth
 ```
 
 **Note:** v0.19+ uses pyav internally, eliminating the external ffmpeg dependency.
+
+**Virtual environment tip:** If not activated, use `uv run manim ...` instead of `manim`.
 
 ## ManimCE vs ManimGL
 
