@@ -116,6 +116,13 @@ self.play(FadeTransform(old_mob, new_mob))
 
 ## Transform Animations
 
+### Transform vs ReplacementTransform
+
+| Animation | After Animation | Use Case |
+|-----------|-----------------|----------|
+| **Transform** | Original object morphs but keeps its reference | Chain multiple transforms on same object |
+| **ReplacementTransform** | Original removed, target becomes active | Clean replacement, no leftover references |
+
 ### Transform
 
 Morph one mobject into another. Original reference stays.
@@ -123,6 +130,7 @@ Morph one mobject into another. Original reference stays.
 ```python
 self.play(Transform(square, circle))
 # After: square looks like circle, but is still the square object
+# Use square (not circle) for subsequent animations
 ```
 
 ### ReplacementTransform
@@ -132,6 +140,12 @@ Replace the original with the new one.
 ```python
 self.play(ReplacementTransform(square, circle))
 # After: circle is the active object, square is removed
+# Use circle for subsequent animations
+```
+
+**Tip:** To avoid lingering references with ReplacementTransform, use `.copy()`:
+```python
+self.play(ReplacementTransform(obj1, obj2.copy()))
 ```
 
 ### TransformFromCopy
@@ -565,4 +579,44 @@ for item in items:
 self.play(FadeIn(header))
 self.wait(0.3)
 self.play(LaggedStart(*[FadeIn(item, shift=LEFT) for item in items]))
+```
+
+### Save State and Restore
+
+Save a mobject's state, modify it, then animate back to the saved state.
+
+```python
+# Save current state
+circle = Circle(color=BLUE)
+circle.save_state()
+
+# Make changes
+self.play(circle.animate.scale(2).set_color(RED).shift(RIGHT))
+self.wait()
+
+# Animate back to saved state
+self.play(Restore(circle))
+```
+
+**Use cases:**
+- Temporary highlighting then returning to original
+- Comparison animations (before/after)
+- Camera zoom and restore (with `self.camera.frame.save_state()`)
+
+### ChangingDecimal
+
+Animate a DecimalNumber through values based on a function.
+
+```python
+from manim import DecimalNumber, ChangingDecimal
+
+num = DecimalNumber(0)
+self.add(num)
+
+# Function receives alpha (0 to 1 during animation)
+self.play(
+    ChangingDecimal(num, lambda alpha: alpha * 100),
+    run_time=3
+)
+# num goes from 0 to 100 over 3 seconds
 ```

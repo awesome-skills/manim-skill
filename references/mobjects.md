@@ -37,7 +37,7 @@ text = Text("Line 1\nLine 2", line_spacing=1.5)
 text = Text("Hello", warn_missing_font=False)
 ```
 
-**Note:** Text is an SVGMobject, so you can use VMobject methods like `set_stroke()`, `set_fill()`, etc.
+**Note:** Text is an SVGMobject, supporting VMobject methods like `set_stroke()`, `set_fill()`, etc.
 
 ### MarkupText
 
@@ -337,6 +337,50 @@ plane = NumberPlane(
         "stroke_opacity": 0.5,
     }
 )
+
+# Add coordinate labels to the plane
+plane_with_coords = NumberPlane().add_coordinates()
+```
+
+### Implicit Curves
+
+Plot curves defined by f(x, y) = 0:
+
+```python
+ax = Axes()
+# Plot implicit curve: y(x-y)² - 4x - 8 = 0
+curve = ax.plot_implicit_curve(
+    lambda x, y: y * (x - y) ** 2 - 4 * x - 8,
+    color=BLUE
+)
+self.add(ax, curve)
+```
+
+## Positioning Methods
+
+### Bounding Box Methods
+
+All positioning methods use the **bounding box** center, not center of mass:
+
+```python
+mob.get_center()   # Center of bounding box
+mob.get_top()      # Top edge center
+mob.get_bottom()   # Bottom edge center
+mob.get_left()     # Left edge center
+mob.get_right()    # Right edge center
+mob.get_corner(UR) # Upper-right corner
+
+# Note: For asymmetric shapes, get_center() may not
+# appear visually centered
+```
+
+### Critical Points
+
+```python
+# get_critical_point returns one of 9 points on bounding box
+mob.get_critical_point(UP)      # Top center
+mob.get_critical_point(UR)      # Upper-right corner
+mob.get_critical_point(ORIGIN)  # Center
 ```
 
 ## Tables
@@ -435,6 +479,15 @@ graph = Graph.from_networkx(G)
 ```
 
 ## Groups
+
+### VGroup vs Group
+
+| Type | Supports | Use Case |
+|------|----------|----------|
+| **VGroup** | VMobjects only (shapes, text) | When needing `set_fill()`, `set_stroke()` |
+| **Group** | Any Mobject (including ImageMobject) | When mixing VMobjects with images |
+
+**Prefer VGroup** for most cases. Use Group only when including non-vector objects like images.
 
 ### VGroup (Vector Group)
 
@@ -564,6 +617,193 @@ cross = Cross(mobject, stroke_color=RED, stroke_width=6)
 
 ```python
 underline = Underline(text, color=YELLOW)
+```
+
+## Number Mobjects
+
+Display and animate numeric values.
+
+### DecimalNumber
+
+```python
+from manim import DecimalNumber
+
+# Basic decimal number
+num = DecimalNumber(3.14159)
+
+# With formatting options
+num = DecimalNumber(
+    number=3.14159,
+    num_decimal_places=2,      # Shows 3.14
+    include_sign=True,         # Shows +3.14
+    group_with_commas=True,    # 1,000.00
+    font_size=48,
+)
+
+# Update value
+num.set_value(2.71828)
+```
+
+### Integer
+
+```python
+from manim import Integer
+
+# Integer display (no decimal places)
+count = Integer(42)
+count.set_value(100)
+```
+
+### Variable
+
+Displays "label = value" with automatic updates from ValueTracker.
+
+```python
+from manim import Variable, ValueTracker, Integer
+
+# Decimal variable (default)
+var = Variable(0.5, Text("x"), num_decimal_places=3)
+# Shows: x = 0.500
+
+# Integer variable
+int_var = Variable(0, Text("count"), var_type=Integer)
+# Shows: count = 0
+
+# With ValueTracker for animation
+tracker = ValueTracker(0)
+var = Variable(tracker, Text("value"))
+self.play(tracker.animate.set_value(10))  # Animates label
+```
+
+### ChangingDecimal Animation
+
+Animate a number changing values.
+
+```python
+from manim import ChangingDecimal, DecimalNumber
+
+num = DecimalNumber(0)
+self.add(num)
+
+# Animate to target value
+self.play(ChangingDecimal(num, lambda t: t * 100), run_time=3)
+```
+
+## 3D Mobjects
+
+Use with `ThreeDScene` for 3D visualizations.
+
+### Basic 3D Primitives
+
+```python
+from manim import *
+
+class ThreeD(ThreeDScene):
+    def construct(self):
+        # Sphere
+        sphere = Sphere(radius=1, color=BLUE)
+
+        # Cube
+        cube = Cube(side_length=1, fill_color=RED, fill_opacity=0.5)
+
+        # Cone
+        cone = Cone(
+            base_radius=1,
+            height=2,
+            direction=UP,      # Points upward
+            show_base=True,    # Show circular base
+        )
+
+        # Cylinder
+        cylinder = Cylinder(
+            radius=0.5,
+            height=2,
+            direction=UP,
+        )
+
+        # Torus (donut shape)
+        torus = Torus(
+            major_radius=1.5,  # Distance from center to tube center
+            minor_radius=0.3,  # Tube radius
+        )
+
+        # Prism (regular polygon extruded)
+        prism = Prism(dimensions=[2, 1, 0.5])  # width, height, depth
+```
+
+### 3D Points and Lines
+
+```python
+# 3D Dot (spherical)
+dot = Dot3D(
+    point=ORIGIN,
+    radius=0.08,
+    color=WHITE,
+    resolution=(8, 8),  # (u, v) mesh resolution
+)
+
+# 3D Line (cylindrical)
+line = Line3D(
+    start=LEFT,
+    end=RIGHT + UP + OUT,  # OUT = Z direction
+    thickness=0.02,
+    color=BLUE,
+)
+
+# 3D Arrow (cylinder + cone tip)
+arrow = Arrow3D(
+    start=ORIGIN,
+    end=RIGHT * 2 + UP + OUT,
+    thickness=0.02,
+    height=0.3,         # Cone tip height
+    base_radius=0.08,   # Cone base radius
+    color=RED,
+)
+```
+
+**Note:** Pass coordinates as floats, not integers. `Arrow3D(ORIGIN, [2.0, 1.0, 1.0])` works; `Arrow3D(ORIGIN, [2, 1, 1])` may cause issues.
+
+### Surface
+
+Create parametric surfaces.
+
+```python
+# Basic surface from function
+surface = Surface(
+    lambda u, v: np.array([u, v, u**2 + v**2]),
+    u_range=[-2, 2],
+    v_range=[-2, 2],
+    resolution=(32, 32),
+    fill_opacity=0.8,
+)
+
+# Checkerboard coloring
+surface = Surface(
+    lambda u, v: np.array([u, v, np.sin(u) * np.cos(v)]),
+    u_range=[-PI, PI],
+    v_range=[-PI, PI],
+    checkerboard_colors=[BLUE_D, BLUE_E],
+)
+```
+
+### ThreeDAxes
+
+```python
+axes = ThreeDAxes(
+    x_range=[-3, 3, 1],
+    y_range=[-3, 3, 1],
+    z_range=[-2, 2, 1],
+    x_length=6,
+    y_length=6,
+    z_length=4,
+)
+
+# Plot 3D function on axes
+surface = axes.plot_surface(
+    lambda u, v: np.sin(u) * np.cos(v),
+    u_range=[-PI, PI],
+    v_range=[-PI, PI],
+)
 ```
 
 ## Common Patterns

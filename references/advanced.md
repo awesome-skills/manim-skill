@@ -150,6 +150,13 @@ class ValueTrackerDemo(Scene):
         self.play(tracker.animate.set_value(10), run_time=3)
 ```
 
+### add_updater vs always_redraw
+
+| Method | Behavior | Use Case |
+|--------|----------|----------|
+| **add_updater** | Modifies existing mobject in place | Simple property changes (position, color) |
+| **always_redraw** | Recreates mobject from scratch each frame | Structure changes (Brace resize, Line endpoints) |
+
 ### always_redraw
 
 Continuously regenerate a mobject.
@@ -254,7 +261,7 @@ class MarkupDemo(Scene):
 
 ### manim.cfg File
 
-Create `manim.cfg` in your project directory:
+Create `manim.cfg` in the project directory:
 
 ```ini
 [CLI]
@@ -368,6 +375,48 @@ manim -v DEBUG scene.py SceneName
 **Memory issues:**
 - Split long scenes into multiple shorter scenes
 - Clear unused mobjects: `self.remove(mob)`
+
+## Common Beginner Mistakes
+
+### Version Confusion
+
+**ManimCE vs 3b1b/manim:**
+- ManimCE (`pip install manim`) - community maintained, recommended
+- 3b1b/manim (`pip install manimgl`) - Grant Sanderson's version, experimental
+- Installation instructions are NOT interchangeable
+
+### Avoid `manim init project`
+
+The `manim init project` command creates a `manim.cfg` that can distort the default coordinate system. **Skip this command** and create scenes directly.
+
+### Text vs Tex Performance
+
+| Type | Speed | Use When |
+|------|-------|----------|
+| `Text` | Fast | Regular text, non-English alphabets |
+| `Tex`/`MathTex` | Slow (LaTeX compilation) | Mathematical formulas only |
+
+### Transform Reference Confusion
+
+```python
+# WRONG: Using target object after Transform
+self.play(Transform(square, circle))
+self.play(circle.animate.shift(UP))  # circle hasn't changed!
+
+# CORRECT: Use original object reference
+self.play(Transform(square, circle))
+self.play(square.animate.shift(UP))  # square now looks like circle
+```
+
+### 3D Coordinate Type Error
+
+```python
+# WRONG: Integer coordinates can cause errors
+Arrow3D(ORIGIN, [2, 1, 1])
+
+# CORRECT: Use floats
+Arrow3D(ORIGIN, [2.0, 1.0, 1.0])
+```
 
 ## LaTeX Troubleshooting
 
@@ -739,3 +788,96 @@ rect2 = SurroundingRectangle(text, buff=(0.5, 0.2))  # (horizontal, vertical)
 - Improved SVG parsing for complex paths
 - Better error messages for common mistakes
 - Performance improvements for large scenes
+
+## Manim Plugins
+
+Community-developed extensions for specialized features.
+
+### manim-voiceover
+
+Add AI-generated voiceovers with per-word timing.
+
+```bash
+pip install manim-voiceover[azure]  # or [gtts], [elevenlabs]
+```
+
+```python
+from manim import *
+from manim_voiceover import VoiceoverScene
+from manim_voiceover.services.azure import AzureService
+
+class VoiceoverDemo(VoiceoverScene):
+    def construct(self):
+        self.set_speech_service(AzureService())
+
+        circle = Circle()
+        with self.voiceover(text="Here is a circle") as tracker:
+            self.play(Create(circle), run_time=tracker.duration)
+```
+
+**Supported services:** Azure, ElevenLabs, gTTS, OpenAI, Coqui
+
+### manim-slides
+
+Create interactive presentations from Manim animations.
+
+```bash
+pip install manim-slides
+```
+
+```python
+from manim import *
+from manim_slides import Slide
+
+class MySlides(Slide):
+    def construct(self):
+        circle = Circle()
+        self.play(Create(circle))
+        self.next_slide()  # Wait for click/key before continuing
+
+        self.play(circle.animate.shift(RIGHT))
+        self.next_slide()
+```
+
+```bash
+# Render then present
+manim -qh slides.py MySlides
+manim-slides MySlides  # Opens presentation viewer
+```
+
+### manim-physics
+
+Physics simulations with rigid body dynamics.
+
+```bash
+pip install manim-physics
+```
+
+```python
+from manim import *
+from manim_physics import *
+
+class FallingBalls(SpaceScene):
+    def construct(self):
+        ground = Line(LEFT * 4, RIGHT * 4).shift(DOWN * 2)
+        balls = [Circle(radius=0.2).shift(UP * i) for i in range(3)]
+
+        self.make_static_body(ground)
+        for ball in balls:
+            self.make_rigid_body(ball)
+
+        self.add(ground, *balls)
+        self.wait(5)  # Physics runs automatically
+```
+
+### Plugin Installation Notes
+
+Most plugins work with ManimCE v0.18+. Check compatibility before upgrading Manim versions.
+
+```bash
+# Install plugins
+pip install manim-voiceover manim-slides manim-physics
+
+# Check installed plugins
+pip list | grep manim
+```

@@ -1,7 +1,7 @@
 ---
 name: manim
-description: This skill should be used when the user asks to "create an animation", "make a manim video", "animate this concept", "visualize this process", "create a GIF for my blog", or mentions "manim", "mathematical animation", "code animation", "process visualization", "technical animation", "3D scene", "camera animation". Provides ManimCE (Community Edition) syntax, patterns, and best practices for creating programmatic animations.
-version: 1.3.0
+description: This skill should be used when the user asks to "create an animation", "make a manim video", "animate this concept", "visualize this process", "create a GIF for my blog", "plot a graph", "animate a value", or mentions "manim", "mathematical animation", "code animation", "process visualization", "technical animation", "3D scene", "camera animation", "ValueTracker", "number animation". Provides ManimCE (Community Edition) syntax, patterns, and best practices for creating programmatic animations.
+version: 1.5.0
 ---
 
 # Manim Animation Skill
@@ -328,9 +328,9 @@ class MyAnimation(Scene):
 ### Reference Files
 
 For detailed syntax and patterns:
-- **`references/mobjects.md`** - Complete Mobject reference (shapes, text, code, graphs)
-- **`references/animations.md`** - All animation types and timing control
-- **`references/advanced.md`** - Camera, 3D, ValueTracker, MarkupText, config, LaTeX troubleshooting, fonts, Jupyter
+- **`references/mobjects.md`** - Complete Mobject reference (shapes, text, code, graphs, 3D primitives, numbers, positioning)
+- **`references/animations.md`** - All animation types, Transform vs ReplacementTransform, timing control
+- **`references/advanced.md`** - Camera, 3D, ValueTracker, updaters, config, common mistakes, plugins
 - **`references/blog-patterns.md`** - Common patterns for technical blog animations
 
 ### Example Files
