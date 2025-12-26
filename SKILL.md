@@ -1,7 +1,7 @@
 ---
 name: manim
 description: This skill should be used when the user asks to "create an animation", "make a manim video", "animate this concept", "visualize this process", "create a GIF for my blog", or mentions "manim", "mathematical animation", "code animation", "process visualization", "technical animation", "3D scene", "camera animation". Provides ManimCE (Community Edition) syntax, patterns, and best practices for creating programmatic animations.
-version: 1.1.0
+version: 1.2.0
 ---
 
 # Manim Animation Skill
@@ -265,6 +265,21 @@ manim -pql -n 1,3 scene.py SceneName # Render animations 1-3 only
 manim --dry_run scene.py SceneName   # No output, just check errors
 ```
 
+### Jupyter Notebook
+
+Use the `%%manim` magic command:
+
+```python
+%%manim -qm -v WARNING MyScene
+
+class MyScene(Scene):
+    def construct(self):
+        circle = Circle()
+        self.play(Create(circle))
+```
+
+See `references/advanced.md` for full Jupyter usage details.
+
 ## Best Practices
 
 ### Keep Animations Focused
@@ -310,7 +325,7 @@ class MyAnimation(Scene):
 For detailed syntax and patterns:
 - **`references/mobjects.md`** - Complete Mobject reference (shapes, text, code, graphs)
 - **`references/animations.md`** - All animation types and timing control
-- **`references/advanced.md`** - Camera, 3D, ValueTracker, MarkupText, config
+- **`references/advanced.md`** - Camera, 3D, ValueTracker, MarkupText, config, LaTeX troubleshooting, fonts, Jupyter
 - **`references/blog-patterns.md`** - Common patterns for technical blog animations
 
 ### Example Files

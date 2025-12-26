@@ -331,11 +331,6 @@ manim -v DEBUG scene.py SceneName
 - Check spelling of class name
 - Ensure file is saved
 
-**LaTeX errors:**
-- Test LaTeX expressions outside Manim first
-- Check for missing packages
-- Use raw strings: `r"\frac{a}{b}"`
-
 **Slow rendering:**
 - Use `-ql` during development
 - Prefer `Text` over `Tex` when possible
@@ -344,6 +339,154 @@ manim -v DEBUG scene.py SceneName
 **Memory issues:**
 - Split long scenes into multiple shorter scenes
 - Clear unused mobjects: `self.remove(mob)`
+
+## LaTeX Troubleshooting
+
+### Common LaTeX Errors
+
+**"LaTeX Error: Missing $ inserted":**
+- Math symbols must be in math mode
+- Use `MathTex` instead of `Tex` for equations
+- Or wrap in `$...$`: `Tex(r"The value is $x^2$")`
+
+**"Undefined control sequence":**
+- Missing package - add to preamble
+- Wrong command name
+- Use raw strings: `r"\frac{a}{b}"` not `"\frac{a}{b}"`
+
+**Raw Strings Required:**
+```python
+# CORRECT - raw string
+tex = MathTex(r"\frac{a}{b}")
+
+# WRONG - backslash escaping issues
+tex = MathTex("\frac{a}{b}")  # Will fail!
+```
+
+### LaTeX Distribution Issues
+
+**dvisvgm version too old:**
+```bash
+# Check version (need 2.4+)
+dvisvgm --version
+
+# On macOS with Homebrew
+brew install --cask mactex  # Full TeX Live
+# or
+brew install basictex && brew install dvisvgm
+```
+
+**MiKTeX vs TeX Live:**
+- TeX Live recommended on macOS/Linux
+- MiKTeX common on Windows
+- Both work, but TeX Live has better package management
+
+**Custom Preamble:**
+```python
+# Add packages for special symbols
+myTemplate = TexTemplate()
+myTemplate.add_to_preamble(r"\usepackage{amssymb}")
+tex = MathTex(r"\mathbb{R}", tex_template=myTemplate)
+```
+
+## Font Handling
+
+### Checking Available Fonts
+
+```python
+# List all available fonts
+import manimpango
+fonts = manimpango.list_fonts()
+print(fonts)  # ['Arial', 'Courier New', ...]
+```
+
+### Font Issues
+
+**Font not found:**
+```python
+# Check if font exists
+import manimpango
+if "My Font" in manimpango.list_fonts():
+    text = Text("Hello", font="My Font")
+else:
+    text = Text("Hello")  # Use default
+```
+
+**Case sensitivity:**
+- Font names are case-sensitive on some systems
+- `"Arial"` ≠ `"arial"`
+
+**Custom Fonts:**
+```python
+from manim import *
+
+# Register a custom font file
+register_font("/path/to/MyFont.ttf")
+
+# Then use it
+text = Text("Hello", font="MyFont")
+```
+
+### Fallback Strategy
+
+```python
+def safe_text(content, preferred_font="SF Pro", fallback_font="Arial"):
+    """Create text with font fallback."""
+    import manimpango
+    fonts = manimpango.list_fonts()
+
+    if preferred_font in fonts:
+        return Text(content, font=preferred_font)
+    elif fallback_font in fonts:
+        return Text(content, font=fallback_font)
+    else:
+        return Text(content)  # System default
+```
+
+## Jupyter Notebook Usage
+
+### Basic Magic Command
+
+```python
+%%manim -qm -v WARNING MyScene
+
+class MyScene(Scene):
+    def construct(self):
+        circle = Circle()
+        self.play(Create(circle))
+```
+
+### Common Parameters
+
+| Flag | Description |
+|------|-------------|
+| `-qm` | Medium quality (720p30) |
+| `-ql` | Low quality (480p15) - fastest |
+| `-qh` | High quality (1080p60) |
+| `-v WARNING` | Reduce log verbosity |
+| `-s` | Output last frame only (image) |
+| `--disable_caching` | Force re-render |
+
+### Full Example
+
+```python
+# In Jupyter cell
+%%manim -qm -v WARNING --disable_caching CircleDemo
+
+class CircleDemo(Scene):
+    def construct(self):
+        c = Circle(color=BLUE)
+        self.play(Create(c))
+        self.play(c.animate.shift(RIGHT * 2))
+        self.wait()
+```
+
+### Tips for Jupyter
+
+- Use `-v WARNING` to reduce output noise
+- Use `--disable_caching` when iterating quickly
+- Class name in magic must match scene class name
+- Multiple scenes in one notebook: define each with different names
 
 ### Caching
 
@@ -393,3 +536,83 @@ coords = axes @ point       # Same as axes.p2c(point)
 # Instant add without animation (run_time=0)
 self.play(Add(mobject))
 ```
+
+## v0.19.1 Updates
+
+### ValueTracker Arithmetic Operators
+
+New operators for ValueTracker math operations:
+
+```python
+tracker = ValueTracker(10)
+
+# Floor division
+result = tracker // 3  # Returns ValueTracker with value 3
+
+# Modulo
+result = tracker % 3   # Returns ValueTracker with value 1
+
+# Power
+result = tracker ** 2  # Returns ValueTracker with value 100
+
+# Multiplication
+result = tracker * 2   # Returns ValueTracker with value 20
+
+# Division
+result = tracker / 2   # Returns ValueTracker with value 5.0
+```
+
+### HSV Color Class
+
+Create colors using HSV (Hue, Saturation, Value):
+
+```python
+from manim import HSV
+
+# Create color from HSV values (h: 0-1, s: 0-1, v: 0-1)
+color = HSV(0.5, 1.0, 1.0)  # Cyan
+
+# Animate through rainbow
+class RainbowDemo(Scene):
+    def construct(self):
+        tracker = ValueTracker(0)
+        circle = Circle()
+        circle.add_updater(
+            lambda m: m.set_color(HSV(tracker.get_value(), 1, 1))
+        )
+        self.add(circle)
+        self.play(tracker.animate.set_value(1), run_time=3)
+```
+
+### Random Color with Seed
+
+Generate reproducible random colors:
+
+```python
+# Reproducible random color
+color1 = random_color(seed=42)
+color2 = random_color(seed=42)  # Same as color1
+
+# Random without seed (different each time)
+color3 = random_color()
+```
+
+### SurroundingRectangle Buff Tuple
+
+Control horizontal and vertical padding separately:
+
+```python
+text = Text("Hello")
+
+# Same padding all sides
+rect1 = SurroundingRectangle(text, buff=0.2)
+
+# Different horizontal/vertical padding (new in v0.19.1)
+rect2 = SurroundingRectangle(text, buff=(0.5, 0.2))  # (horizontal, vertical)
+```
+
+### Other v0.19.1 Fixes
+- Fixed `Code` mobject line number alignment
+- Improved SVG parsing for complex paths
+- Better error messages for common mistakes
+- Performance improvements for large scenes
