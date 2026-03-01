@@ -85,7 +85,14 @@ uv run --with manim manim -qm --format=gif examples/quicksort.py QuickSortBars
 ## Preview
 
 <p align="center">
-  <img src="./assets/quicksort-preview.png" alt="Quicksort preview" width="88%" />
+  <video src="./assets/quicksort-preview.mp4" controls muted loop playsinline width="88%">
+    Your browser does not support the video tag.
+  </video>
+</p>
+
+<p align="center">
+  <a href="./assets/quicksort-preview.mp4">Download the preview video</a> ·
+  <a href="./assets/quicksort-preview.png">Static fallback image</a>
 </p>
 
 ## Repository Structure
@@ -104,7 +111,9 @@ manim-skill/
 │  ├─ advanced.md
 │  └─ blog-patterns.md
 └─ assets/
-   └─ banner.svg
+   ├─ banner.svg
+   ├─ quicksort-preview.mp4
+   └─ quicksort-preview.png
 ```
 
 ## Contributing
