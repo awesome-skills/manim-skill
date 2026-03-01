@@ -34,7 +34,7 @@ class QuickSortBars(Scene):
     BAR_WIDTH = 0.48
     BAR_GAP = 0.12
     BASELINE_Y = -2.55
-    MAX_BAR_HEIGHT = 4.0
+    MAX_BAR_HEIGHT = 3.25
     MESSAGE_FONT_SIZE = 26
 
     def construct(self) -> None:
@@ -63,12 +63,12 @@ class QuickSortBars(Scene):
         message = Text(events[0].message, font_size=self.MESSAGE_FONT_SIZE, color=GRAY_A).to_edge(DOWN, buff=0.38)
 
         legend = self.build_legend()
-        legend.to_corner(UR, buff=0.3).shift(1.0 * DOWN)
+        legend.to_corner(UR, buff=0.28)
 
-        stats_panel = RoundedRectangle(corner_radius=0.14, width=4.3, height=2.0)
+        stats_panel = RoundedRectangle(corner_radius=0.14, width=3.9, height=1.7)
         stats_panel.set_stroke(color=GRAY_C, width=1.5, opacity=0.8)
         stats_panel.set_fill(color="#101827", opacity=0.84)
-        stats_panel.to_corner(UL, buff=0.3).shift(1.0 * DOWN)
+        stats_panel.to_corner(UL, buff=0.28)
         stats_text = self.build_stats_text(events[0]).move_to(stats_panel.get_center()).align_to(stats_panel, LEFT).shift(
             RIGHT * 0.2
         )
@@ -417,7 +417,7 @@ class QuickSortBars(Scene):
             item(GREEN_C, "sorted"),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.08)
 
-        panel = RoundedRectangle(corner_radius=0.12, width=3.35, height=2.0)
+        panel = RoundedRectangle(corner_radius=0.12, width=2.95, height=1.72)
         panel.set_stroke(color=GRAY_C, width=1.2, opacity=0.8)
         panel.set_fill(color="#101827", opacity=0.84)
         rows.move_to(panel.get_center()).align_to(panel, LEFT).shift(RIGHT * 0.18)
@@ -426,11 +426,11 @@ class QuickSortBars(Scene):
     @staticmethod
     def build_stats_text(event: Event) -> VGroup:
         lines = VGroup(
-            Text(f"step: {event.step}", font_size=20, color=GRAY_A),
-            Text(f"depth: {event.depth}", font_size=20, color=GRAY_A),
-            Text(f"range: [{event.left}, {event.right}]", font_size=20, color=GRAY_A),
-            Text(f"comparisons: {event.comparisons}", font_size=20, color=GRAY_A),
-            Text(f"swaps: {event.swaps}", font_size=20, color=GRAY_A),
+            Text(f"step: {event.step}", font_size=17, color=GRAY_A),
+            Text(f"depth: {event.depth}", font_size=17, color=GRAY_A),
+            Text(f"range: [{event.left}, {event.right}]", font_size=17, color=GRAY_A),
+            Text(f"comparisons: {event.comparisons}", font_size=17, color=GRAY_A),
+            Text(f"swaps: {event.swaps}", font_size=17, color=GRAY_A),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.06)
         return lines
 
