@@ -93,6 +93,9 @@ uv run --with manim manim -pql examples/quicksort.py QuickSortBars
 
 # GIF export
 uv run --with manim manim -qm --format=gif examples/quicksort.py QuickSortBars
+
+# 4K showcase (2160p60)
+manim -qk examples/quicksort.py QuickSortBars
 ```
 
 ## Preview

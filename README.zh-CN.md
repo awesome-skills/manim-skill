@@ -93,6 +93,9 @@ uv run --with manim manim -pql examples/quicksort.py QuickSortBars
 
 # 导出 GIF
 uv run --with manim manim -qm --format=gif examples/quicksort.py QuickSortBars
+
+# 4K 展示（2160p60）
+manim -qk examples/quicksort.py QuickSortBars
 ```
 
 ## 预览视频
