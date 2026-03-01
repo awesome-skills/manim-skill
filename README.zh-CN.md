@@ -18,6 +18,19 @@
 
 它既可以作为 Codex Skills 原生安装，也可以作为通用知识包给任意 Agent 使用。只要你的 IDE/Agent 能读取 Markdown 指南，就能用这套内容。
 
+## 面向 AI 的技能包
+
+这个仓库是按 AI Agent 使用场景设计的。
+把 `SKILL.md` 和 `references/` 里相关文档提供给 AI 后，AI 可以自主完成：
+
+- 选择合适的动画模式
+- 生成或修改 Manim 场景代码
+- 执行渲染命令
+- 排查常见环境问题（FFmpeg / TeX / 字体）
+- 迭代到最终 mp4 或 gif 输出
+
+你描述目标，Agent 负责落地执行。
+
 ## 主流 Agent / IDE 支持
 
 <p>

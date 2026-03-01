@@ -18,6 +18,19 @@
 
 It is designed for Codex Skills **and** works as an agent-agnostic playbook that can be used by any coding assistant that can read markdown instructions.
 
+## AI-Ready Skill
+
+This repository is designed for AI agents.
+Provide `SKILL.md` and relevant files from `references/`, and agents can autonomously:
+
+- choose suitable animation patterns
+- generate or modify Manim scenes
+- run render commands
+- troubleshoot common environment issues (FFmpeg / TeX / fonts)
+- iterate outputs to final mp4 or gif
+
+You provide intent; the agent handles execution.
+
 ## Agent and IDE Compatibility
 
 <p>
