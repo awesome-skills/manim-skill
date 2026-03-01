@@ -82,6 +82,12 @@ uv run --with manim manim -pql examples/quicksort.py QuickSortBars
 uv run --with manim manim -qm --format=gif examples/quicksort.py QuickSortBars
 ```
 
+## 预览图
+
+<p align="center">
+  <img src="./assets/quicksort-preview.png" alt="Quicksort preview" width="88%" />
+</p>
+
 ## 仓库结构
 
 ```text
@@ -108,4 +114,3 @@ manim-skill/
 - 算法动画模板扩展
 - 跨平台问题排查补充
 - 更多 Agent 集成示例
-

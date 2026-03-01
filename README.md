@@ -82,6 +82,12 @@ uv run --with manim manim -pql examples/quicksort.py QuickSortBars
 uv run --with manim manim -qm --format=gif examples/quicksort.py QuickSortBars
 ```
 
+## Preview
+
+<p align="center">
+  <img src="./assets/quicksort-preview.png" alt="Quicksort preview" width="88%" />
+</p>
+
 ## Repository Structure
 
 ```text
@@ -108,4 +114,3 @@ Contributions are welcome, especially:
 - New algorithm animation templates
 - Better cross-platform troubleshooting
 - More agent integration examples
-
