@@ -459,6 +459,10 @@ brew install basictex && brew install dvisvgm
 - MiKTeX common on Windows
 - Both work, but TeX Live has better package management
 
+**Windows `FileNotFoundError: [WinError 2]` during render:**
+- Usually means TeX tooling is missing while using `Tex`, `MathTex`, or number mobjects that depend on TeX.
+- Install MiKTeX/TeX Live, or switch those labels to `Text(str(value))` for a TeX-free path.
+
 **Custom Preamble:**
 ```python
 # Add packages for special symbols

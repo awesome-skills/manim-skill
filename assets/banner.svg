@@ -1,0 +1,52 @@
+<svg width="1600" height="420" viewBox="0 0 1600 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="240" y1="80" x2="1140" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1600" height="420" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="18" flood-color="#0B1020" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="420" rx="28" fill="url(#bg)"/>
+  <g opacity="0.25">
+    <circle cx="1310" cy="120" r="180" fill="#22D3EE"/>
+    <circle cx="1450" cy="330" r="150" fill="#4F46E5"/>
+    <circle cx="1080" cy="360" r="120" fill="#06B6D4"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="72" width="164" height="164" rx="28" fill="url(#accent)"/>
+    <path d="M118 194L154 112L190 194H169L154 157L139 194H118Z" fill="white"/>
+  </g>
+
+  <text x="280" y="165" fill="white" font-size="74" font-family="'Segoe UI', Arial, sans-serif" font-weight="700">
+    Manim Skill
+  </text>
+  <text x="280" y="228" fill="#BFDBFE" font-size="30" font-family="'Segoe UI', Arial, sans-serif" font-weight="500">
+    Agent-agnostic animation playbook for technical visuals
+  </text>
+  <text x="280" y="286" fill="#94A3B8" font-size="24" font-family="'Segoe UI', Arial, sans-serif">
+    Works with Codex, Claude Code, Cursor, and other modern coding agents
+  </text>
+
+  <rect x="280" y="314" width="222" height="50" rx="25" fill="#0B1223" stroke="#334155"/>
+  <text x="322" y="346" fill="#22D3EE" font-size="22" font-family="'Segoe UI', Arial, sans-serif" font-weight="700">
+    MANIMCE
+  </text>
+
+  <rect x="520" y="314" width="238" height="50" rx="25" fill="#0B1223" stroke="#334155"/>
+  <text x="565" y="346" fill="#A5B4FC" font-size="22" font-family="'Segoe UI', Arial, sans-serif" font-weight="700">
+    SKILL KIT
+  </text>
+
+  <rect x="776" y="314" width="258" height="50" rx="25" fill="#0B1223" stroke="#334155"/>
+  <text x="814" y="346" fill="#67E8F9" font-size="22" font-family="'Segoe UI', Arial, sans-serif" font-weight="700">
+    ANY AGENT
+  </text>
+</svg>

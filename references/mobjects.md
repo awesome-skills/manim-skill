@@ -654,6 +654,13 @@ count = Integer(42)
 count.set_value(100)
 ```
 
+If TeX is not installed and numeric labels fail to render on Windows, use a plain text fallback:
+
+```python
+count = Text(str(42), font_size=48)
+count.become(Text(str(100), font_size=48))
+```
+
 ### Variable
 
 Displays "label = value" with automatic updates from ValueTracker.

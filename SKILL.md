@@ -28,6 +28,21 @@ manim checkhealth
 
 **Virtual environment tip:** If not activated, use `uv run manim ...` instead of `manim`.
 
+### Windows Quick Start (PowerShell)
+
+```powershell
+# Install uv (if needed)
+python -m pip install --user uv
+
+# Verify uv is on PATH
+where uv
+
+# One-off run without creating a venv
+uv run --with manim manim checkhealth
+```
+
+If `uv` is not found, restart the terminal and run `where uv` again.
+
 ## ManimCE vs ManimGL
 
 | Aspect | ManimCE (Recommended) | ManimGL |
@@ -106,6 +121,17 @@ math = MathTex(r"E = mc^2")
 
 # Multi-line equation
 equation = MathTex(r"f(x) &= x^2 \\ g(x) &= x^3")
+```
+
+### TeX-Free Numeric Labels (Windows-Safe)
+
+If LaTeX is not installed, avoid `Tex`, `MathTex`, and number mobjects that may trigger TeX rendering (`Integer`, `DecimalNumber`, `Variable` with math labels).
+
+Use plain text labels instead:
+
+```python
+value = 42
+label = Text(str(value), font_size=24)
 ```
 
 ### Shapes
@@ -249,6 +275,9 @@ mango = XKCD.MANGO     # '#FFA62B'
 ## Rendering Commands
 
 ```bash
+# One-off render with uv (no manual venv activation)
+uv run --with manim manim -pql scene.py SceneName
+
 # Preview with low quality (fast)
 manim -pql scene.py SceneName
 
@@ -339,6 +368,7 @@ Working examples in `examples/`:
 - **`examples/basic_scene.py`** - Minimal scene template
 - **`examples/flowchart.py`** - Animated flowchart pattern
 - **`examples/state_diagram.py`** - State transition visualization
+- **`examples/quicksort.py`** - Quicksort bar animation (algorithm visualization template)
 
 ### External Resources
 
