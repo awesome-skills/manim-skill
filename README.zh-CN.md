@@ -2,103 +2,123 @@
   <img src="./assets/banner.svg" alt="Manim Skill Banner" width="100%" />
 </p>
 
-<p align="center">
-  <a href="./README.md">English</a> · 简体中文
+<div align="center">
+
+<h3>AI &#39537;&#21160;&#30340;&#25216;&#26415;&#21160;&#30011;&#21046;&#20316; &mdash; &#22522;&#20110; ManimCE</h3>
+
+<p>
+  <a href="https://github.com/awesome-skills/manim-skill/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-22c55e?style=flat-square" alt="License: MIT"/>
+  </a>
+  <img src="https://img.shields.io/badge/Manim-Community%20Edition-58b86b?style=flat-square&logo=python&logoColor=white" alt="ManimCE"/>
+  <img src="https://img.shields.io/badge/Skill-Agent%20Agnostic-0ea5e9?style=flat-square" alt="Agent Agnostic"/>
+  <img src="https://img.shields.io/badge/Lines-3%2C100%2B-7c3aed?style=flat-square" alt="3100+ lines"/>
+  <img src="https://img.shields.io/badge/Format-SKILL.md-f59e0b?style=flat-square" alt="SKILL.md"/>
+  <img src="https://img.shields.io/badge/PRs-Welcome-ec4899?style=flat-square" alt="PRs Welcome"/>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Manim-Community%20Edition-22c55e?style=for-the-badge" alt="Manim Community Edition" />
-  <img src="https://img.shields.io/badge/Skill-Agent%20Agnostic-0ea5e9?style=for-the-badge" alt="Agent Agnostic" />
-  <img src="https://img.shields.io/badge/Format-SKILL.md-f59e0b?style=for-the-badge" alt="SKILL.md format" />
+<p>
+  <a href="./README.md">English</a> &middot; &#31616;&#20307;&#20013;&#25991;
 </p>
 
-## 仓库介绍
+</div>
 
-`manim-skill` 是一个面向 ManimCE 的可复用技能包，帮助你快速产出技术动画、算法可视化和博客 GIF。
+---
 
-它既可以作为 Codex Skills 原生安装，也可以作为通用知识包给任意 Agent 使用。只要你的 IDE/Agent 能读取 Markdown 指南，就能用这套内容。
+## &#36825;&#26159;&#20160;&#20040;&#65311;
 
-## 面向 AI 的技能包
+**manim-skill** &#26159;&#19968;&#20010;&#38754;&#21521; [ManimCE](https://www.manim.community/) &#30340;&#21487;&#22797;&#29992;&#25216;&#33021;&#21253;&#65292;&#29992;&#20110;&#24555;&#36895;&#21046;&#20316;&#25216;&#26415;&#21160;&#30011;&#12289;&#31639;&#27861;&#21487;&#35270;&#21270;&#21644;&#21338;&#23458; GIF&#12290;
 
-这个仓库是按 AI Agent 使用场景设计的。
-把 `SKILL.md` 和 `references/` 里相关文档提供给 AI 后，AI 可以自主完成：
+&#23427;&#26082;&#21487;&#20197;&#20316;&#20026; **Codex Skills** &#21407;&#29983;&#23433;&#35013;&#65292;&#20063;&#21487;&#20197;&#20316;&#20026;**&#36890;&#29992;&#30693;&#35782;&#21253;**&#32473;&#20219;&#24847; AI &#32534;&#31243;&#21161;&#25163;&#20351;&#29992;&#12290;&#20320;&#25551;&#36848;&#21160;&#30011;&#30446;&#26631;&#65292;Agent &#36127;&#36131;&#20840;&#27969;&#31243;&#25191;&#34892;&#12290;
 
-- 选择合适的动画模式
-- 生成或修改 Manim 场景代码
-- 执行渲染命令
-- 排查常见环境问题（FFmpeg / TeX / 字体）
-- 迭代到最终 mp4 或 gif 输出
+---
 
-你描述目标，Agent 负责落地执行。
+## &#9889; Agent &#33021;&#21147;
 
-## 主流 Agent / IDE 支持
+&#25552;&#20379; `SKILL.md` &#21644;&#30456;&#20851; `references/` &#25991;&#26723;&#21518;&#65292;AI Agent &#21487;&#20197;&#33258;&#20027;&#23436;&#25104;&#65306;
+
+| &#27493;&#39588; | Agent &#25191;&#34892;&#20869;&#23481; |
+|------|---------------------|
+| **1. &#27169;&#24335;&#36873;&#25321;** | &#26681;&#25454;&#38656;&#27714;&#36873;&#25321;&#21160;&#30011;&#31867;&#22411;&#65288;&#26609;&#29366;&#22270;&#12289;&#22270;&#34920;&#12289;&#27969;&#31243;&#22270;&#12289;3D&#12289;&#30456;&#26426;&#36816;&#21160;&#65289; |
+| **2. &#20195;&#30721;&#29983;&#25104;** | &#26681;&#25454;&#25551;&#36848;&#32534;&#20889;&#27491;&#30830;&#30340; ManimCE &#22330;&#26223;&#20195;&#30721; |
+| **3. &#28210;&#26579;&#25191;&#34892;** | &#20351;&#29992;&#36866;&#24403;&#30340;&#36136;&#37327;&#21442;&#25968;&#25191;&#34892;&#28210;&#26579;&#21629;&#20196; |
+| **4. &#38382;&#39064;&#25490;&#26597;** | &#33258;&#21160;&#20462;&#22797; FFmpeg&#12289;TeX&#12289;&#23383;&#20307;&#31561;&#29615;&#22659;&#38382;&#39064; |
+| **5. &#36845;&#20195;&#20248;&#21270;** | &#35843;&#25972;&#26102;&#24207;&#12289;&#37197;&#33394;&#12289;&#24067;&#23616;&#65292;&#30452;&#21040;&#36755;&#20986;&#31526;&#21512;&#39044;&#26399; |
+
+---
+
+## &#127912; &#25903;&#25345;&#30340; Agent &#19982; IDE
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Supported-111827?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code" />
   <img src="https://img.shields.io/badge/Cursor-Supported-111827?style=flat-square&logo=cursor&logoColor=white" alt="Cursor" />
-  <img src="https://img.shields.io/badge/Codex%20CLI-Supported-111827?style=flat-square&logo=openai&logoColor=white" alt="Codex CLI" />
+  <img src="https://img.shields.io/badge/Codex%20CLI-Supported-111927?style=flat-square&logo=openai&logoColor=white" alt="Codex CLI" />
   <img src="https://img.shields.io/badge/Gemini%20CLI-Supported-111827?style=flat-square&logo=google&logoColor=white" alt="Gemini CLI" />
   <img src="https://img.shields.io/badge/Qwen%20Code-Supported-111827?style=flat-square&logo=alibabacloud&logoColor=white" alt="Qwen Code" />
   <img src="https://img.shields.io/badge/Cline-Supported-111827?style=flat-square&logo=visualstudiocode&logoColor=white" alt="Cline" />
 </p>
 
-| Agent / IDE | 使用方式 |
+| Agent / IDE | &#20351;&#29992;&#26041;&#24335; |
 |---|---|
-| Codex | 作为技能目录安装到 `~/.codex/skills/...` |
-| Claude Code / Cursor / Cline | 将 `SKILL.md` + `references/` 作为项目规则或上下文 |
-| 其他 Agent | 直接把本仓库当作结构化 Manim 指南使用 |
+| **Codex** | &#20316;&#20026;&#25216;&#33021;&#30446;&#24405;&#23433;&#35013;&#21040; `~/.codex/skills/...` |
+| **Claude Code / Cursor / Cline** | &#23558; `SKILL.md` + `references/` &#20316;&#20026;&#39033;&#30446;&#35268;&#21017;&#25110;&#19978;&#19979;&#25991; |
+| **&#20854;&#20182; Agent** | &#30452;&#25509;&#25226;&#26412;&#20179;&#24211;&#24403;&#20316;&#32467;&#26500;&#21270; Manim &#25351;&#21335;&#20351;&#29992; |
 
-## 核心内容
+---
 
-- ManimCE 优先实践（`SKILL.md`）
-- 进阶参考手册（`references/`）
-- 可直接运行的案例（`examples/`）
-- Windows 友好安装指引
-- 无 TeX 场景下的数字标签 fallback
+## &#128293; &#24555;&#36895;&#24320;&#22987;
 
-## 安装方式
+### &#23433;&#35013;
 
-### 方式 1：作为 Codex Skill 安装
+<details>
+<summary><strong>&#26041;&#24335; 1&#65306;&#20316;&#20026; Codex Skill &#23433;&#35013;</strong></summary>
 
 ```bash
+# macOS / Linux
 python ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
   --repo awesome-skills/manim-skill \
   --path . \
   --name manim-skill
 ```
 
-Windows PowerShell：
-
 ```powershell
+# Windows PowerShell
 python $HOME\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py `
   --repo awesome-skills/manim-skill `
   --path . `
   --name manim-skill
 ```
 
-### 方式 2：作为通用仓库直接使用
+</details>
+
+<details>
+<summary><strong>&#26041;&#24335; 2&#65306;&#20316;&#20026;&#29420;&#31435;&#20179;&#24211;&#20351;&#29992;</strong></summary>
 
 ```bash
 git clone https://github.com/awesome-skills/manim-skill.git
 cd manim-skill
 ```
 
-然后把 `SKILL.md` 和 `references/` 中相关文档喂给你的 Agent 即可。
+&#28982;&#21518;&#25226; `SKILL.md` &#21644; `references/` &#20013;&#30456;&#20851;&#25991;&#26723;&#21890;&#32473;&#20320;&#30340; Agent &#21363;&#21487;&#12290;
 
-## 快速渲染示例
+</details>
+
+### &#28210;&#26579;
 
 ```bash
-# 快速预览
+# &#24555;&#36895;&#39044;&#35272;&#65288;480p&#65289;
 uv run --with manim manim -pql examples/quicksort.py QuickSortBars
 
-# 导出 GIF
+# &#23548;&#20986; GIF&#65288;720p&#65289;
 uv run --with manim manim -qm --format=gif examples/quicksort.py QuickSortBars
 
-# 4K 展示（2160p60）
+# 4K &#23637;&#31034;&#65288;2160p60&#65289;
 manim -qk examples/quicksort.py QuickSortBars
 ```
 
-## 预览视频
+---
+
+## &#127916; &#39044;&#35272;
 
 <p align="center">
   <video src="./assets/quicksort-preview.mp4" controls muted loop playsinline width="88%">
@@ -107,35 +127,88 @@ manim -qk examples/quicksort.py QuickSortBars
 </p>
 
 <p align="center">
-  <a href="./assets/quicksort-preview.mp4">下载预览视频</a> ·
-  <a href="./assets/quicksort-preview.png">静态图片备用</a>
+  <a href="./assets/quicksort-preview.mp4">&#9654;&#65039; &#19979;&#36733;&#39044;&#35272;&#35270;&#39057;</a> &middot;
+  <a href="./assets/quicksort-preview.png">&#128247; &#38745;&#24577;&#22270;&#29255;&#22791;&#29992;</a>
 </p>
 
-## 仓库结构
+---
 
-```text
+## &#128218; &#20869;&#23481;&#27010;&#35272;
+
+| &#25991;&#20214; | &#34892;&#25968; | &#35828;&#26126; |
+|------|------|------|
+| **SKILL.md** | ~380 | &#26680;&#24515;&#25351;&#20196; &mdash; &#25216;&#33021;&#28608;&#27963;&#26102;&#21152;&#36733; |
+| **references/mobjects.md** | ~860 | Mobject &#31867;&#22411;&#12289;&#23450;&#20301;&#12289;&#26679;&#24335;&#12289;&#20998;&#32452; |
+| **references/animations.md** | ~620 | &#21160;&#30011;&#31867;&#12289;&#26102;&#24207;&#25511;&#21046;&#12289;&#38142;&#24335;&#35843;&#29992;&#12289;&#21464;&#25442; |
+| **references/advanced.md** | ~890 | 3D &#22330;&#26223;&#12289;&#30456;&#26426;&#12289;ValueTracker&#12289;Updater&#12289;&#33258;&#23450;&#20041;&#21160;&#30011; |
+| **references/blog-patterns.md** | ~410 | &#21338;&#23458;&#24120;&#29992;&#27169;&#24335;&#65306;&#20027;&#35270;&#35273;&#12289;&#20998;&#27493;&#28436;&#31034;&#12289;&#23545;&#27604;&#22270; |
+
+**&#24635;&#35745;&#65306;3,100+ &#34892;** ManimCE &#25351;&#21335;&#65292;&#25353;&#20027;&#39064;&#25353;&#38656;&#21152;&#36733;&#12290;
+
+---
+
+## &#128196; &#31034;&#20363;&#22330;&#26223;
+
+| &#25991;&#20214; | &#28436;&#31034;&#20869;&#23481; |
+|------|---------------------|
+| `examples/basic_scene.py` | &#26368;&#23567;&#22330;&#26223;&#35774;&#32622;&#12289;&#22270;&#24418;&#12289;&#25991;&#23383;&#12289;&#22522;&#30784;&#21160;&#30011; |
+| `examples/quicksort.py` | &#31639;&#27861;&#21487;&#35270;&#21270;&#65306;&#26609;&#29366;&#22270; + &#27493;&#39588;&#26631;&#31614; |
+| `examples/flowchart.py` | &#27969;&#31243;&#22270;&#26500;&#24314;&#65306;&#31661;&#22836; + &#26679;&#24335;&#21270;&#26041;&#26694; |
+| `examples/state_diagram.py` | &#29366;&#24577;&#26426;&#65306;&#29366;&#24577;&#36716;&#25442; + &#39640;&#20142;&#26174;&#31034; |
+
+---
+
+## &#128193; &#20179;&#24211;&#32467;&#26500;
+
+```
 manim-skill/
-├─ SKILL.md
-├─ examples/
-│  ├─ basic_scene.py
-│  ├─ flowchart.py
-│  ├─ state_diagram.py
-│  └─ quicksort.py
-├─ references/
-│  ├─ mobjects.md
-│  ├─ animations.md
-│  ├─ advanced.md
-│  └─ blog-patterns.md
-└─ assets/
-   ├─ banner.svg
-   ├─ quicksort-preview.mp4
-   └─ quicksort-preview.png
+|
++-- SKILL.md                     # &#26680;&#24515;&#25216;&#33021;&#25351;&#20196;&#65288;~380 &#34892;&#65289;
++-- README.md                    # &#33521;&#25991;&#25991;&#26723;
++-- README.zh-CN.md              # &#20013;&#25991;&#25991;&#26723;
+|
++-- examples/                    # &#21487;&#30452;&#25509;&#36816;&#34892;&#30340;&#21160;&#30011;&#22330;&#26223;
+|   +-- basic_scene.py           # &#26368;&#23567; Hello World &#22330;&#26223;
+|   +-- quicksort.py             # &#31639;&#27861;&#26609;&#29366;&#22270;&#21160;&#30011;
+|   +-- flowchart.py             # &#27969;&#31243;&#22270;
+|   +-- state_diagram.py         # &#29366;&#24577;&#26426;&#21487;&#35270;&#21270;
+|
++-- references/                  # &#28176;&#36827;&#24335;&#21442;&#32771;&#25351;&#21335;
+|   +-- mobjects.md              # &#22270;&#24418;&#12289;&#25991;&#23383;&#12289;&#34920;&#26684;&#12289;&#22270;&#34920;&#12289;&#20998;&#32452;
+|   +-- animations.md            # Create&#12289;Transform&#12289;Fade&#12289;&#26102;&#24207;&#25511;&#21046;
+|   +-- advanced.md              # 3D&#12289;&#30456;&#26426;&#12289;ValueTracker&#12289;Updater
+|   +-- blog-patterns.md         # &#21338;&#23458;&#21160;&#30011;&#23454;&#29992;&#27169;&#26495;
+|
++-- assets/                      # &#23186;&#20307;&#36164;&#28304;
+    +-- banner.svg               # &#20179;&#24211; Banner
+    +-- quicksort-preview.mp4    # &#39044;&#35272;&#35270;&#39057;
+    +-- quicksort-preview.png    # &#38745;&#24577;&#22791;&#29992;&#22270;
 ```
 
-## 欢迎贡献
+---
 
-欢迎提交 PR，重点方向：
+## &#10024; &#26680;&#24515;&#20142;&#28857;
 
-- 算法动画模板扩展
-- 跨平台问题排查补充
-- 更多 Agent 集成示例
+- **ManimCE v0.19+** &mdash; &#26080;&#38656;&#22806;&#37096; FFmpeg&#65288;&#20869;&#32622; pyav&#65289;
+- **&#28176;&#36827;&#24335;&#21152;&#36733;** &mdash; &#21482;&#21152;&#36733;&#24403;&#21069;&#20219;&#21153;&#38656;&#35201;&#30340;&#21442;&#32771;&#25991;&#26723;
+- **Windows &#21451;&#22909;** &mdash; PowerShell &#23433;&#35013;&#12289;`uv run` &#21333;&#34892;&#21629;&#20196;&#12289;&#23383;&#20307; fallback
+- **&#26080; TeX &#22791;&#36873;** &mdash; &#27809;&#26377; LaTeX &#26102;&#21487;&#29992; `Text()` &#21644;&#25968;&#23383;&#26631;&#31614;&#26367;&#20195;
+- **&#29983;&#20135;&#23601;&#32490;** &mdash; &#20174; 480p &#39044;&#35272;&#21040; 4K60 &#23637;&#31034;&#30340;&#36136;&#37327;&#39044;&#35774;
+
+---
+
+## &#129309; &#21442;&#19982;&#36129;&#29486;
+
+&#27426;&#36814;&#25552;&#20132; PR&#65292;&#37325;&#28857;&#26041;&#21521;&#65306;
+
+- &#31639;&#27861;&#21160;&#30011;&#27169;&#26495;&#25193;&#23637;
+- &#36328;&#24179;&#21488;&#38382;&#39064;&#25490;&#26597;&#34917;&#20805;
+- &#26356;&#22810; Agent &#38598;&#25104;&#31034;&#20363;
+- &#26694;&#26550;&#39118;&#26684;&#27169;&#26495;&#65288;D3 &#39118;&#26684;&#12289;Matplotlib &#39118;&#26684;&#65289;
+- &#22810;&#35821;&#35328;&#32763;&#35793;
+
+---
+
+## &#128196; &#24320;&#28304;&#21327;&#35758;
+
+MIT &copy; [awesome-skills](https://github.com/awesome-skills)
