@@ -37,6 +37,10 @@ heading = Typst("A formula without TeX", font_size=36)
 formula = MathTypst("sum_(k=1)^n k = (n(n+1))/2", font_size=48)
 ```
 
+For a derivation, use named captures such as `MathTypst("{{ a^2 : left_a }} = {{ c^2 : right_c }}")` and `formula.select("left_a")`. Give repeated occurrences distinct names (for example, `left_b`, `subtract_left_b`, `subtract_right_b`) so matching preserves their roles. A repeated label selects all its occurrences, which is useful for collective styling but ambiguous for a one-to-one move.
+
+Keep the full formula's typeset layout, select disjoint semantic groups, and animate those groups with explicit `ReplacementTransform` mappings. If adding the selected groups directly to the scene, keep their parent formula out of the scene so each glyph has one animation owner. Align successive formulas by a stable anchor such as the equals sign. See `examples/typst_derivation.py`: `TypstDerivation` for a runnable subtraction-on-both-sides and cancellation sequence using the existing optional Typst extra.
+
 Typst has its own language: passing LaTeX commands such as `\frac` is not a drop-in migration. Use `manim[typst]` and inspect font/math output. Plain numeric labels can use `Text(str(value))`; `Integer`, `DecimalNumber`, `Variable`, axes numbers, and default graph labels may otherwise invoke TeX. Pass explicit `Text` labels when creating a TeX-free graph:
 
 ```python

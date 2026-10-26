@@ -17,6 +17,21 @@ self.play(circle.animate.shift(RIGHT))  # circle is still the live reference
 
 A transformed object may retain its original Python type; avoid assuming a `Transform` changes its class. Use replacement when downstream behavior needs the target's type.
 
+## Formula correspondence
+
+Choose matching according to the meaning of the change:
+
+| Case | Approach |
+|---|---|
+| LaTeX terms with unambiguous string identity | Split `MathTex` deliberately and use `TransformMatchingTex`; inspect repeated terms |
+| Same-looking shapes whose geometry is the intended correspondence | `TransformMatchingShapes`; visual similarity does not establish mathematical identity |
+| Repeated terms with different roles, or Typst subexpressions | Give each occurrence a label and map disjoint selections explicitly with `ReplacementTransform` |
+| One expression contributes to several result terms | Use `TransformFromCopy` for the intended copies, then introduce any new operators explicitly |
+
+`TransformMatchingTex` expects LaTeX objects/parts; it is not a generic adapter for `MathTypst`. In CE 0.22, Typst's named captures and `select` provide a public alternative. The complete example is `examples/typst_derivation.py`; selection and ownership details are in [mobjects](mobjects.md#math-backends).
+
+Make the algebraic operation visible: to move an additive term across an equality, first show the same subtraction on both sides and then cancel. Clear cancellation marks before retained terms move through their former position; otherwise a moving term can appear falsely crossed out. A smooth path alone does not explain the change of sign. Treat this as an explanatory choice for the intended audience, not a requirement to expand every elementary step in an expert presentation.
+
 ## Timing and simultaneous mutations
 
 ```python

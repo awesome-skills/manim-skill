@@ -10,37 +10,13 @@ import subprocess
 import sys
 
 import av
-from PIL import Image, ImageDraw
+
+if __package__:
+    from .video_inspection import inspect_video
+else:
+    from video_inspection import inspect_video
 
 ROOT = Path(__file__).resolve().parents[1]
-
-
-def inspect_video(path, contact_path):
-    frames = []
-    with av.open(str(path)) as container:
-        stream = container.streams.video[0]
-        width, height = stream.width, stream.height
-        duration = float(stream.duration * stream.time_base) if stream.duration else None
-        total = 0
-        # Decode every frame to detect broken/truncated media, retaining a few checkpoints.
-        count = stream.frames or 0
-        targets = {0, count // 4, count // 2, 3 * count // 4, max(0, count - 1)}
-        for index, frame in enumerate(container.decode(video=0)):
-            if index in targets:
-                frames.append((index, frame.to_image()))
-            total += 1
-    if not total or duration is None or duration <= 0:
-        raise ValueError(f"No positive-duration video decoded: {path}")
-    sheet = Image.new("RGB", (640 * len(frames), 390), "#eeeeee")
-    draw = ImageDraw.Draw(sheet)
-    for column, (index, image) in enumerate(frames):
-        image.thumbnail((640, 360))
-        sheet.paste(image, (640 * column, 25))
-        draw.text((640 * column + 8, 5), f"frame {index}", fill="black")
-    sheet.save(contact_path)
-    return {"width": width, "height": height, "duration_seconds": duration,
-            "decoded_frames": total, "bytes": path.stat().st_size,
-            "contact_sheet": str(contact_path)}
 
 
 def main():
@@ -71,7 +47,7 @@ def main():
             reason = None
             if name == "MathExample" and not args.include_tex:
                 reason = "optional TeX backend not requested"
-            if name == "TypstFormula" and not args.include_typst:
+            if name in {"TypstFormula", "TypstDerivation"} and not args.include_typst:
                 reason = "optional Typst backend not requested"
             if reason:
                 report["skipped"].append({"scene": name, "reason": reason})

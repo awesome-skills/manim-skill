@@ -2,7 +2,7 @@
 name: manim
 description: Create and edit programmatic explanatory animations, videos, and GIFs with Manim Community Edition. Use for mathematical animation, algorithm animation, animated technical diagrams, or an explicit Manim request. Static diagrams, ordinary charts, and interactive web UI do not need this skill unless the user chooses Manim.
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 # Manim animations
@@ -14,7 +14,7 @@ This edition targets **ManimCE 0.22.x, Python 3.11+**. Check `python --version` 
 ## Workflow
 
 1. Establish the explanation: what changes over time, what the viewer should understand, and the requested output (video/GIF/still, duration, aspect ratio, language). Infer sensible defaults for unspecified presentation choices; ask only when the answer changes the work materially.
-2. Choose a small scene and the relevant reference below. Prefer one readable visual progression over decorative motion. Use explicit labels as well as color to convey state.
+2. Before coding a new animation or improving its appearance, read [visual direction](references/visual-direction.md). Choose a focal object and sketch a short shot list: question, visible action, insight, timing. Make the changing geometry carry the explanation; use captions to support it. Use explicit labels as well as color to convey state.
 3. Write a runnable scene in the user's project, keeping output media separate from source. Use public scene APIs. Configure resolution, renderer, and output **before** constructing a scene; use CLI flags or `tempconfig` rather than changing global config after `super().__init__()`.
 4. Render a low-quality **video** first. Inspect opening, intermediate, and final frames, and review transitions for pacing and semantic correctness. A last-frame PNG or a successful command alone does not verify an animation. Fix clipping, unreadable labels, overlaps, wrong states, and unexpected jumps before increasing quality.
 5. Render the requested artifact and verify it exists, decodes, and has the intended dimensions, duration, and format. Deliver the source path, artifact path, exact render command, environment version, and any verification limits. Do not claim visual acceptance when only syntax or rendering was checked.
@@ -50,10 +50,11 @@ python -m manim render -ql --format png scene.py Explain
 
 | Need | Reference / runnable starting point |
 |---|---|
+| Composition, visual storytelling, choreography, appearance review | [visual direction](references/visual-direction.md); `examples/visual_story.py`: `VectorStory` |
 | Labels, formulas, code, axes, graphs, layout | [mobjects](references/mobjects.md); `examples/basic_scene.py` |
 | Transforms, timing, live values, object identity | [animations](references/animations.md) |
 | Camera, 3D, updaters, programmatic rendering | [advanced](references/advanced.md); `examples/advanced_scene.py` |
-| Formula without a TeX installation | [mobjects: math backends](references/mobjects.md#math-backends); `examples/typst_scene.py` |
+| Formula without a TeX installation, including labeled derivations | [mobjects: math backends](references/mobjects.md#math-backends); `examples/typst_scene.py`, `examples/typst_derivation.py` |
 | Process, state, comparison, algorithm explanation | [storytelling patterns](references/blog-patterns.md); `examples/flowchart.py`, `examples/state_diagram.py`, `examples/quicksort.py` |
 | Installation or older Manim code | [setup and migration](references/setup-and-migration.md) |
 

@@ -46,7 +46,9 @@ PyAV handles normal encoding, so a standalone FFmpeg executable is not a core Ma
 | `examples/state_diagram.py` | State transitions, index mismatch, cycles |
 | `examples/quicksort.py` | Computed Lomuto-partition events and sorting animation |
 | `examples/typst_scene.py` | Optional formula typesetting without a TeX distribution |
+| `examples/typst_derivation.py` | Optional Typst derivation: explicit term identity, stable equals sign, subtraction and cancellation |
 | `examples/advanced_scene.py` | Cairo camera focus and 3D orbit |
+| `examples/visual_story.py` | Original head-to-tail vector story: composition, correspondence, staged revelation; no TeX |
 
 The quicksort showcase is longer than a short blog loop; choose a smaller input or a narrower explanation for a short embed.
 
@@ -77,13 +79,23 @@ uv run python scripts/smoke.py --include-tex --include-typst
 uv run python scripts/smoke.py --scene BasicScene --scene CodeExample
 ```
 
+Inspect specific transition times in an existing MP4 without rerendering (replace the video and times):
+
+```bash
+uv run python scripts/video_inspection.py scene.mp4 --at 6.8 --at 8 --columns 2 --output verification/review
+```
+
+The inspector saves full-resolution sampled PNGs, a multirow contact sheet and a JSON report with actual presentation times and the input hash. It selects the frame displayed at each requested time, including irregular frame intervals, and decodes the full clip. Timestamps are seconds from the first frame; the duration endpoint selects the last frame. It does not evaluate appearance or playback.
+
 The runner renders every selected scene as a 640×360 / 15 fps Cairo MP4, decodes every frame, checks positive duration and dimensions, and writes per-scene logs/contact sheets plus `verification/report.json`. It records the interpreter, Manim version, source hashes, commands, failures, and optional-backend skips. Generated evidence is ignored by Git. Use a new output directory when comparing runs.
 
-**Rendering is not visual approval.** Inspect contact sheets for missing glyphs, clipping, overlap, and wrong states; play the videos to evaluate timing and continuity. The report deliberately leaves `visual_review` as `not performed`; record actual review separately. Tests also check quicksort data invariants that an attractive video alone cannot establish.
+**Rendering is not visual approval.** Inspect contact sheets for missing glyphs, clipping, overlap, and wrong states; play the videos to evaluate timing and continuity. The report deliberately leaves `visual_review` as `not performed`; record actual review separately. Tests check quicksort data invariants and timestamp sampling against encoded videos, including irregular presentation times and CLI output.
 
 CI renders with Typst on Python 3.11 and 3.13, additionally installs TeX for `MathExample` on 3.13, and uploads evidence even on failure. OpenGL and platform-specific font coverage require separate checks; Cairo results do not establish those claims.
 
 ## Reference layout
+
+- [Visual direction](references/visual-direction.md): shot design, hierarchy, choreography and visual iteration; includes primary study references.
 
 - [Setup and migration](references/setup-and-migration.md): environment, 0.20–0.22 changes, math backends, output flags.
 - [Mobjects](references/mobjects.md): text, formulas, code, layout, constructor pitfalls.
@@ -92,6 +104,10 @@ CI renders with Typst on Python 3.11 and 3.13, additionally installs TeX for `Ma
 - [Storytelling](references/blog-patterns.md): choose a progression and review the explanation.
 
 References are loaded by task, not all at once. Runnable examples are the source of truth for complete patterns; documentation avoids maintaining duplicate copies of those scenes.
+
+[Project research and adoption decisions](docs/research/animation-projects-2026-10-26.md) records which upstream ideas we adopted or deferred. See also [formula mechanisms](docs/research/formula-and-preview-projects-2026-10-26.md) and [preview feedback](docs/research/preview-feedback-projects-2026-10-26.md).
+
+[Render-feedback research](docs/research/render-feedback-evaluation-2026-10-26.md) and a [fresh-session heap-repair trial](docs/evaluations/heap-repair-20261026/review.md) separate a concrete generated result from unmeasured general quality claims.
 
 ## License
 
