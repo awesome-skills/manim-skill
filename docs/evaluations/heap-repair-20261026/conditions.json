@@ -1,0 +1,120 @@
+{
+  "generator_configuration": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "medium",
+    "history": "none",
+    "evidence": "spawn_agent configuration"
+  },
+  "environment": {
+    "python": "3.13.14",
+    "manim": "0.22.0",
+    "renderer": "cairo",
+    "font": "Hiragino Sans GB",
+    "platform": "macOS"
+  },
+  "seed": "not explicitly set; scene uses fixed data, no random draws",
+  "skill_sha256": "eb02d497c8933f366327f0a66c28f3af4ac5d627ef11cb6367ed47c54c3eee76",
+  "visual_direction_sha256": "602d78e7a668b3ae26606a6a201fb54e53191614a20161b27011f42bb52980fd",
+  "dependency_lock_sha256": "d9aea4be913e25ca517e81404ef1fdbef1bfb90ae651b6b8b0e7c2d1d5ed2c15",
+  "source_sha256": "bcfd01b1cfda8dd0dd93721b950b0c4aa4cabc4c1b9212f49b43586d470b3d54",
+  "video_sha256": "21974cbb3e57cbcdf37e81a9c203fd1de7c22554a571b8cff9f555ae4a35dc07",
+  "initial_source_and_media": "not separately provided for parent assessment; first-attempt success is unknown",
+  "normal_speed_playback": "not performed",
+  "learning_gain": "not measured",
+  "comparative_skill_improvement": "not measured; no baseline trial",
+  "video_filename": "heap-repair-720p.mp4 (not committed)",
+  "author_receipt_sha256": "fd24f905a9303f7f7d06ce55f931b35dd98904608b602bdfab56c65f4cf4d859",
+  "media": {
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 20.1,
+    "decoded_frames": 603,
+    "bytes": 1014352
+  },
+  "samples": [
+    {
+      "requested_seconds": 1.5,
+      "actual_seconds": 1.5,
+      "frame_index": 45
+    },
+    {
+      "requested_seconds": 5.4,
+      "actual_seconds": 5.4,
+      "frame_index": 162
+    },
+    {
+      "requested_seconds": 8.8,
+      "actual_seconds": 8.8,
+      "frame_index": 264
+    },
+    {
+      "requested_seconds": 11.8,
+      "actual_seconds": 11.8,
+      "frame_index": 354
+    },
+    {
+      "requested_seconds": 16.2,
+      "actual_seconds": 16.2,
+      "frame_index": 486
+    },
+    {
+      "requested_seconds": 19.5,
+      "actual_seconds": 19.5,
+      "frame_index": 585
+    }
+  ],
+  "independent_reference_trace": {
+    "input": [
+      90,
+      70,
+      80,
+      40,
+      60,
+      50,
+      30
+    ],
+    "extracted": 90,
+    "states_after_replacement_and_swaps": [
+      [
+        30,
+        70,
+        80,
+        40,
+        60,
+        50
+      ],
+      [
+        80,
+        70,
+        30,
+        40,
+        60,
+        50
+      ],
+      [
+        80,
+        70,
+        50,
+        40,
+        60,
+        30
+      ]
+    ],
+    "swaps": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        5
+      ]
+    ]
+  },
+  "parent_probe": {
+    "average_fps": 30.0,
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "audio_streams": 0
+  }
+}

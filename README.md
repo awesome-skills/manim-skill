@@ -107,6 +107,8 @@ References are loaded by task, not all at once. Runnable examples are the source
 
 [Project research and adoption decisions](docs/research/animation-projects-2026-10-26.md) records which upstream ideas we adopted or deferred. See also [formula mechanisms](docs/research/formula-and-preview-projects-2026-10-26.md) and [preview feedback](docs/research/preview-feedback-projects-2026-10-26.md).
 
+[Render-feedback research](docs/research/render-feedback-evaluation-2026-10-26.md) and a [fresh-session heap-repair trial](docs/evaluations/heap-repair-20261026/review.md) separate a concrete generated result from unmeasured general quality claims.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

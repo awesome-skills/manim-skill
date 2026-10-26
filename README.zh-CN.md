@@ -103,6 +103,8 @@ CI 在 Python 3.11 和 3.13 上渲染普通示例及 Typst 示例，并在 3.13 
 
 [项目调研与采用取舍](docs/research/animation-projects-2026-10-26.md)记录了这轮调研采用或暂缓的方向。另见[公式机制调研](docs/research/formula-and-preview-projects-2026-10-26.md)与[预览反馈调研](docs/research/preview-feedback-projects-2026-10-26.md)。
 
+[渲染反馈评估调研](docs/research/render-feedback-evaluation-2026-10-26.md)与[新会话最大堆试用](docs/evaluations/heap-repair-20261026/review.md)记录具体生成结果，并保留尚未测量的普遍效果。
+
 ## 许可
 
 MIT，见 [LICENSE](LICENSE)。
