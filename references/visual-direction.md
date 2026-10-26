@@ -50,6 +50,8 @@ Render the hardest few seconds cheaply before polishing the whole timeline. Insp
 - Do text, arrowheads, values and motion paths stay clear of each other?
 - Does each pause allow the new idea to register, and do repetitions advance the explanation?
 
+Use `python scripts/video_inspection.py scene.mp4 --at 6.8 --at 8 --columns 2 --output verification/review` to inspect chosen transition times in an existing rendered MP4 (replace the video and times). It decodes the same artifact rather than rerunning the scene, saves full-resolution PNGs and a multirow contact sheet, and records requested/actual presentation times, indices and the input hash. It selects the frame displayed at the requested time, not a future frame or an index estimated from average fps. The duration endpoint selects the last frame; out-of-range requests fail. Omit `--at` for five overview samples. Read `report.json` alongside the images; the tool deliberately leaves visual review unperformed.
+
 Fix the most distracting failure, render that segment again, then review the whole video at normal speed when playback is available. Higher resolution fixes neither pacing nor composition. Record whether review covered still frames, sampled transition frames or actual playback; appearance remains a human judgment, not a render-test result.
 
 ## Studying 3Blue1Brown
