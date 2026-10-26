@@ -167,8 +167,7 @@ class ProcessHighlight(Scene):
         for i, node in enumerate(nodes):
             # Highlight current
             self.play(
-                node[0].animate.set_fill(GREEN, opacity=0.5),
-                node[0].animate.set_stroke(GREEN),
+                node[0].animate.set_fill(GREEN, opacity=0.5).set_stroke(GREEN),
                 run_time=0.4
             )
             self.wait(0.3)
@@ -176,8 +175,7 @@ class ProcessHighlight(Scene):
             # Dim after processing
             if i < len(nodes) - 1:
                 self.play(
-                    node[0].animate.set_fill(GRAY, opacity=0.2),
-                    node[0].animate.set_stroke(GRAY),
+                    node[0].animate.set_fill(GRAY, opacity=0.2).set_stroke(GRAY),
                     run_time=0.2
                 )
 

@@ -84,11 +84,11 @@ class GraphExample(Scene):
 
         # Plot function
         graph = axes.plot(lambda x: x**2, color=WHITE)
-        label = axes.get_graph_label(graph, label="x^2")
+        label = axes.get_graph_label(graph, label=Text("x²", font_size=28))
 
         # Coordinate labels
-        x_label = axes.get_x_axis_label("x")
-        y_label = axes.get_y_axis_label("y")
+        x_label = axes.get_x_axis_label(Text("x", font_size=28))
+        y_label = axes.get_y_axis_label(Text("y", font_size=28))
 
         self.play(Create(axes), Write(x_label), Write(y_label))
         self.play(Create(graph), Write(label))

@@ -1,378 +1,73 @@
 ---
 name: manim
-description: This skill should be used when the user asks to "create an animation", "make a manim video", "animate this concept", "visualize this process", "create a GIF for my blog", "plot a graph", "animate a value", or mentions "manim", "mathematical animation", "code animation", "process visualization", "technical animation", "3D scene", "camera animation", "ValueTracker", "number animation". Provides ManimCE (Community Edition) syntax, patterns, and best practices for creating programmatic animations.
-version: 1.5.0
+description: Create and edit programmatic explanatory animations, videos, and GIFs with Manim Community Edition. Use for mathematical animation, algorithm animation, animated technical diagrams, or an explicit Manim request. Static diagrams, ordinary charts, and interactive web UI do not need this skill unless the user chooses Manim.
+metadata:
+  version: "2.0.0"
 ---
 
-# Manim Animation Skill
+# Manim animations
 
-Create precise, programmatic animations for technical blogs, educational content, and concept visualization using Manim Community Edition (ManimCE).
+Use Manim Community Edition (CE), not `manimgl` / `manimlib`, unless the user explicitly requests that engine. Preserve an existing project's engine and dependency constraints; migration is a separate choice.
 
-**Test animations:** https://docs.manim.community/en/stable/examples.html
+This edition targets **ManimCE 0.22.x, Python 3.11+**. Check `python --version` and `python -m manim --version` in the project's environment before writing version-sensitive code. For an older project, read the matching official docs rather than silently upgrading it. See [setup and migration](references/setup-and-migration.md) for installation, optional math backends, output changes, and troubleshooting.
 
-## Installation (v0.19+)
+## Workflow
 
-```bash
-# Recommended: uv (no ffmpeg needed since v0.19!)
-uv venv && source .venv/bin/activate
-uv pip install manim
+1. Establish the explanation: what changes over time, what the viewer should understand, and the requested output (video/GIF/still, duration, aspect ratio, language). Infer sensible defaults for unspecified presentation choices; ask only when the answer changes the work materially.
+2. Choose a small scene and the relevant reference below. Prefer one readable visual progression over decorative motion. Use explicit labels as well as color to convey state.
+3. Write a runnable scene in the user's project, keeping output media separate from source. Use public scene APIs. Configure resolution, renderer, and output **before** constructing a scene; use CLI flags or `tempconfig` rather than changing global config after `super().__init__()`.
+4. Render a low-quality **video** first. Inspect opening, intermediate, and final frames, and review transitions for pacing and semantic correctness. A last-frame PNG or a successful command alone does not verify an animation. Fix clipping, unreadable labels, overlaps, wrong states, and unexpected jumps before increasing quality.
+5. Render the requested artifact and verify it exists, decodes, and has the intended dimensions, duration, and format. Deliver the source path, artifact path, exact render command, environment version, and any verification limits. Do not claim visual acceptance when only syntax or rendering was checked.
 
-# Or pip (still works)
-pip install manim
+For a blog embed, a short 16:9 MP4 is a reasonable starting point; GIF is useful when required but can be larger and less efficient. Follow the user's duration and style rather than imposing a fixed length or banning titles.
 
-# Check installation
-manim checkhealth
-```
-
-**Note:** v0.19+ uses pyav internally, eliminating the external ffmpeg dependency.
-
-**Virtual environment tip:** If not activated, use `uv run manim ...` instead of `manim`.
-
-### Windows Quick Start (PowerShell)
-
-```powershell
-# Install uv (if needed)
-python -m pip install --user uv
-
-# Verify uv is on PATH
-where uv
-
-# One-off run without creating a venv
-uv run --with manim manim checkhealth
-```
-
-If `uv` is not found, restart the terminal and run `where uv` again.
-
-## ManimCE vs ManimGL
-
-| Aspect | ManimCE (Recommended) | ManimGL |
-|--------|----------------------|---------|
-| Package | `pip install manim` | `pip install manimgl` |
-| Stability | Stable, well-documented | Experimental, breaking changes |
-| Jupyter | Supported (`%%manim` magic) | Limited |
-| ffmpeg | Not required (v0.19+) | Required |
-| Caching | Supported | Not supported |
-
-**Always use ManimCE** unless reproducing exact 3Blue1Brown videos.
-
-## Core Concepts
-
-### Three Building Blocks
-
-1. **Mobjects** - Mathematical objects displayed on screen (Circle, Text, Code, etc.)
-2. **Scenes** - Canvas containing animations, subclass of `Scene`
-3. **Animations** - Transformations applied to Mobjects (Create, Write, FadeIn, etc.)
-
-### Basic Scene Structure
+## Small starting point
 
 ```python
-from manim import *
+from manim import BLUE, Circle, Create, Scene, Text, VGroup, DOWN
 
-class MyScene(Scene):
+class Explain(Scene):
     def construct(self):
-        # Create mobjects
         circle = Circle(color=BLUE)
-
-        # Animate
-        self.play(Create(circle))
+        label = Text("Input", font_size=32).next_to(circle, DOWN)
+        group = VGroup(circle, label)
+        self.play(Create(group))
         self.wait(1)
 ```
 
-## Common Mobjects
-
-### Text and Labels
-
-```python
-# Plain text
-text = Text("Hello", font_size=48)
-
-# With color portions
-text = Text("Hello World", t2c={"Hello": RED, "World": BLUE})
-
-# Positioned
-label = Text("Label").next_to(circle, UP)
-```
-
-### Code Blocks (v0.19+)
-
-```python
-# IMPORTANT: Use code_string, NOT code parameter
-code = Code(
-    code_string="""function example() {
-  return 42;
-}""",
-    language="javascript",       # Specify explicitly (auto-detect is flaky)
-    background="rectangle",      # or "window"
-    formatter_style="monokai",   # pygments style
-)
-
-# Get available styles
-styles = Code.get_styles_list()  # ['monokai', 'vim', 'native', ...]
-```
-
-### LaTeX
-
-```python
-# Simple LaTeX
-tex = Tex(r"\LaTeX", font_size=144)
-
-# Math mode (auto-wrapped in $...$)
-math = MathTex(r"E = mc^2")
-
-# Multi-line equation
-equation = MathTex(r"f(x) &= x^2 \\ g(x) &= x^3")
-```
-
-### TeX-Free Numeric Labels (Windows-Safe)
-
-If LaTeX is not installed, avoid `Tex`, `MathTex`, and number mobjects that may trigger TeX rendering (`Integer`, `DecimalNumber`, `Variable` with math labels).
-
-Use plain text labels instead:
-
-```python
-value = 42
-label = Text(str(value), font_size=24)
-```
-
-### Shapes
-
-```python
-circle = Circle(radius=1, color=BLUE, fill_opacity=0.5)
-square = Square(side_length=2, color=RED)
-rect = Rectangle(width=3, height=1.5)
-arrow = Arrow(LEFT, RIGHT)
-line = Line(ORIGIN, UP * 2)
-```
-
-### Graphs and Axes
-
-```python
-axes = Axes(
-    x_range=[-3, 3, 1],
-    y_range=[-5, 5, 1],
-    axis_config={"color": BLUE}
-)
-graph = axes.plot(lambda x: x**2, color=WHITE)
-label = axes.get_graph_label(graph, label="x^2")
-```
-
-## Animation Patterns
-
-### Basic Animations
-
-```python
-# Create vs Write:
-# - Create: Simple stroke drawing (use for shapes)
-# - Write: Hand-writing effect with border-then-fill (use for text)
-self.play(Create(circle))       # For shapes
-self.play(Write(text))          # For Text/Tex/MathTex
-
-self.play(FadeIn(mob))          # Fade in
-self.play(FadeIn(mob, shift=UP))  # Fade in with direction
-self.play(FadeOut(mob))         # Fade out
-self.play(GrowFromCenter(mob))  # Grow from center
-self.wait(1)                    # Pause 1 second
-```
-
-### The .animate Syntax
-
-Prepend `.animate` to any method to animate the change:
-
-```python
-# Animate movement
-self.play(circle.animate.shift(RIGHT * 2))
-
-# Animate scaling
-self.play(square.animate.scale(2))
-
-# Animate color change
-self.play(text.animate.set_color(RED))
-
-# Chain animations
-self.play(mob.animate.shift(UP).scale(0.5).set_color(BLUE))
-```
-
-### Transform Animations
-
-```python
-# Morph one shape into another
-self.play(Transform(square, circle))
-
-# Replace (keeps reference to new object)
-self.play(ReplacementTransform(old, new))
-```
-
-### Simultaneous Animations
-
-```python
-# Multiple objects at once
-self.play(
-    Create(circle),
-    Write(text),
-    FadeIn(arrow),
-    run_time=2
-)
-```
-
-## Positioning
-
-### Direction Constants
-
-```python
-UP, DOWN, LEFT, RIGHT, ORIGIN
-UL, UR, DL, DR  # Corners (Up-Left, etc.)
-```
-
-### Positioning Methods
-
-```python
-# Absolute position
-mob.move_to(ORIGIN)
-mob.move_to(LEFT * 3 + UP * 2)
-
-# Relative to another object
-label.next_to(circle, UP, buff=0.5)
-
-# Shift from current position
-mob.shift(RIGHT * 2)
-
-# Align edges
-mob.align_to(other, UP)  # Align top edges
-```
-
-### Grouping
-
-```python
-group = VGroup(circle, square, text)
-group.arrange(RIGHT, buff=0.5)           # Horizontal layout
-group.arrange(DOWN, aligned_edge=LEFT)   # Vertical, left-aligned
-
-# Grid layout
-boxes = VGroup(*[Square() for _ in range(6)])
-boxes.arrange_in_grid(rows=2, cols=3, buff=0.5)
-```
-
-## Colors
-
-```python
-# Named colors
-RED, BLUE, GREEN, YELLOW, WHITE, BLACK, GRAY
-ORANGE, PINK, PURPLE, TEAL, GOLD
-
-# Shades (A=lightest, E=darkest)
-BLUE_A, BLUE_B, BLUE_C, BLUE_D, BLUE_E
-GRAY_A, GRAY_B, GRAY_C, GRAY_D, GRAY_E
-
-# Hex colors
-color = "#61DAFB"
-
-# Color modules (v0.19+)
-from manim.utils.color import X11, XKCD
-beige = X11.BEIGE      # '#F5F5DC'
-mango = XKCD.MANGO     # '#FFA62B'
-```
-
-## Rendering Commands
+Run from the environment containing Manim:
 
 ```bash
-# One-off render with uv (no manual venv activation)
-uv run --with manim manim -pql scene.py SceneName
-
-# Preview with low quality (fast)
-manim -pql scene.py SceneName
-
-# High quality render
-manim -pqh scene.py SceneName
-
-# Export as GIF (good for blogs)
-manim -qm --format=gif scene.py SceneName
-
-# Quality flags
-# -ql  480p15 (preview)
-# -qm  720p30 (medium)
-# -qh  1080p60 (high)
-# -qk  4K60 (production)
-
-# Debugging options
-manim -pql -s scene.py SceneName     # Output last frame only (fastest)
-manim -pql -n 1,3 scene.py SceneName # Render animations 1-3 only
-manim --dry_run scene.py SceneName   # No output, just check errors
+python -m manim render -ql scene.py Explain
+python -m manim render -qh --format mp4 scene.py Explain
+python -m manim render -qm --format gif scene.py Explain
+python -m manim render -ql --format png scene.py Explain
 ```
 
-### Jupyter Notebook
+`-p` opens the completed artifact; omit it in headless runs. `--format png` writes only the last frame. For all frames use `png-sequence`; `--format none` evaluates without producing media. `--dry_run` remains supported, but is not visual verification. Standard presets: `-ql` 480p15, `-qm` 720p30, `-qh` 1080p60, `-qk` 2160p60. See [setup and migration](references/setup-and-migration.md) for 0.22 output semantics.
 
-Use the `%%manim` magic command:
+## Read only what the scene needs
 
-```python
-%%manim -qm -v WARNING MyScene
+| Need | Reference / runnable starting point |
+|---|---|
+| Labels, formulas, code, axes, graphs, layout | [mobjects](references/mobjects.md); `examples/basic_scene.py` |
+| Transforms, timing, live values, object identity | [animations](references/animations.md) |
+| Camera, 3D, updaters, programmatic rendering | [advanced](references/advanced.md); `examples/advanced_scene.py` |
+| Formula without a TeX installation | [mobjects: math backends](references/mobjects.md#math-backends); `examples/typst_scene.py` |
+| Process, state, comparison, algorithm explanation | [storytelling patterns](references/blog-patterns.md); `examples/flowchart.py`, `examples/state_diagram.py`, `examples/quicksort.py` |
+| Installation or older Manim code | [setup and migration](references/setup-and-migration.md) |
 
-class MyScene(Scene):
-    def construct(self):
-        circle = Circle()
-        self.play(Create(circle))
-```
+## Reliability notes
 
-See `references/advanced.md` for full Jupyter usage details.
+- Text uses Pango and installed fonts. Check glyph coverage for the requested language; inspect rendered text for missing characters. `Text` does not require TeX. Some convenience objects (including default numeric labels) do; choose `Text` labels when avoiding TeX.
+- In 0.22, formulas can use `Tex`/`MathTex` (external TeX tools) or `Typst`/`MathTypst` (optional `manim[typst]` dependency). Typst math uses its own syntax, not LaTeX syntax.
+- Use `Code(code_string=..., language=..., formatter_style=...)`. Syntax and line-number colors come from Pygments, not `paragraph_config["color"]`.
+- `Transform(source, target)` changes the source; keep animating the source variable. `ReplacementTransform` replaces it with the target. Avoid two simultaneous animations mutating the same mobject.
+- Frame dimensions are scene units, distinct from output pixels. Fit the complete composition inside `config.frame_width` / `frame_height` with margins, including arrowheads, labels, and motion extrema. Inspect portrait layouts separately.
+- Use Cairo for a portable starting point. OpenGL requires a functioning display/graphics environment and has different camera APIs; test it explicitly when requested.
 
-## Best Practices
+## Repository checks
 
-### Keep Animations Focused
+For changes to this skill or its examples, follow [the contributing checks](README.md#development-and-verification). The smoke runner renders examples, probes media, and extracts contact sheets. Its report distinguishes skipped optional backends and rendering success from human visual review.
 
-For blog posts, create short, focused animations (5-15 seconds) that illustrate one concept. Let surrounding text provide context.
-
-### Use Helper Functions
-
-```python
-def create_node(label, color):
-    """Reusable node factory."""
-    rect = RoundedRectangle(width=2, height=1, color=color, fill_opacity=0.3)
-    text = Text(label, font_size=20)
-    text.move_to(rect)
-    return VGroup(rect, text)
-```
-
-### Performance Tips
-
-- Use `-ql` during development, render high quality only when ready
-- Prefer `Text` over `Tex` when LaTeX isn't needed (faster)
-- Use caching: Manim automatically caches partial renders
-- Use `-s` to quickly preview the final frame
-
-### Scene Organization
-
-```python
-class MyAnimation(Scene):
-    def construct(self):
-        self.show_intro()
-        self.show_main_concept()
-        self.show_conclusion()
-
-    def show_intro(self):
-        # Intro animations
-        pass
-```
-
-## Additional Resources
-
-### Reference Files
-
-For detailed syntax and patterns:
-- **`references/mobjects.md`** - Complete Mobject reference (shapes, text, code, graphs, 3D primitives, numbers, positioning)
-- **`references/animations.md`** - All animation types, Transform vs ReplacementTransform, timing control
-- **`references/advanced.md`** - Camera, 3D, ValueTracker, updaters, config, common mistakes, plugins
-- **`references/blog-patterns.md`** - Common patterns for technical blog animations
-
-### Example Files
-
-Working examples in `examples/`:
-- **`examples/basic_scene.py`** - Minimal scene template
-- **`examples/flowchart.py`** - Animated flowchart pattern
-- **`examples/state_diagram.py`** - State transition visualization
-- **`examples/quicksort.py`** - Quicksort bar animation (algorithm visualization template)
-
-### External Resources
-
-- **Official Docs:** https://docs.manim.community/en/stable/
-- **Example Gallery:** https://docs.manim.community/en/stable/examples.html
-- **GitHub:** https://github.com/ManimCommunity/manim
-- **Discord:** Community support and #beginner-resources channel
+Official references: [versioned 0.22 docs](https://docs.manim.community/en/v0.22.0/), [changelog](https://docs.manim.community/en/stable/changelog.html), [source](https://github.com/ManimCommunity/manim).

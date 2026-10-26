@@ -1,9 +1,10 @@
-# Python
+# Python and project environment
+.venv/
 __pycache__/
 *.py[cod]
+*.egg-info/
 
-# Local render outputs
+# Generated render and verification artifacts
 media/
-
-# Local temporary preview exports
+verification/
 assets/quicksort-preview.gif

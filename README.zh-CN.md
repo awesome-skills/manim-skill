@@ -1,214 +1,94 @@
-<p align="center">
-  <img src="./assets/banner.svg" alt="Manim Skill Banner" width="100%" />
-</p>
+# Manim Skill
 
-<div align="center">
+让 AI 编程 Agent 使用 **Manim Community Edition** 制作解释性动画。输入要讲的概念，skill 引导 Agent 编写场景、低清预览、检查画面，再交付成品与可编辑源码。
 
-<h3>AI &#39537;&#21160;&#30340;&#25216;&#26415;&#21160;&#30011;&#21046;&#20316; &mdash; &#22522;&#20110; ManimCE</h3>
+[English](README.md) · [Skill 指令](SKILL.md) · [Manim 0.22 文档](https://docs.manim.community/en/v0.22.0/)
 
-<p>
-  <a href="https://github.com/awesome-skills/manim-skill/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-22c55e?style=flat-square" alt="License: MIT"/>
-  </a>
-  <img src="https://img.shields.io/badge/Manim-Community%20Edition-58b86b?style=flat-square&logo=python&logoColor=white" alt="ManimCE"/>
-  <img src="https://img.shields.io/badge/Skill-Agent%20Agnostic-0ea5e9?style=flat-square" alt="Agent Agnostic"/>
-  <img src="https://img.shields.io/badge/Lines-3%2C100%2B-7c3aed?style=flat-square" alt="3100+ lines"/>
-  <img src="https://img.shields.io/badge/Format-SKILL.md-f59e0b?style=flat-square" alt="SKILL.md"/>
-  <img src="https://img.shields.io/badge/PRs-Welcome-ec4899?style=flat-square" alt="PRs Welcome"/>
-</p>
+## 适用范围
 
-<p>
-  <a href="./README.md">English</a> &middot; &#31616;&#20307;&#20013;&#25991;
-</p>
+数学讲解、算法动画、动态技术图解、视频和 GIF。普通静态图表或交互网页无需默认使用 Manim。当前适配 **ManimCE 0.22.x、Python 3.11+**；已有项目保留原来的引擎和版本约束，不自动迁移。
 
-</div>
-
----
-
-## &#36825;&#26159;&#20160;&#20040;&#65311;
-
-**manim-skill** &#26159;&#19968;&#20010;&#38754;&#21521; [ManimCE](https://www.manim.community/) &#30340;&#21487;&#22797;&#29992;&#25216;&#33021;&#21253;&#65292;&#29992;&#20110;&#24555;&#36895;&#21046;&#20316;&#25216;&#26415;&#21160;&#30011;&#12289;&#31639;&#27861;&#21487;&#35270;&#21270;&#21644;&#21338;&#23458; GIF&#12290;
-
-&#23427;&#26082;&#21487;&#20197;&#20316;&#20026; **Codex Skills** &#21407;&#29983;&#23433;&#35013;&#65292;&#20063;&#21487;&#20197;&#20316;&#20026;**&#36890;&#29992;&#30693;&#35782;&#21253;**&#32473;&#20219;&#24847; AI &#32534;&#31243;&#21161;&#25163;&#20351;&#29992;&#12290;&#20320;&#25551;&#36848;&#21160;&#30011;&#30446;&#26631;&#65292;Agent &#36127;&#36131;&#20840;&#27969;&#31243;&#25191;&#34892;&#12290;
-
----
-
-## &#9889; Agent &#33021;&#21147;
-
-&#25552;&#20379; `SKILL.md` &#21644;&#30456;&#20851; `references/` &#25991;&#26723;&#21518;&#65292;AI Agent &#21487;&#20197;&#33258;&#20027;&#23436;&#25104;&#65306;
-
-| &#27493;&#39588; | Agent &#25191;&#34892;&#20869;&#23481; |
-|------|---------------------|
-| **1. &#27169;&#24335;&#36873;&#25321;** | &#26681;&#25454;&#38656;&#27714;&#36873;&#25321;&#21160;&#30011;&#31867;&#22411;&#65288;&#26609;&#29366;&#22270;&#12289;&#22270;&#34920;&#12289;&#27969;&#31243;&#22270;&#12289;3D&#12289;&#30456;&#26426;&#36816;&#21160;&#65289; |
-| **2. &#20195;&#30721;&#29983;&#25104;** | &#26681;&#25454;&#25551;&#36848;&#32534;&#20889;&#27491;&#30830;&#30340; ManimCE &#22330;&#26223;&#20195;&#30721; |
-| **3. &#28210;&#26579;&#25191;&#34892;** | &#20351;&#29992;&#36866;&#24403;&#30340;&#36136;&#37327;&#21442;&#25968;&#25191;&#34892;&#28210;&#26579;&#21629;&#20196; |
-| **4. &#38382;&#39064;&#25490;&#26597;** | &#33258;&#21160;&#20462;&#22797; FFmpeg&#12289;TeX&#12289;&#23383;&#20307;&#31561;&#29615;&#22659;&#38382;&#39064; |
-| **5. &#36845;&#20195;&#20248;&#21270;** | &#35843;&#25972;&#26102;&#24207;&#12289;&#37197;&#33394;&#12289;&#24067;&#23616;&#65292;&#30452;&#21040;&#36755;&#20986;&#31526;&#21512;&#39044;&#26399; |
-
----
-
-## &#127912; &#25903;&#25345;&#30340; Agent &#19982; IDE
-
-<p>
-  <img src="https://img.shields.io/badge/Claude%20Code-Supported-111827?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code" />
-  <img src="https://img.shields.io/badge/Cursor-Supported-111827?style=flat-square&logo=cursor&logoColor=white" alt="Cursor" />
-  <img src="https://img.shields.io/badge/Codex%20CLI-Supported-111927?style=flat-square&logo=openai&logoColor=white" alt="Codex CLI" />
-  <img src="https://img.shields.io/badge/Gemini%20CLI-Supported-111827?style=flat-square&logo=google&logoColor=white" alt="Gemini CLI" />
-  <img src="https://img.shields.io/badge/Qwen%20Code-Supported-111827?style=flat-square&logo=alibabacloud&logoColor=white" alt="Qwen Code" />
-  <img src="https://img.shields.io/badge/Cline-Supported-111827?style=flat-square&logo=visualstudiocode&logoColor=white" alt="Cline" />
-</p>
-
-| Agent / IDE | &#20351;&#29992;&#26041;&#24335; |
-|---|---|
-| **Codex** | &#20316;&#20026;&#25216;&#33021;&#30446;&#24405;&#23433;&#35013;&#21040; `~/.codex/skills/...` |
-| **Claude Code / Cursor / Cline** | &#23558; `SKILL.md` + `references/` &#20316;&#20026;&#39033;&#30446;&#35268;&#21017;&#25110;&#19978;&#19979;&#25991; |
-| **&#20854;&#20182; Agent** | &#30452;&#25509;&#25226;&#26412;&#20179;&#24211;&#24403;&#20316;&#32467;&#26500;&#21270; Manim &#25351;&#21335;&#20351;&#29992; |
-
----
-
-## &#128293; &#24555;&#36895;&#24320;&#22987;
-
-### &#23433;&#35013;
-
-<details>
-<summary><strong>&#26041;&#24335; 1&#65306;&#20316;&#20026; Codex Skill &#23433;&#35013;</strong></summary>
-
-```bash
-# macOS / Linux
-python ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo awesome-skills/manim-skill \
-  --path . \
-  --name manim-skill
-```
-
-```powershell
-# Windows PowerShell
-python $HOME\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py `
-  --repo awesome-skills/manim-skill `
-  --path . `
-  --name manim-skill
-```
-
-</details>
-
-<details>
-<summary><strong>&#26041;&#24335; 2&#65306;&#20316;&#20026;&#29420;&#31435;&#20179;&#24211;&#20351;&#29992;</strong></summary>
+## 安装 skill
 
 ```bash
 git clone https://github.com/awesome-skills/manim-skill.git
-cd manim-skill
 ```
 
-&#28982;&#21518;&#25226; `SKILL.md` &#21644; `references/` &#20013;&#30456;&#20851;&#25991;&#26723;&#21890;&#32473;&#20320;&#30340; Agent &#21363;&#21487;&#12290;
+把包含 `SKILL.md`、`references/`、`examples/` 和 `scripts/` 的仓库目录安装到 Agent 的 skills 路径。Codex 可以使用 `~/.codex/skills/manim-skill/`；其他能读取 Markdown 的 Agent 也可使用。如果已有统一 skills 目录，沿用现有软链接架构。
 
-</details>
+安装 skill 和安装 Manim 渲染环境是两回事。
 
-### &#28210;&#26579;
+例如：
+
+> 用 Manim 解释三步校验流程，生成可读的 10 秒 MP4。先低清渲染并检查中间状态，再交付 Python 源码和最终视频。
+
+## 安装渲染环境
+
+先按[官方说明](https://docs.manim.community/en/stable/installation.html)准备当前系统的原生依赖，再在仓库中执行：
 
 ```bash
-# &#24555;&#36895;&#39044;&#35272;&#65288;480p&#65289;
-uv run --with manim manim -pql examples/quicksort.py QuickSortBars
-
-# &#23548;&#20986; GIF&#65288;720p&#65289;
-uv run --with manim manim -qm --format=gif examples/quicksort.py QuickSortBars
-
-# 4K &#23637;&#31034;&#65288;2160p60&#65289;
-manim -qk examples/quicksort.py QuickSortBars
+uv sync --python 3.13 --extra typst
+uv run python -m manim --version
+uv run python -m manim checkhealth
+uv run python -m manim render -ql examples/basic_scene.py BasicScene
 ```
 
----
+`pyproject.toml` 限制 Manim 为 `>=0.22,<0.23`，`uv.lock` 锁定具体依赖以便复现。不需要 Typst 时可省略 `--extra typst`。`MathExample` 需要外部 TeX 工具链；其余基础示例使用 Pango 文字。
 
-## &#127916; &#39044;&#35272;
+普通编码由 PyAV 处理，不要求单独安装 FFmpeg 可执行程序；Cairo/Pango、字体等依赖仍然存在。ManimCE 与 ManimGL 是不同引擎，API 不能混用。
 
-<p align="center">
-  <video src="./assets/quicksort-preview.mp4" controls muted loop playsinline width="88%">
-    Your browser does not support the video tag.
-  </video>
-</p>
+## 示例
 
-<p align="center">
-  <a href="./assets/quicksort-preview.mp4">&#9654;&#65039; &#19979;&#36733;&#39044;&#35272;&#35270;&#39057;</a> &middot;
-  <a href="./assets/quicksort-preview.png">&#128247; &#38745;&#24577;&#22270;&#29255;&#22791;&#29992;</a>
-</p>
+| 文件 | 内容 |
+|---|---|
+| `examples/basic_scene.py` | 基础图形、代码高亮、可选 TeX 公式、无 TeX 曲线图 |
+| `examples/flowchart.py` | 线性流程、分支、步骤高亮 |
+| `examples/state_diagram.py` | 状态转换、位置索引错配、循环 |
+| `examples/quicksort.py` | 根据真实算法事件生成的快速排序动画 |
+| `examples/typst_scene.py` | 无需 TeX 发行版的可选公式示例 |
+| `examples/advanced_scene.py` | Cairo 相机聚焦和 3D 环绕 |
 
----
+快速排序是较长的展示示例，不是所有博客动画的默认时长。短视频应减少输入规模或聚焦一个步骤。
 
-## &#128218; &#20869;&#23481;&#27010;&#35272;
+## 输出
 
-| &#25991;&#20214; | &#34892;&#25968; | &#35828;&#26126; |
-|------|------|------|
-| **SKILL.md** | ~380 | &#26680;&#24515;&#25351;&#20196; &mdash; &#25216;&#33021;&#28608;&#27963;&#26102;&#21152;&#36733; |
-| **references/mobjects.md** | ~860 | Mobject &#31867;&#22411;&#12289;&#23450;&#20301;&#12289;&#26679;&#24335;&#12289;&#20998;&#32452; |
-| **references/animations.md** | ~620 | &#21160;&#30011;&#31867;&#12289;&#26102;&#24207;&#25511;&#21046;&#12289;&#38142;&#24335;&#35843;&#29992;&#12289;&#21464;&#25442; |
-| **references/advanced.md** | ~890 | 3D &#22330;&#26223;&#12289;&#30456;&#26426;&#12289;ValueTracker&#12289;Updater&#12289;&#33258;&#23450;&#20041;&#21160;&#30011; |
-| **references/blog-patterns.md** | ~410 | &#21338;&#23458;&#24120;&#29992;&#27169;&#24335;&#65306;&#20027;&#35270;&#35273;&#12289;&#20998;&#27493;&#28436;&#31034;&#12289;&#23545;&#27604;&#22270; |
-
-**&#24635;&#35745;&#65306;3,100+ &#34892;** ManimCE &#25351;&#21335;&#65292;&#25353;&#20027;&#39064;&#25353;&#38656;&#21152;&#36733;&#12290;
-
----
-
-## &#128196; &#31034;&#20363;&#22330;&#26223;
-
-| &#25991;&#20214; | &#28436;&#31034;&#20869;&#23481; |
-|------|---------------------|
-| `examples/basic_scene.py` | &#26368;&#23567;&#22330;&#26223;&#35774;&#32622;&#12289;&#22270;&#24418;&#12289;&#25991;&#23383;&#12289;&#22522;&#30784;&#21160;&#30011; |
-| `examples/quicksort.py` | &#31639;&#27861;&#21487;&#35270;&#21270;&#65306;&#26609;&#29366;&#22270; + &#27493;&#39588;&#26631;&#31614; |
-| `examples/flowchart.py` | &#27969;&#31243;&#22270;&#26500;&#24314;&#65306;&#31661;&#22836; + &#26679;&#24335;&#21270;&#26041;&#26694; |
-| `examples/state_diagram.py` | &#29366;&#24577;&#26426;&#65306;&#29366;&#24577;&#36716;&#25442; + &#39640;&#20142;&#26174;&#31034; |
-
----
-
-## &#128193; &#20179;&#24211;&#32467;&#26500;
-
-```
-manim-skill/
-|
-+-- SKILL.md                     # &#26680;&#24515;&#25216;&#33021;&#25351;&#20196;&#65288;~380 &#34892;&#65289;
-+-- README.md                    # &#33521;&#25991;&#25991;&#26723;
-+-- README.zh-CN.md              # &#20013;&#25991;&#25991;&#26723;
-|
-+-- examples/                    # &#21487;&#30452;&#25509;&#36816;&#34892;&#30340;&#21160;&#30011;&#22330;&#26223;
-|   +-- basic_scene.py           # &#26368;&#23567; Hello World &#22330;&#26223;
-|   +-- quicksort.py             # &#31639;&#27861;&#26609;&#29366;&#22270;&#21160;&#30011;
-|   +-- flowchart.py             # &#27969;&#31243;&#22270;
-|   +-- state_diagram.py         # &#29366;&#24577;&#26426;&#21487;&#35270;&#21270;
-|
-+-- references/                  # &#28176;&#36827;&#24335;&#21442;&#32771;&#25351;&#21335;
-|   +-- mobjects.md              # &#22270;&#24418;&#12289;&#25991;&#23383;&#12289;&#34920;&#26684;&#12289;&#22270;&#34920;&#12289;&#20998;&#32452;
-|   +-- animations.md            # Create&#12289;Transform&#12289;Fade&#12289;&#26102;&#24207;&#25511;&#21046;
-|   +-- advanced.md              # 3D&#12289;&#30456;&#26426;&#12289;ValueTracker&#12289;Updater
-|   +-- blog-patterns.md         # &#21338;&#23458;&#21160;&#30011;&#23454;&#29992;&#27169;&#26495;
-|
-+-- assets/                      # &#23186;&#20307;&#36164;&#28304;
-    +-- banner.svg               # &#20179;&#24211; Banner
-    +-- quicksort-preview.mp4    # &#39044;&#35272;&#35270;&#39057;
-    +-- quicksort-preview.png    # &#38745;&#24577;&#22791;&#29992;&#22270;
+```bash
+uv run python -m manim render -qh --format mp4 examples/basic_scene.py BasicScene
+uv run python -m manim render -qm --format gif examples/basic_scene.py BasicScene
+uv run python -m manim render -ql --format png examples/basic_scene.py BasicScene
+uv run python -m manim render -ql examples/typst_scene.py TypstFormula
 ```
 
----
+`png` 只保存最后一帧。需要打开生成文件时加 `-p`；0.22 的 `-p` 与 OpenGL 实时窗口不同。旧命令和配置时机的变化见[迁移说明](references/setup-and-migration.md)。
 
-## &#10024; &#26680;&#24515;&#20142;&#28857;
+## 开发与验证
 
-- **ManimCE v0.19+** &mdash; &#26080;&#38656;&#22806;&#37096; FFmpeg&#65288;&#20869;&#32622; pyav&#65289;
-- **&#28176;&#36827;&#24335;&#21152;&#36733;** &mdash; &#21482;&#21152;&#36733;&#24403;&#21069;&#20219;&#21153;&#38656;&#35201;&#30340;&#21442;&#32771;&#25991;&#26723;
-- **Windows &#21451;&#22909;** &mdash; PowerShell &#23433;&#35013;&#12289;`uv run` &#21333;&#34892;&#21629;&#20196;&#12289;&#23383;&#20307; fallback
-- **&#26080; TeX &#22791;&#36873;** &mdash; &#27809;&#26377; LaTeX &#26102;&#21487;&#29992; `Text()` &#21644;&#25968;&#23383;&#26631;&#31614;&#26367;&#20195;
-- **&#29983;&#20135;&#23601;&#32490;** &mdash; &#20174; 480p &#39044;&#35272;&#21040; 4K60 &#23637;&#31034;&#30340;&#36136;&#37327;&#39044;&#35774;
+```bash
+uv sync --locked --extra typst
+uv run python -m unittest discover -s tests -v
+uv run python scripts/smoke.py --include-typst
+# 已安装 TeX 时：
+uv run python scripts/smoke.py --include-tex --include-typst
+# 只检查指定场景：
+uv run python scripts/smoke.py --scene BasicScene --scene CodeExample
+```
 
----
+检查脚本为选中的场景生成 640×360、15 fps 的 Cairo MP4，解码全部帧、检查分辨率和正时长，并输出日志、关键帧拼图和 `verification/report.json`。报告记录 Python/Manim 版本、源码哈希、命令、失败及可选后端跳过原因。生成文件不进入 Git；比较不同运行时请使用不同输出目录。
 
-## &#129309; &#21442;&#19982;&#36129;&#29486;
+**渲染成功不等于视觉验收。** 拼图用于检查裁切、遮挡、缺字和状态错误；播放视频才能判断节奏和连续性。报告中的 `visual_review` 保持 `not performed`，实际人工检查结果另外记录。测试还检查快速排序的数据不变量。
 
-&#27426;&#36814;&#25552;&#20132; PR&#65292;&#37325;&#28857;&#26041;&#21521;&#65306;
+CI 在 Python 3.11 和 3.13 上渲染普通示例及 Typst 示例，并在 3.13 中安装 TeX 验证 `MathExample`，保存运行证据。OpenGL 和平台字体需分别验证，不能用 Cairo 的通过结果代替。
 
-- &#31639;&#27861;&#21160;&#30011;&#27169;&#26495;&#25193;&#23637;
-- &#36328;&#24179;&#21488;&#38382;&#39064;&#25490;&#26597;&#34917;&#20805;
-- &#26356;&#22810; Agent &#38598;&#25104;&#31034;&#20363;
-- &#26694;&#26550;&#39118;&#26684;&#27169;&#26495;&#65288;D3 &#39118;&#26684;&#12289;Matplotlib &#39118;&#26684;&#65289;
-- &#22810;&#35821;&#35328;&#32763;&#35793;
+## 按需参考
 
----
+- [安装与迁移](references/setup-and-migration.md)
+- [图形对象、文字与布局](references/mobjects.md)
+- [动画、对象身份与时序](references/animations.md)
+- [相机、3D 与排错](references/advanced.md)
+- [叙事与博客模式](references/blog-patterns.md)
 
-## &#128196; &#24320;&#28304;&#21327;&#35758;
+只读取当前任务需要的参考。完整场景以可执行示例为准，文档不再重复维护同一份示例代码。
 
-MIT &copy; [awesome-skills](https://github.com/awesome-skills)
+## 许可
+
+MIT，见 [LICENSE](LICENSE)。

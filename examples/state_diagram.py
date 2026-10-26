@@ -44,7 +44,7 @@ class SimpleStates(Scene):
         self.play(Create(arrow_ab), Create(arrow_bc))
 
         # Active indicator
-        indicator = Dot(color=YELLOW, radius=0.12)
+        indicator = Circle(color=YELLOW, radius=0.75, stroke_width=3)
         indicator.move_to(state_a)
 
         self.play(FadeIn(indicator))
@@ -78,6 +78,7 @@ class StateWithLabels(Scene):
 
         # Self-loop for retry
         retry_arc = Arc(radius=0.4, start_angle=PI/4, angle=3*PI/2, color=ORANGE)
+        retry_arc.add_tip(tip_length=0.12)
         retry_arc.next_to(loading, UP, buff=0.1)
         retry_label = Text("retry", font_size=12, color=ORANGE).next_to(retry_arc, UP, buff=0.05)
 
@@ -90,77 +91,47 @@ class StateWithLabels(Scene):
 
 
 class LinkedListMismatch(Scene):
-    """
-    Visualize linked list state mismatch (like React Hooks).
-    Shows correct matching vs. broken matching when order changes.
-    """
+    """Position-based state identity breaks when a slot is skipped."""
 
     def construct(self):
-        # === Render 1 ===
-        r1_label = Text("Render 1", font_size=20, color=GRAY)
-        r1_label.to_edge(UP, buff=0.8).shift(LEFT * 4)
-
-        r1_states = VGroup(
+        first = VGroup(
             make_indexed_state("name", 0, GREEN),
             make_indexed_state("age", 1, GREEN),
-            make_indexed_state("effect", 2, PURPLE)
-        ).arrange(RIGHT, buff=1)
-        r1_states.next_to(r1_label, DOWN, buff=0.5).shift(RIGHT * 2)
-
-        # Arrows in list
-        r1_arrows = VGroup(
-            Arrow(r1_states[0].get_right(), r1_states[1].get_left(), buff=0.1, color=GRAY),
-            Arrow(r1_states[1].get_right(), r1_states[2].get_left(), buff=0.1, color=GRAY)
+            make_indexed_state("effect", 2, PURPLE),
         )
-
-        self.play(FadeIn(r1_label))
-        self.play(*[GrowFromCenter(s) for s in r1_states])
-        self.play(*[Create(a) for a in r1_arrows])
-        self.wait(0.5)
-
-        # === Render 2 (broken - skipped name) ===
-        r2_label = Text("Render 2 (skip name)", font_size=20, color=RED)
-        r2_label.shift(DOWN * 1.5 + LEFT * 3)
-
-        r2_states = VGroup(
+        second = VGroup(
             make_indexed_state("age", 0, ORANGE),
-            make_indexed_state("effect", 1, ORANGE)
-        ).arrange(RIGHT, buff=1)
-        r2_states.next_to(r2_label, DOWN, buff=0.5).shift(RIGHT * 2)
-
-        r2_arrow = Arrow(r2_states[0].get_right(), r2_states[1].get_left(), buff=0.1, color=GRAY)
-
-        self.play(FadeIn(r2_label))
-        self.play(*[GrowFromCenter(s) for s in r2_states])
-        self.play(Create(r2_arrow))
-
-        # Wrong matching lines
-        wrong_match_1 = DashedLine(
-            r1_states[0].get_bottom(), r2_states[0].get_top(),
-            color=RED, dash_length=0.1
+            make_indexed_state("effect", 1, ORANGE),
         )
-        wrong_match_2 = DashedLine(
-            r1_states[1].get_bottom(), r2_states[1].get_top(),
-            color=RED, dash_length=0.1
+        for i, state in enumerate(first):
+            state.move_to([3 * (i - 1), 1.8, 0])
+        for i, state in enumerate(second):
+            state.move_to([3 * (i - 1), -2.1, 0])
+
+        first_title = Text("Render 1", font_size=26).to_edge(UP, buff=0.35)
+        second_title = Text("Render 2: skip name", font_size=24, color=ORANGE)
+        second_title.to_edge(LEFT, buff=0.5).set_y(-0.9)
+        first_arrows = VGroup(*[
+            Arrow(first[i][0].get_right(), first[i + 1][0].get_left(), buff=0.1, color=GRAY)
+            for i in range(2)
+        ])
+        second_arrow = Arrow(second[0][0].get_right(), second[1][0].get_left(), buff=0.1, color=GRAY)
+        self.play(FadeIn(first_title), *[FadeIn(state) for state in first])
+        self.play(*[GrowArrow(arrow) for arrow in first_arrows])
+        self.wait(0.5)
+        self.play(FadeIn(second_title), *[FadeIn(state) for state in second], GrowArrow(second_arrow))
+
+        matches = VGroup(*[
+            DashedLine(first[i][0].get_bottom(), second[i][0].get_top(), color=RED)
+            for i in range(2)
+        ])
+        errors = VGroup(
+            Text("slot 0: name → age", font_size=22, color=RED).next_to(matches[0], LEFT, buff=0.2),
+            Text("slot 1: age → effect", font_size=22, color=RED).next_to(matches[1], RIGHT, buff=0.2),
         )
-
-        x1 = Text("✗", font_size=24, color=RED)
-        x1.move_to((r1_states[0].get_center() + r2_states[0].get_center()) / 2 + RIGHT * 0.5)
-        x2 = Text("✗", font_size=24, color=RED)
-        x2.move_to((r1_states[1].get_center() + r2_states[1].get_center()) / 2 + RIGHT * 0.5)
-
-        err1 = Text("name→age", font_size=12, color=RED).next_to(x1, RIGHT, buff=0.1)
-        err2 = Text("age→effect", font_size=12, color=RED).next_to(x2, RIGHT, buff=0.1)
-
-        self.play(Create(wrong_match_1), Create(wrong_match_2))
-        self.play(FadeIn(x1, scale=1.5), FadeIn(x2, scale=1.5))
-        self.play(FadeIn(err1), FadeIn(err2))
-
-        # Lost state
-        lost = Text("effect lost!", font_size=16, color=RED)
-        lost.next_to(r1_states[2], DOWN, buff=1.2)
-        lost_arrow = Arrow(r1_states[2].get_bottom(), lost.get_top(), buff=0.1, color=RED)
-
+        lost = Text("slot 2: no match", font_size=22, color=RED).move_to([3, -0.9, 0])
+        lost_arrow = Arrow(first[2][0].get_bottom(), lost.get_top(), buff=0.15, color=RED)
+        self.play(*[Create(line) for line in matches], FadeIn(errors))
         self.play(GrowArrow(lost_arrow), FadeIn(lost))
         self.wait(1.5)
 
@@ -193,21 +164,24 @@ class CyclicStates(Scene):
         )
 
         # Animate cycle
-        dot = Dot(color=YELLOW, radius=0.1).move_to(state_a)
+        dot = Dot(color=YELLOW, radius=0.1).move_to(state_a[0].get_bottom() + UP * 0.18)
         self.play(FadeIn(dot))
 
         # Cycle through
         for _ in range(2):
+            self.play(dot.animate.move_to(ab_arrow.get_start()), run_time=0.2)
             self.play(MoveAlongPath(dot, ab_arrow.copy()), run_time=0.5)
-            dot.move_to(state_b)
+            self.play(dot.animate.move_to(state_b[0].get_bottom() + UP * 0.18), run_time=0.2)
             self.wait(0.2)
 
+            self.play(dot.animate.move_to(bc_arrow.get_start()), run_time=0.2)
             self.play(MoveAlongPath(dot, bc_arrow.copy()), run_time=0.5)
-            dot.move_to(state_c)
+            self.play(dot.animate.move_to(state_c[0].get_bottom() + UP * 0.18), run_time=0.2)
             self.wait(0.2)
 
+            self.play(dot.animate.move_to(ca_arrow.get_start()), run_time=0.2)
             self.play(MoveAlongPath(dot, ca_arrow.copy()), run_time=0.5)
-            dot.move_to(state_a)
+            self.play(dot.animate.move_to(state_a[0].get_bottom() + UP * 0.18), run_time=0.2)
             self.wait(0.2)
 
         self.wait(1)

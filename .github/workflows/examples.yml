@@ -1,0 +1,36 @@
+name: Manim examples
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: astral-sh/setup-uv@v10.3.2
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Native text and rendering dependencies
+        run: sudo apt-get update && sudo apt-get install -y libcairo2-dev libpango1.0-dev pkg-config fonts-dejavu-core
+      - name: Optional TeX backend on Python 3.13
+        if: matrix.python == '3.13'
+        run: sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended dvisvgm
+      - run: uv sync --locked --extra typst
+      - run: uv run python -m unittest discover -s tests -v
+      - name: Render examples
+        run: |
+          if [ "${{ matrix.python }}" = "3.13" ]; then
+            uv run python scripts/smoke.py --include-typst --include-tex
+          else
+            uv run python scripts/smoke.py --include-typst
+          fi
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: render-evidence-python-${{ matrix.python }}
+          path: verification/
