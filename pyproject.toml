@@ -1,0 +1,12 @@
+[project]
+name = "manim-skill-examples"
+version = "2.0.0"
+description = "Executable examples and checks for the Manim agent skill"
+requires-python = ">=3.11"
+dependencies = ["manim>=0.22,<0.23"]
+
+[project.optional-dependencies]
+typst = ["manim[typst]>=0.22,<0.23"]
+
+[tool.uv]
+package = false

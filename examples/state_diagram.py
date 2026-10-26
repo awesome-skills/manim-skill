@@ -198,16 +198,19 @@ class CyclicStates(Scene):
 
         # Cycle through
         for _ in range(2):
+            self.play(dot.animate.move_to(ab_arrow.get_start()), run_time=0.2)
             self.play(MoveAlongPath(dot, ab_arrow.copy()), run_time=0.5)
-            dot.move_to(state_b)
+            self.play(dot.animate.move_to(state_b), run_time=0.2)
             self.wait(0.2)
 
+            self.play(dot.animate.move_to(bc_arrow.get_start()), run_time=0.2)
             self.play(MoveAlongPath(dot, bc_arrow.copy()), run_time=0.5)
-            dot.move_to(state_c)
+            self.play(dot.animate.move_to(state_c), run_time=0.2)
             self.wait(0.2)
 
+            self.play(dot.animate.move_to(ca_arrow.get_start()), run_time=0.2)
             self.play(MoveAlongPath(dot, ca_arrow.copy()), run_time=0.5)
-            dot.move_to(state_a)
+            self.play(dot.animate.move_to(state_a), run_time=0.2)
             self.wait(0.2)
 
         self.wait(1)

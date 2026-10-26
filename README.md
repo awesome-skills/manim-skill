@@ -1,214 +1,98 @@
-<p align="center">
-  <img src="./assets/banner.svg" alt="Manim Skill Banner" width="100%" />
-</p>
+# Manim Skill
 
-<div align="center">
+Create explanatory animations with an AI coding agent and **Manim Community Edition**. Describe the concept; the skill guides scene authoring, low-quality previews, visual inspection, and final delivery.
 
-<h3>AI-powered technical animation with ManimCE</h3>
+[简体中文](README.zh-CN.md) · [Skill instructions](SKILL.md) · [Manim 0.22 documentation](https://docs.manim.community/en/v0.22.0/)
 
-<p>
-  <a href="https://github.com/awesome-skills/manim-skill/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-22c55e?style=flat-square" alt="License: MIT"/>
-  </a>
-  <img src="https://img.shields.io/badge/Manim-Community%20Edition-58b86b?style=flat-square&logo=python&logoColor=white" alt="ManimCE"/>
-  <img src="https://img.shields.io/badge/Skill-Agent%20Agnostic-0ea5e9?style=flat-square" alt="Agent Agnostic"/>
-  <img src="https://img.shields.io/badge/Lines-3%2C100%2B-7c3aed?style=flat-square" alt="3100+ lines"/>
-  <img src="https://img.shields.io/badge/Format-SKILL.md-f59e0b?style=flat-square" alt="SKILL.md"/>
-  <img src="https://img.shields.io/badge/PRs-Welcome-ec4899?style=flat-square" alt="PRs Welcome"/>
-</p>
+## Scope
 
-<p>
-  English &middot; <a href="./README.zh-CN.md">&#31616;&#20307;&#20013;&#25991;</a>
-</p>
+Use for mathematical explanations, algorithm animations, animated technical diagrams, videos, and GIFs. A static chart or an interactive website does not need Manim by default. This skill targets **ManimCE 0.22.x and Python 3.11+**; it preserves an existing project's engine/version rather than silently migrating it.
 
-</div>
+## Install the skill
 
----
-
-## What is this?
-
-**manim-skill** is a reusable skill package for creating technical animations with [ManimCE](https://www.manim.community/). It works as a **Codex native skill** and as an **agent-agnostic playbook** for any AI coding assistant that reads markdown.
-
-You describe the animation you want. The agent handles the rest &mdash; pattern selection, code generation, rendering, troubleshooting, and iteration.
-
----
-
-## &#9889; Agent Capabilities
-
-When provided with `SKILL.md` and relevant `references/` docs, AI agents can autonomously:
-
-| Step | What the agent does |
-|------|---------------------|
-| **1. Pattern selection** | Choose the right animation type (bars, graphs, diagrams, 3D, camera moves) |
-| **2. Code generation** | Write correct ManimCE scene code from your description |
-| **3. Rendering** | Execute render commands with appropriate quality flags |
-| **4. Troubleshooting** | Fix FFmpeg, TeX, font, and environment issues automatically |
-| **5. Iteration** | Refine timing, colors, and layout until the output matches your intent |
-
----
-
-## &#127912; Supported Agents & IDEs
-
-<p>
-  <img src="https://img.shields.io/badge/Claude%20Code-Supported-111827?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code" />
-  <img src="https://img.shields.io/badge/Cursor-Supported-111827?style=flat-square&logo=cursor&logoColor=white" alt="Cursor" />
-  <img src="https://img.shields.io/badge/Codex%20CLI-Supported-111927?style=flat-square&logo=openai&logoColor=white" alt="Codex CLI" />
-  <img src="https://img.shields.io/badge/Gemini%20CLI-Supported-111827?style=flat-square&logo=google&logoColor=white" alt="Gemini CLI" />
-  <img src="https://img.shields.io/badge/Qwen%20Code-Supported-111827?style=flat-square&logo=alibabacloud&logoColor=white" alt="Qwen Code" />
-  <img src="https://img.shields.io/badge/Cline-Supported-111827?style=flat-square&logo=visualstudiocode&logoColor=white" alt="Cline" />
-</p>
-
-| Agent / IDE | How to use |
-|---|---|
-| **Codex** | Install as a native skill folder (`~/.codex/skills/...`) |
-| **Claude Code / Cursor / Cline** | Use `SKILL.md` + `references/` as project instructions or prompt context |
-| **Other agents** | Use this repository as a structured Manim playbook |
-
----
-
-## &#128293; Quick Start
-
-### Install
-
-<details>
-<summary><strong>Option 1: Codex native skill</strong></summary>
-
-```bash
-# macOS / Linux
-python ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo awesome-skills/manim-skill \
-  --path . \
-  --name manim-skill
-```
-
-```powershell
-# Windows PowerShell
-python $HOME\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py `
-  --repo awesome-skills/manim-skill `
-  --path . `
-  --name manim-skill
-```
-
-</details>
-
-<details>
-<summary><strong>Option 2: Standalone playbook</strong></summary>
+Copy this repository's skill folder into the skill directory used by your agent, or use an installer that accepts a GitHub repository root:
 
 ```bash
 git clone https://github.com/awesome-skills/manim-skill.git
-cd manim-skill
 ```
 
-Then feed `SKILL.md` and relevant `references/` files into your agent workflow.
+Install the folder containing `SKILL.md`, `references/`, `examples/`, and `scripts/`. Codex discovers `~/.codex/skills/manim-skill/SKILL.md`; other agents can use the same Markdown instructions. If you already use a shared skill directory, install there and retain your existing agent symlinks. Installing the skill does **not** install the rendering environment.
 
-</details>
+Example request:
 
-### Render
+> Use Manim to explain a three-step validation pipeline. Make a readable 10-second MP4, preview it at low quality, inspect the intermediate states, and return the editable Python scene and final video.
+
+## Rendering environment
+
+Follow the [official native dependency instructions](https://docs.manim.community/en/stable/installation.html), then run from the cloned repository:
 
 ```bash
-# Fast preview (480p)
-uv run --with manim manim -pql examples/quicksort.py QuickSortBars
-
-# GIF export (720p)
-uv run --with manim manim -qm --format=gif examples/quicksort.py QuickSortBars
-
-# 4K showcase (2160p60)
-manim -qk examples/quicksort.py QuickSortBars
+uv sync --python 3.13 --extra typst
+uv run python -m manim --version
+uv run python -m manim checkhealth
+uv run python -m manim render -ql examples/basic_scene.py BasicScene
 ```
 
----
+The project constrains Manim to `>=0.22,<0.23`; `uv.lock` pins the resolved environment for reproducibility. Typst is optional. Install without `--extra typst` for non-Typst scenes. `MathExample` additionally needs an external TeX toolchain; the other basic examples use Pango text.
 
-## &#127916; Preview
+PyAV handles normal encoding, so a standalone FFmpeg executable is not a core Manim requirement. Native text dependencies and fonts still matter. ManimCE and ManimGL are different engines; their imports and APIs are not interchangeable.
 
-<p align="center">
-  <video src="./assets/quicksort-preview.mp4" controls muted loop playsinline width="88%">
-    Your browser does not support the video tag.
-  </video>
-</p>
+## Examples
 
-<p align="center">
-  <a href="./assets/quicksort-preview.mp4">&#9654;&#65039; Download preview video</a> &middot;
-  <a href="./assets/quicksort-preview.png">&#128247; Static fallback image</a>
-</p>
+| File | Scenes / purpose |
+|---|---|
+| `examples/basic_scene.py` | Basic geometry, syntax-highlighted code, optional TeX math, TeX-free graph |
+| `examples/flowchart.py` | Linear/branching processes and progress highlighting |
+| `examples/state_diagram.py` | State transitions, index mismatch, cycles |
+| `examples/quicksort.py` | Computed Lomuto-partition events and sorting animation |
+| `examples/typst_scene.py` | Optional formula typesetting without a TeX distribution |
+| `examples/advanced_scene.py` | Cairo camera focus and 3D orbit |
 
----
+The quicksort showcase is longer than a short blog loop; choose a smaller input or a narrower explanation for a short embed.
 
-## &#128218; Content Overview
+## Output
 
-| File | Lines | Description |
-|------|-------|-------------|
-| **SKILL.md** | ~380 | Core instructions &mdash; loaded on skill activation |
-| **references/mobjects.md** | ~860 | Mobject types, positioning, styling, grouping |
-| **references/animations.md** | ~620 | Animation classes, timing, chaining, transforms |
-| **references/advanced.md** | ~890 | 3D scenes, camera, ValueTracker, updaters, custom anims |
-| **references/blog-patterns.md** | ~410 | Blog-ready patterns: hero banners, step-by-step, comparisons |
-
-**Total: 3,100+ lines** of ManimCE guidance, loaded progressively per topic.
-
----
-
-## &#128196; Examples
-
-| File | What it demonstrates |
-|------|---------------------|
-| `examples/basic_scene.py` | Minimal scene setup, shapes, text, basic animations |
-| `examples/quicksort.py` | Algorithm visualization with bar charts and step labels |
-| `examples/flowchart.py` | Flowchart construction with arrows and styled boxes |
-| `examples/state_diagram.py` | State machine with transitions and highlighting |
-
----
-
-## &#128193; Repository Structure
-
-```
-manim-skill/
-|
-+-- SKILL.md                     # Core skill instructions (~380 lines)
-+-- README.md                    # English documentation
-+-- README.zh-CN.md              # Chinese documentation
-|
-+-- examples/                    # Ready-to-run animation scenes
-|   +-- basic_scene.py           # Minimal hello-world scene
-|   +-- quicksort.py             # Algorithm bar chart animation
-|   +-- flowchart.py             # Flowchart with arrows and boxes
-|   +-- state_diagram.py         # State machine visualization
-|
-+-- references/                  # Progressive reference guides
-|   +-- mobjects.md              # Shapes, text, tables, graphs, grouping
-|   +-- animations.md            # Create, Transform, Fade, timing control
-|   +-- advanced.md              # 3D, camera, ValueTracker, updaters
-|   +-- blog-patterns.md         # Blog-ready animation recipes
-|
-+-- assets/                      # Media assets
-    +-- banner.svg               # Repository banner
-    +-- quicksort-preview.mp4    # Preview video
-    +-- quicksort-preview.png    # Static fallback image
+```bash
+# Final video
+uv run python -m manim render -qh --format mp4 examples/basic_scene.py BasicScene
+# Animated GIF
+uv run python -m manim render -qm --format gif examples/basic_scene.py BasicScene
+# Last-frame PNG (does not verify the full timeline)
+uv run python -m manim render -ql --format png examples/basic_scene.py BasicScene
+# Optional Typst formula
+uv run python -m manim render -ql examples/typst_scene.py TypstFormula
 ```
 
----
+Add `-p` to open the completed artifact. In 0.22 this differs from the OpenGL `--live-preview` window. See [migration notes](references/setup-and-migration.md) for removed flags, output selection, and configuration timing.
 
-## &#10024; Key Highlights
+## Development and verification
 
-- **ManimCE v0.19+** &mdash; No external FFmpeg needed (uses pyav internally)
-- **Progressive loading** &mdash; Only load the reference docs relevant to your task
-- **Windows-friendly** &mdash; PowerShell setup, `uv run` one-liners, font fallback tips
-- **TeX-free fallback** &mdash; Numeric labels and `Text()` alternatives when LaTeX is unavailable
-- **Production-ready** &mdash; Quality presets from 480p preview to 4K60 showcase
+```bash
+uv sync --locked --extra typst
+uv run python -m unittest discover -s tests -v
+uv run python scripts/smoke.py --include-typst
+# Optional, when TeX is installed:
+uv run python scripts/smoke.py --include-tex --include-typst
+# Focused iteration:
+uv run python scripts/smoke.py --scene BasicScene --scene CodeExample
+```
 
----
+The runner renders every selected scene as a 640×360 / 15 fps Cairo MP4, decodes every frame, checks positive duration and dimensions, and writes per-scene logs/contact sheets plus `verification/report.json`. It records the interpreter, Manim version, source hashes, commands, failures, and optional-backend skips. Generated evidence is ignored by Git. Use a new output directory when comparing runs.
 
-## &#129309; Contributing
+**Rendering is not visual approval.** Inspect contact sheets for missing glyphs, clipping, overlap, and wrong states; play the videos to evaluate timing and continuity. The report deliberately leaves `visual_review` as `not performed`; record actual review separately. Tests also check quicksort data invariants that an attractive video alone cannot establish.
 
-Contributions are welcome! Priority areas:
+CI renders with Typst on Python 3.11 and 3.13, additionally installs TeX for `MathExample` on 3.13, and uploads evidence even on failure. OpenGL and platform-specific font coverage require separate checks; Cairo results do not establish those claims.
 
-- New algorithm animation templates
-- Better cross-platform troubleshooting
-- More agent integration examples
-- Framework-specific patterns (D3-style, Matplotlib-style)
-- Translations
+## Reference layout
 
----
+- [Setup and migration](references/setup-and-migration.md): environment, 0.20–0.22 changes, math backends, output flags.
+- [Mobjects](references/mobjects.md): text, formulas, code, layout, constructor pitfalls.
+- [Animations](references/animations.md): identity, timing, paths, updaters.
+- [Advanced](references/advanced.md): camera, 3D, programmatic rendering, diagnosis.
+- [Storytelling](references/blog-patterns.md): choose a progression and review the explanation.
 
-## &#128196; License
+References are loaded by task, not all at once. Runnable examples are the source of truth for complete patterns; documentation avoids maintaining duplicate copies of those scenes.
 
-MIT &copy; [awesome-skills](https://github.com/awesome-skills)
+## License
+
+MIT. See [LICENSE](LICENSE).
