@@ -71,7 +71,7 @@ def main():
             reason = None
             if name == "MathExample" and not args.include_tex:
                 reason = "optional TeX backend not requested"
-            if name == "TypstFormula" and not args.include_typst:
+            if name in {"TypstFormula", "TypstDerivation"} and not args.include_typst:
                 reason = "optional Typst backend not requested"
             if reason:
                 report["skipped"].append({"scene": name, "reason": reason})

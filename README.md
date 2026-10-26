@@ -46,6 +46,7 @@ PyAV handles normal encoding, so a standalone FFmpeg executable is not a core Ma
 | `examples/state_diagram.py` | State transitions, index mismatch, cycles |
 | `examples/quicksort.py` | Computed Lomuto-partition events and sorting animation |
 | `examples/typst_scene.py` | Optional formula typesetting without a TeX distribution |
+| `examples/typst_derivation.py` | Optional Typst derivation: explicit term identity, stable equals sign, subtraction and cancellation |
 | `examples/advanced_scene.py` | Cairo camera focus and 3D orbit |
 | `examples/visual_story.py` | Original head-to-tail vector story: composition, correspondence, staged revelation; no TeX |
 
@@ -96,7 +97,7 @@ CI renders with Typst on Python 3.11 and 3.13, additionally installs TeX for `Ma
 
 References are loaded by task, not all at once. Runnable examples are the source of truth for complete patterns; documentation avoids maintaining duplicate copies of those scenes.
 
-[Project research and adoption decisions](docs/research/animation-projects-2026-10-26.md) records which upstream ideas we adopted or deferred.
+[Project research and adoption decisions](docs/research/animation-projects-2026-10-26.md) records which upstream ideas we adopted or deferred. See also [formula and preview mechanisms](docs/research/formula-and-preview-projects-2026-10-26.md).
 
 ## License
 

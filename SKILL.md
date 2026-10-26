@@ -54,7 +54,7 @@ python -m manim render -ql --format png scene.py Explain
 | Labels, formulas, code, axes, graphs, layout | [mobjects](references/mobjects.md); `examples/basic_scene.py` |
 | Transforms, timing, live values, object identity | [animations](references/animations.md) |
 | Camera, 3D, updaters, programmatic rendering | [advanced](references/advanced.md); `examples/advanced_scene.py` |
-| Formula without a TeX installation | [mobjects: math backends](references/mobjects.md#math-backends); `examples/typst_scene.py` |
+| Formula without a TeX installation, including labeled derivations | [mobjects: math backends](references/mobjects.md#math-backends); `examples/typst_scene.py`, `examples/typst_derivation.py` |
 | Process, state, comparison, algorithm explanation | [storytelling patterns](references/blog-patterns.md); `examples/flowchart.py`, `examples/state_diagram.py`, `examples/quicksort.py` |
 | Installation or older Manim code | [setup and migration](references/setup-and-migration.md) |
 

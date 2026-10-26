@@ -46,6 +46,7 @@ uv run python -m manim render -ql examples/basic_scene.py BasicScene
 | `examples/state_diagram.py` | 状态转换、位置索引错配、循环 |
 | `examples/quicksort.py` | 根据真实算法事件生成的快速排序动画 |
 | `examples/typst_scene.py` | 无需 TeX 发行版的可选公式示例 |
+| `examples/typst_derivation.py` | 可选 Typst 推导：显式区分重复项，固定等号，展示两边减项与消去 |
 | `examples/advanced_scene.py` | Cairo 相机聚焦和 3D 环绕 |
 | `examples/visual_story.py` | 原创向量首尾相接示例：构图、对象对应、逐步揭示，无需 TeX |
 
@@ -92,7 +93,7 @@ CI 在 Python 3.11 和 3.13 上渲染普通示例及 Typst 示例，并在 3.13 
 
 只读取当前任务需要的参考。完整场景以可执行示例为准，文档不再重复维护同一份示例代码。
 
-[项目调研与采用取舍](docs/research/animation-projects-2026-10-26.md)记录了这轮调研采用或暂缓的方向。
+[项目调研与采用取舍](docs/research/animation-projects-2026-10-26.md)记录了这轮调研采用或暂缓的方向。另见[公式与预览机制调研](docs/research/formula-and-preview-projects-2026-10-26.md)。
 
 ## 许可
 
