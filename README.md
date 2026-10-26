@@ -47,6 +47,7 @@ PyAV handles normal encoding, so a standalone FFmpeg executable is not a core Ma
 | `examples/quicksort.py` | Computed Lomuto-partition events and sorting animation |
 | `examples/typst_scene.py` | Optional formula typesetting without a TeX distribution |
 | `examples/advanced_scene.py` | Cairo camera focus and 3D orbit |
+| `examples/visual_story.py` | Original head-to-tail vector story: composition, correspondence, staged revelation; no TeX |
 
 The quicksort showcase is longer than a short blog loop; choose a smaller input or a narrower explanation for a short embed.
 
@@ -85,6 +86,8 @@ CI renders with Typst on Python 3.11 and 3.13, additionally installs TeX for `Ma
 
 ## Reference layout
 
+- [Visual direction](references/visual-direction.md): shot design, hierarchy, choreography and visual iteration; includes primary study references.
+
 - [Setup and migration](references/setup-and-migration.md): environment, 0.20–0.22 changes, math backends, output flags.
 - [Mobjects](references/mobjects.md): text, formulas, code, layout, constructor pitfalls.
 - [Animations](references/animations.md): identity, timing, paths, updaters.
@@ -92,6 +95,8 @@ CI renders with Typst on Python 3.11 and 3.13, additionally installs TeX for `Ma
 - [Storytelling](references/blog-patterns.md): choose a progression and review the explanation.
 
 References are loaded by task, not all at once. Runnable examples are the source of truth for complete patterns; documentation avoids maintaining duplicate copies of those scenes.
+
+[Project research and adoption decisions](docs/research/animation-projects-2026-10-26.md) records which upstream ideas we adopted or deferred.
 
 ## License
 

@@ -47,6 +47,7 @@ uv run python -m manim render -ql examples/basic_scene.py BasicScene
 | `examples/quicksort.py` | 根据真实算法事件生成的快速排序动画 |
 | `examples/typst_scene.py` | 无需 TeX 发行版的可选公式示例 |
 | `examples/advanced_scene.py` | Cairo 相机聚焦和 3D 环绕 |
+| `examples/visual_story.py` | 原创向量首尾相接示例：构图、对象对应、逐步揭示，无需 TeX |
 
 快速排序是较长的展示示例，不是所有博客动画的默认时长。短视频应减少输入规模或聚焦一个步骤。
 
@@ -81,6 +82,8 @@ CI 在 Python 3.11 和 3.13 上渲染普通示例及 Typst 示例，并在 3.13 
 
 ## 按需参考
 
+- [视觉导演](references/visual-direction.md)：镜头设计、视觉层次、运动编排与视觉迭代，附一手研究参考。
+
 - [安装与迁移](references/setup-and-migration.md)
 - [图形对象、文字与布局](references/mobjects.md)
 - [动画、对象身份与时序](references/animations.md)
@@ -88,6 +91,8 @@ CI 在 Python 3.11 和 3.13 上渲染普通示例及 Typst 示例，并在 3.13 
 - [叙事与博客模式](references/blog-patterns.md)
 
 只读取当前任务需要的参考。完整场景以可执行示例为准，文档不再重复维护同一份示例代码。
+
+[项目调研与采用取舍](docs/research/animation-projects-2026-10-26.md)记录了这轮调研采用或暂缓的方向。
 
 ## 许可
 
