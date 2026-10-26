@@ -82,7 +82,7 @@ The cell magic is for notebooks, not Python files. Keep generated media out of s
 
 ## Performance and reproducibility
 
-Use a low quality preview before production resolution. Choose `--seed` for random examples. Keep deterministic input data when comparing renders. Manim caches partial movies; `manim cache clear` is the 0.22 cache command. Use `--disable_caching` when diagnosing a stale render, not as an unconditional production setting.
+Use a low quality preview before production resolution. Choose `--seed` for random examples. Keep deterministic input data when comparing renders. Manim caches partial movies; `manim cache clear scene.py SceneName` is the 0.22 cache command. Use `--disable_caching` when diagnosing a stale render, not as an unconditional production setting.
 
 Parallel encoding (`--max-inflight-encoders`, `--encoder-queue-size`) trades memory for overlap with rendering. Measure first. Avoid recommending large values on every task.
 

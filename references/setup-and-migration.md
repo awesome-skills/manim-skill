@@ -59,7 +59,7 @@ Migration from older switches:
 | `-i` / `--save_as_gif` | `--format gif` |
 | `save_last_frame` in config file | `format=png`; CLI `-s` still works |
 | `--force_window` | `--live-preview` |
-| `--flush_cache` | `manim cache clear` |
+| `--flush_cache` | `manim cache clear scene.py SceneName` |
 | `--custom_folders` / `[custom_folders]` | Set individual output directory options under `[CLI]` |
 
 Do not combine replacement formats as if they were independent flags. Use a separate render for a second artifact. `--dry_run` is still available; it does not prove encoding or visual quality.
