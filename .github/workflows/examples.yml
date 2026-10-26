@@ -6,13 +6,13 @@ on:
 
 jobs:
   render:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         python: ['3.11', '3.13']
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v6
+      - uses: actions/checkout@v7.0.1
+      - uses: astral-sh/setup-uv@v10.3.2
         with:
           python-version: ${{ matrix.python }}
       - name: Native text and rendering dependencies
@@ -29,7 +29,7 @@ jobs:
           else
             uv run python scripts/smoke.py --include-typst
           fi
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
           name: render-evidence-python-${{ matrix.python }}
