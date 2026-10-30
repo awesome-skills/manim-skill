@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-29",
+  "screenings": [
+    {
+      "repo": "codrops/RepetitiveTypography",
+      "content_evidence": {
+        "sha256": "5aa360cacec23704727798420de1200cae3b5d4deee976d2a1420779dd419ab4",
+        "characters": 919,
+        "source_url": "https://api.github.com/repos/codrops/RepetitiveTypography/contents/README.md",
+        "local_archive": "verification/research-source-archive-20261029/kinetic-type-2026-10-29.json",
+        "json_pointer": "/screenings/0/content"
+      },
+      "title": "README.md",
+      "modified_date": null,
+      "url": "https://api.github.com/repos/codrops/RepetitiveTypography/contents/README.md",
+      "display_url": "https://api.github.com/repos/codrops/RepetitiveTypography/contents/README.md",
+      "display_title": "README.md",
+      "structuredContent": {
+        "title": "README.md",
+        "content_evidence": {
+          "sha256": "5aa360cacec23704727798420de1200cae3b5d4deee976d2a1420779dd419ab4",
+          "characters": 919,
+          "source_url": "https://api.github.com/repos/codrops/RepetitiveTypography/contents/README.md",
+          "local_archive": "verification/research-source-archive-20261029/kinetic-type-2026-10-29.json",
+          "json_pointer": "/screenings/0/structuredContent/content"
+        },
+        "display_url": "https://api.github.com/repos/codrops/RepetitiveTypography/contents/README.md"
+      }
+    },
+    {
+      "repo": "pablostanley/typexperiments",
+      "content_evidence": {
+        "sha256": "d2055261d1a31c74470bc401cc9db8aca4efacb9fa3f065e8472143a604e0306",
+        "characters": 2103,
+        "source_url": "https://api.github.com/repos/pablostanley/typexperiments/contents/README.md",
+        "local_archive": "verification/research-source-archive-20261029/kinetic-type-2026-10-29.json",
+        "json_pointer": "/screenings/1/content"
+      },
+      "title": "README.md",
+      "modified_date": null,
+      "url": "https://api.github.com/repos/pablostanley/typexperiments/contents/README.md",
+      "display_url": "https://api.github.com/repos/pablostanley/typexperiments/contents/README.md",
+      "display_title": "README.md",
+      "structuredContent": {
+        "title": "README.md",
+        "content_evidence": {
+          "sha256": "d2055261d1a31c74470bc401cc9db8aca4efacb9fa3f065e8472143a604e0306",
+          "characters": 2103,
+          "source_url": "https://api.github.com/repos/pablostanley/typexperiments/contents/README.md",
+          "local_archive": "verification/research-source-archive-20261029/kinetic-type-2026-10-29.json",
+          "json_pointer": "/screenings/1/structuredContent/content"
+        },
+        "display_url": "https://api.github.com/repos/pablostanley/typexperiments/contents/README.md"
+      }
+    },
+    {
+      "repo": "berteh/synfig-import-labels",
+      "content_evidence": {
+        "sha256": "07e44f71ef6a66db10777d2da6c8218099e384e642cfe7c6f65c053a4926e43e",
+        "characters": 6950,
+        "source_url": "https://api.github.com/repos/berteh/synfig-import-labels/contents/README.md",
+        "local_archive": "verification/research-source-archive-20261029/kinetic-type-2026-10-29.json",
+        "json_pointer": "/screenings/2/content"
+      },
+      "title": "README.md",
+      "modified_date": null,
+      "url": "https://api.github.com/repos/berteh/synfig-import-labels/contents/README.md",
+      "display_url": "https://api.github.com/repos/berteh/synfig-import-labels/contents/README.md",
+      "display_title": "README.md",
+      "structuredContent": {
+        "title": "README.md",
+        "content_evidence": {
+          "sha256": "07e44f71ef6a66db10777d2da6c8218099e384e642cfe7c6f65c053a4926e43e",
+          "characters": 6950,
+          "source_url": "https://api.github.com/repos/berteh/synfig-import-labels/contents/README.md",
+          "local_archive": "verification/research-source-archive-20261029/kinetic-type-2026-10-29.json",
+          "json_pointer": "/screenings/2/structuredContent/content"
+        },
+        "display_url": "https://api.github.com/repos/berteh/synfig-import-labels/contents/README.md"
+      }
+    },
+    {
+      "repo": "encd8/kinetic-typography-javascript",
+      "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}",
+      "error_code": "NOT_FOUND",
+      "error_data": {
+        "message": "Not Found",
+        "documentation_url": "https://docs.github.com/rest/repos/contents#get-repository-content",
+        "status": "404"
+      }
+    }
+  ],
+  "deep": {
+    "content_evidence": {
+      "sha256": "2a00e33df3f645ffb0905ab656209cf3b8c3eb611b6ddf9ad03093bc84d13728",
+      "characters": 10718,
+      "source_url": "https://api.github.com/repos/codrops/RepetitiveTypography/contents/src/js/index.js",
+      "local_archive": "verification/research-source-archive-20261029/kinetic-type-2026-10-29.json",
+      "json_pointer": "/deep/content"
+    },
+    "title": "index.js",
+    "modified_date": null,
+    "url": "https://api.github.com/repos/codrops/RepetitiveTypography/contents/src/js/index.js",
+    "display_url": "https://api.github.com/repos/codrops/RepetitiveTypography/contents/src/js/index.js",
+    "display_title": "index.js",
+    "structuredContent": {
+      "title": "index.js",
+      "content_evidence": {
+        "sha256": "2a00e33df3f645ffb0905ab656209cf3b8c3eb611b6ddf9ad03093bc84d13728",
+        "characters": 10718,
+        "source_url": "https://api.github.com/repos/codrops/RepetitiveTypography/contents/src/js/index.js",
+        "local_archive": "verification/research-source-archive-20261029/kinetic-type-2026-10-29.json",
+        "json_pointer": "/deep/structuredContent/content"
+      },
+      "display_url": "https://api.github.com/repos/codrops/RepetitiveTypography/contents/src/js/index.js"
+    }
+  },
+  "deep_sha": "3c4d6ca70e5ca1112d73d683ee19633f1e17a2e1",
+  "inspection": "Live Codrops demo loaded; final layout and hover state sampled. Full intro timing not evaluated. No images, font assets or code copied."
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "candidate_values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "probe": 8
+  },
+  {
+    "candidate_values": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "probe": 12
+  },
+  {
+    "candidate_values": [
+      13,
+      14,
+      15
+    ],
+    "probe": 14
+  },
+  {
+    "candidate_values": [
+      13
+    ],
+    "probe": 13
+  }
+]

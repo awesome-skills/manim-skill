@@ -1,0 +1,52 @@
+{
+  "artifact": "/Users/tsk/code/manim-skill/verification/vector-craft-20261030/final-media/videos/visual_story/720p30/VectorStory.mp4",
+  "width": 1280,
+  "height": 720,
+  "duration_seconds": 14.933333333333334,
+  "decoded_frames": 448,
+  "bytes": 438148,
+  "video_sha256": "23bdebddc3697ccb49ff463683549f795e1ddc1734a49c9a6deddb2cdfe3e1c8",
+  "contact_sheet": "/Users/tsk/code/manim-skill/verification/vector-craft-20261030/final/contact.png",
+  "samples": [
+    {
+      "requested_seconds": 3.0,
+      "actual_seconds": 3.0,
+      "frame_index": 90,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/vector-craft-20261030/final/frame-000090.png"
+    },
+    {
+      "requested_seconds": 6.0,
+      "actual_seconds": 6.0,
+      "frame_index": 180,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/vector-craft-20261030/final/frame-000180.png"
+    },
+    {
+      "requested_seconds": 11.0,
+      "actual_seconds": 11.0,
+      "frame_index": 330,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/vector-craft-20261030/final/frame-000330.png"
+    },
+    {
+      "requested_seconds": 14.0,
+      "actual_seconds": 14.0,
+      "frame_index": 420,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/vector-craft-20261030/final/frame-000420.png"
+    }
+  ],
+  "contact_preview": {
+    "width": 360,
+    "height": 202,
+    "mode": "exact width"
+  },
+  "sampling": "displayed frame at requested time (presentation timestamps)",
+  "visual_review": "not performed",
+  "review_player": "/Users/tsk/code/manim-skill/verification/vector-craft-20261030/final/review.html",
+  "source_sha256": "87e357109bd6138470584d7788818ac5f2b0194462b3937dcebf03597c380ac2",
+  "decoded_pixel_sha256": "b10d539bac5ffd126027cb367a92c43977f1dcf0fc77263f1cf0b7d60837480f",
+  "checks": [
+    "Render completed including head-to-tail endpoint assertions.",
+    "Final tuple-derived scene pixels identical to inspected draft across all 448 frames.",
+    "Skill validator and diff check passed."
+  ],
+  "manual_review": "Reviewed 360-pixel contact previews at 3, 6, 11, 14 seconds; no full-speed aesthetic acceptance."
+}

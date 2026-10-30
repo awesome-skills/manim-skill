@@ -1,0 +1,390 @@
+{
+  "date": "2026-10-29",
+  "method": "GitHub repository search, repository metadata, README screening; selected source/doc inspection. No upstream engines were executed.",
+  "queries": [
+    "animation engine motion graphics",
+    "programmatic video animation",
+    "manim animation",
+    "animation timeline editor",
+    "JAnim",
+    "reactive-manim",
+    "manim skill",
+    "procedural animation python"
+  ],
+  "repositories": [
+    {
+      "repository": "3b1b/manim",
+      "url": "https://github.com/3b1b/manim",
+      "branch": "master",
+      "license_metadata": "MIT",
+      "description": "Animation engine for explanatory math videos",
+      "readme_url": "https://github.com/3b1b/manim/blob/master/README.md",
+      "readme_blob_sha": "fdbcfd7d98b9a9d99a885a24c1f8755d9ef17898",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "3b1b/videos",
+      "url": "https://github.com/3b1b/videos",
+      "branch": "master",
+      "license_metadata": "NOASSERTION",
+      "description": "Code for the manim-generated scenes used in 3blue1brown videos",
+      "readme_url": "https://github.com/3b1b/videos/blob/master/README.md",
+      "readme_blob_sha": "4d33a9411f8dd3e1bb01115de366f8dbc438e59a",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "ManimCommunity/manim",
+      "url": "https://github.com/ManimCommunity/manim",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "A community-maintained Python framework for creating mathematical animations. ",
+      "readme_url": "https://github.com/ManimCommunity/manim/blob/main/README.md",
+      "readme_blob_sha": "2d272267cd18839334c9768eee28c940512169e5",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "jkjkil4/JAnim",
+      "url": "https://github.com/jkjkil4/JAnim",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "Programmatic animation engine for creating precise and smooth animations with real-time feedback",
+      "readme_url": "https://github.com/jkjkil4/JAnim/blob/main/README.md",
+      "readme_blob_sha": "8dc3da8bd901644fff19373a317929f7fcff7b4e",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "AzurIce/ranim",
+      "url": "https://github.com/AzurIce/ranim",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "An animation engine implemented in rust, inspired by manim and JAnim",
+      "readme_url": "https://github.com/AzurIce/ranim/blob/main/README.md",
+      "readme_blob_sha": "29c30c61ec3e1be4d18ba5dda9ce1d3926091caa",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "academa-labs/manimgx",
+      "url": "https://github.com/academa-labs/manimgx",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "The animation engine for agents: blazingly fast math and 3D videos with Manim's Python API, on a Rust GPU core.",
+      "readme_url": "https://github.com/academa-labs/manimgx/blob/main/README.md",
+      "readme_blob_sha": "bce9610168d96a30476674b24c8239eae8fd2604",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "maloyan/manim-web",
+      "url": "https://github.com/maloyan/manim-web",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "Mathematical animations for the web — Manim in TypeScript",
+      "readme_url": "https://github.com/maloyan/manim-web/blob/main/README.md",
+      "readme_blob_sha": "dc8403e38b60ddab9a93f24289f754f0a1064eb8",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "motion-canvas/motion-canvas",
+      "url": "https://github.com/motion-canvas/motion-canvas",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "Visualize Your Ideas With Code",
+      "readme_url": "https://github.com/motion-canvas/motion-canvas/blob/main/README.md",
+      "readme_blob_sha": "446c8db1aa77f01ddea44d0ff89ed42aa03cd54b",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "remotion-dev/remotion",
+      "url": "https://github.com/remotion-dev/remotion",
+      "branch": "main",
+      "license_metadata": "NOASSERTION",
+      "description": "🎥      Make videos programmatically with React",
+      "readme_url": "https://github.com/remotion-dev/remotion/blob/main/README.md",
+      "readme_blob_sha": "844e6f537f2b788b6cbf17e9de82e29b14c5a3cb",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "midrender/revideo",
+      "url": "https://github.com/midrender/revideo",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "Create Videos with Code",
+      "readme_url": "https://github.com/midrender/revideo/blob/main/README.md",
+      "readme_blob_sha": "3f5d9cee1158dbd50e66f71f974a875428166943",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "theatre-js/theatre",
+      "url": "https://github.com/theatre-js/theatre",
+      "branch": "main",
+      "license_metadata": "Apache-2.0",
+      "description": "Motion design editor for the web",
+      "readme_url": "https://github.com/theatre-js/theatre/blob/main/README.md",
+      "readme_blob_sha": "6a0cf34cf98e39f2708a99d7d96edfd6b8f7dca4",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "juliangarnier/anime",
+      "url": "https://github.com/juliangarnier/anime",
+      "branch": "master",
+      "license_metadata": "MIT",
+      "description": "JavaScript animation engine",
+      "readme_url": "https://github.com/juliangarnier/anime/blob/master/README.md",
+      "readme_blob_sha": "14403f081e2ba79daaaa68b09fc4bcf04e0ee5f0",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "motiondivision/motion",
+      "url": "https://github.com/motiondivision/motion",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "A modern animation library for React and JavaScript",
+      "readme_url": "https://github.com/motiondivision/motion/blob/main/README.md",
+      "readme_blob_sha": "135269342568a3c3507accd14881c9bde2a7c090",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "mojs/mojs",
+      "url": "https://github.com/mojs/mojs",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "The motion graphics toolbelt for the web",
+      "readme_url": "https://github.com/mojs/mojs/blob/main/README.md",
+      "readme_blob_sha": "68c67a971c5a2332bc14bb9ab16c0c9ffd1aabc5",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "airbnb/lottie-web",
+      "url": "https://github.com/airbnb/lottie-web",
+      "branch": "master",
+      "license_metadata": "MIT",
+      "description": "Render After Effects animations natively on Web, Android and iOS, and React Native. http://airbnb.io/lottie/",
+      "readme_url": "https://github.com/airbnb/lottie-web/blob/master/README.md",
+      "readme_blob_sha": "98de95b9459860384d8c42c129df278d94883ac4",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "rive-app/rive-runtime",
+      "url": "https://github.com/rive-app/rive-runtime",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "Low-level C++ Rive runtime and renderer",
+      "readme_url": "https://github.com/rive-app/rive-runtime/blob/main/README.md",
+      "readme_blob_sha": "536f862e570b9d09f0f0faf32c1760e924271465",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "GraphiteEditor/Graphite",
+      "url": "https://github.com/GraphiteEditor/Graphite",
+      "branch": "master",
+      "license_metadata": "Apache-2.0",
+      "description": "Community-built comprehensive 2D content creation appplication for graphic design, digital art, and interactive real-time motion graphics powered by a node-based procedural graphics engine",
+      "readme_url": "https://github.com/GraphiteEditor/Graphite/blob/master/README.md",
+      "readme_blob_sha": "ad20249f120e9c033efff22604522a2e9ec4d6f4",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "alyssaxuu/motionity",
+      "url": "https://github.com/alyssaxuu/motionity",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "The web-based motion graphics editor for everyone 📽",
+      "readme_url": "https://github.com/alyssaxuu/motionity/blob/main/README.md",
+      "readme_blob_sha": "3669bd38b0e61ab4cad2437510a645b53cac9370",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "excalimate/excalimate",
+      "url": "https://github.com/excalimate/excalimate",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "Create keyframe animations from hand-drawn Excalidraw diagrams — timeline editor, camera animation, sequence reveals, and an MCP server for AI-driven creation with real-time live preview Export as MP4, WebM, GIF, or animated SVG.",
+      "readme_url": "https://github.com/excalimate/excalimate/blob/main/README.md",
+      "readme_blob_sha": "b7f3d31c52d13c7fd47c9fa562e4490ac0b44923",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "philip-murray/reactive-manim",
+      "url": "https://github.com/philip-murray/reactive-manim",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "A component library for ManimCE, supporting component composition and automatic animation. Supports declarative syntax for writing components inspired by React.js. ",
+      "readme_url": "https://github.com/philip-murray/reactive-manim/blob/main/README.md",
+      "readme_blob_sha": "4fb48228a6b43949c44677a75a34a3770e77805e",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "helblazer811/ManimML",
+      "url": "https://github.com/helblazer811/ManimML",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "ManimML is a project focused on providing animations and visualizations of common machine learning concepts with the Manim Community Library.",
+      "readme_url": "https://github.com/helblazer811/ManimML/blob/main/Readme.md",
+      "readme_blob_sha": "bdafea71cc798d59bc3397c95f284b5396d613ac",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "ManimCommunity/manim-voiceover",
+      "url": "https://github.com/ManimCommunity/manim-voiceover",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "Manim plugin for all things voiceover",
+      "readme_url": "https://github.com/ManimCommunity/manim-voiceover/blob/main/README.md",
+      "readme_blob_sha": "fe2806bfd0445dc54d003382d53489136676602b",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "jeertmans/manim-slides",
+      "url": "https://github.com/jeertmans/manim-slides",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "Tool for live presentations using manim",
+      "readme_url": "https://github.com/jeertmans/manim-slides/blob/main/README.md",
+      "readme_blob_sha": "25163e598b4dd6ff922e2f1d42f306c20cbe070c",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "HarleyCoops/Math-To-Manim",
+      "url": "https://github.com/HarleyCoops/Math-To-Manim",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "Create Epic Math and Physics Animations & Study Notes From Text and Images.",
+      "readme_url": "https://github.com/HarleyCoops/Math-To-Manim/blob/main/README.md",
+      "readme_blob_sha": "4d972d04d165658f85734545dec13309c825a84b",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "marcelo-earth/generative-manim",
+      "url": "https://github.com/marcelo-earth/generative-manim",
+      "branch": "main",
+      "license_metadata": "Apache-2.0",
+      "description": "🎨 GPT for video generation ⚡️",
+      "readme_url": "https://github.com/marcelo-earth/generative-manim/blob/main/README.md",
+      "readme_blob_sha": "0df06d98b573bfb0242549e9af070934e65953e5",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "adithya-s-k/manim_skill",
+      "url": "https://github.com/adithya-s-k/manim_skill",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "Agent skills for Manim to create 3Blue1Brown style animations.",
+      "readme_url": "https://github.com/adithya-s-k/manim_skill/blob/main/README.md",
+      "readme_blob_sha": "99aa94d7602ffc8b3130b4f647100ef648545eb1",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "iart-ai/motion-skills",
+      "url": "https://github.com/iart-ai/motion-skills",
+      "branch": "master",
+      "license_metadata": "MIT",
+      "description": "50 open-source skills that teach your AI coding agent to make motion graphics, animation & video — kinetic typography, data-viz, explainers, TikTok/Reels, WebGL, Manim. 14 installable packs. By iart.ai, the AI motion agent.",
+      "readme_url": "https://github.com/iart-ai/motion-skills/blob/master/README.md",
+      "readme_blob_sha": "b90b4cd33849477623ef59f21fd34db6b2832b67",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "iart-ai/manim-skills",
+      "url": "https://github.com/iart-ai/manim-skills",
+      "branch": "main",
+      "license_metadata": "MIT",
+      "description": "Manim (math animation) skills for AI coding agents — animate equations, plot functions, and render 3Blue1Brown-style explainers to MP4 with Manim Community Edition.",
+      "readme_url": "https://github.com/iart-ai/manim-skills/blob/main/README.md",
+      "readme_blob_sha": "5e7223d666d238065b08a0a2b17e0318e33e56a6",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "Elteoremadebeethoven/AnimationsWithManim",
+      "url": "https://github.com/Elteoremadebeethoven/AnimationsWithManim",
+      "branch": "master",
+      "license_metadata": "not detected",
+      "description": " Animation course with Manim",
+      "readme_url": "https://github.com/Elteoremadebeethoven/AnimationsWithManim/blob/master/README.md",
+      "readme_blob_sha": "76deca75cb77e125d0a9996d7cb64883dde17565",
+      "readme_reviewed": true
+    },
+    {
+      "repository": "jkjkil4/videos",
+      "url": "https://github.com/jkjkil4/videos",
+      "branch": "main",
+      "license_metadata": "not detected",
+      "description": "janim code of videos",
+      "readme_url": "https://github.com/jkjkil4/videos/blob/main/README.md",
+      "readme_blob_sha": "e45ca91ed67288ca4c9083cb573cbaa35197e0e4",
+      "readme_reviewed": true
+    }
+  ],
+  "inspected_files": [
+    {
+      "repository": "motion-canvas/motion-canvas",
+      "path": "packages/core/src/flow/sequence.ts",
+      "url": "https://github.com/motion-canvas/motion-canvas/blob/main/packages/core/src/flow/sequence.ts",
+      "blob_sha": "853e6bcea82ba8842409f3747bb619f40b542052"
+    },
+    {
+      "repository": "motion-canvas/motion-canvas",
+      "path": "packages/docs/docs/getting-started/layouts.mdx",
+      "url": "https://github.com/motion-canvas/motion-canvas/blob/main/packages/docs/docs/getting-started/layouts.mdx",
+      "blob_sha": "04134989138f4a1d66cbfba66036263936e90f9c"
+    },
+    {
+      "repository": "juliangarnier/anime",
+      "path": "src/utils/stagger.js",
+      "url": "https://github.com/juliangarnier/anime/blob/master/src/utils/stagger.js",
+      "blob_sha": "ce12a8066ab8ab5a0da3104df22c237614de4123"
+    },
+    {
+      "repository": "motiondivision/motion",
+      "path": "dev/html/public/animate-layout/shared-element-basic.html",
+      "url": "https://github.com/motiondivision/motion/blob/main/dev/html/public/animate-layout/shared-element-basic.html",
+      "blob_sha": "2cddf73eeee2039633c1d02f2b4df9420f88fc68"
+    },
+    {
+      "repository": "jkjkil4/JAnim",
+      "path": "doc/source/tutorials/sub_timeline.rst",
+      "url": "https://github.com/jkjkil4/JAnim/blob/main/doc/source/tutorials/sub_timeline.rst",
+      "blob_sha": "103077e38285dabc65f76e0a4b212cdc8614377c"
+    },
+    {
+      "repository": "excalimate/excalimate",
+      "path": "skills/animation-patterns/references/stagger-patterns.md",
+      "url": "https://github.com/excalimate/excalimate/blob/main/skills/animation-patterns/references/stagger-patterns.md",
+      "blob_sha": "2918baf2f8c660c2ba108a26edcaf9b47e930056"
+    },
+    {
+      "repository": "philip-murray/reactive-manim",
+      "path": "examples/factoring-square.py",
+      "url": "https://github.com/philip-murray/reactive-manim/blob/main/examples/factoring-square.py",
+      "blob_sha": "05c857b17861791954d5cee8122b3f7e90326ab5"
+    },
+    {
+      "repository": "helblazer811/ManimML",
+      "path": "examples/readme_example/animating_the_forward_pass.py",
+      "url": "https://github.com/helblazer811/ManimML/blob/main/examples/readme_example/animating_the_forward_pass.py",
+      "blob_sha": "c8fbe2b00264282261c0be7c5afb7c852a234bb9"
+    },
+    {
+      "repository": "iart-ai/motion-skills",
+      "path": "tools/verify/README.md",
+      "url": "https://github.com/iart-ai/motion-skills/blob/master/tools/verify/README.md",
+      "blob_sha": "3b0a78352725fab6bba6f4969abe4f29ef6f5487"
+    },
+    {
+      "repository": "academa-labs/manimgx",
+      "path": "examples/linear_maps.py",
+      "url": "https://github.com/academa-labs/manimgx/blob/main/examples/linear_maps.py",
+      "blob_sha": "e728d885c3d466dead55d250831690182305b8fe"
+    },
+    {
+      "repository": "iart-ai/manim-skills",
+      "path": "skills/manim/SKILL.md",
+      "url": "https://github.com/iart-ai/manim-skills/blob/main/skills/manim/SKILL.md",
+      "blob_sha": "4e64f3690af397e2c950cbf43058bedefece2ff9"
+    },
+    {
+      "repository": "helblazer811/ManimML",
+      "path": "Readme.md",
+      "url": "https://github.com/helblazer811/ManimML/blob/main/Readme.md",
+      "blob_sha": "bdafea71cc798d59bc3397c95f284b5396d613ac"
+    }
+  ]
+}

@@ -7,23 +7,23 @@ Run with: manim -pql flowchart.py SimpleFlow
 from manim import *
 
 
-def make_node(label, color=BLUE, width=2, height=1):
+def make_node(label, color=BLUE, width=2, height=1, font_size=20):
     """Create a labeled flowchart node."""
     rect = RoundedRectangle(
         width=width, height=height, corner_radius=0.15,
         fill_color=color, fill_opacity=0.3,
         stroke_color=color, stroke_width=2
     )
-    text = Text(label, font_size=20)
+    text = Text(label, font_size=font_size)
     text.move_to(rect)
     return VGroup(rect, text)
 
 
-def make_diamond(label, color=YELLOW):
+def make_diamond(label, color=YELLOW, font_size=18):
     """Create a decision diamond."""
     diamond = Square(side_length=1.2, color=color, fill_opacity=0.3)
     diamond.rotate(PI / 4)
-    text = Text(label, font_size=18)
+    text = Text(label, font_size=font_size)
     text.move_to(diamond)
     return VGroup(diamond, text)
 
@@ -59,50 +59,74 @@ class SimpleFlow(Scene):
 
 
 class BranchingFlow(Scene):
-    """Flowchart with decision branch."""
+    """Two example requests select mutually exclusive branches of a field check."""
 
     def construct(self):
-        # Start node
-        start = make_node("Request", GREEN).shift(LEFT * 4)
+        ground, ink, neutral = "#15212B", "#E9F1F0", "#59707B"
+        accepted, rejected = "#6BC8A5", "#E5AD64"
+        self.camera.background_color = ground
 
-        # Decision
-        decision = make_diamond("Valid?").shift(LEFT * 1)
+        def label(words, size=30, color=ink):
+            return Text(words, font="sans-serif", warn_missing_font=False,
+                        font_size=size, color=color)
 
-        # Branches
-        yes_node = make_node("Process", BLUE).shift(RIGHT * 2 + UP * 1.5)
-        no_node = make_node("Error", RED).shift(RIGHT * 2 + DOWN * 1.5)
+        heading = label("One request. One branch.", 46).move_to([-6, 2.9, 0], aligned_edge=LEFT)
+        subtitle = label("A small example: is the name field present?", 27, ink).move_to([-6, 2.1, 0], aligned_edge=LEFT)
+        self.add(heading, subtitle)
+        start = make_node("Request", neutral, width=2.1, font_size=29).move_to([-5.05, 0, 0])
+        decision = make_diamond("Name?", neutral, font_size=26).move_to([-2.1, 0, 0])
+        yes_node = make_node("Process", neutral, width=2.1, font_size=29).move_to([1, 1.1, 0])
+        no_node = make_node("Reject", neutral, width=2.1, font_size=29).move_to([1, -1.1, 0])
+        end_node = make_node("Reply", neutral, width=2.1, font_size=29).move_to([4.7, 0, 0])
+        nodes = VGroup(start, decision, yes_node, no_node, end_node)
+        for node, words in zip(nodes, ["Request", "Name?", "Process", "Reject", "Reply"]):
+            node[1].become(label(words, 26 if node is decision else 29).move_to(node[0]))
+        start_arrow = Arrow(start.get_right(), decision.get_left(), buff=.12, color=neutral, stroke_width=2)
+        yes_arrow = Arrow(decision[0].get_top(), yes_node.get_left(), buff=.12, color=neutral, stroke_width=2)
+        no_arrow = Arrow(decision[0].get_bottom(), no_node.get_left(), buff=.12, color=neutral, stroke_width=2)
+        yes_to_end = Arrow(yes_node.get_right(), end_node.get_left()+UP*.24, buff=.12, color=neutral, stroke_width=2)
+        no_to_end = Arrow(no_node.get_right(), end_node.get_left()+DOWN*.24, buff=.12, color=neutral, stroke_width=2)
+        arrows = VGroup(start_arrow, yes_arrow, no_arrow, yes_to_end, no_to_end)
+        yes_label = label("Yes", 27, accepted).move_to([-1.15, 1.43, 0])
+        no_label = label("No", 27, rejected).move_to([-1.15, -1.43, 0])
+        self.play(FadeIn(nodes), *[GrowArrow(a) for a in arrows], FadeIn(yes_label), FadeIn(no_label), run_time=1)
+        self.wait(.7)
 
-        # End node
-        end_node = make_node("Response", PURPLE).shift(RIGHT * 5)
+        def arrive(node, color):
+            self.play(node[0].animate.set_stroke(color, width=3).set_fill(color, opacity=.16), run_time=.25)
 
-        # Arrows
-        start_arrow = Arrow(start.get_right(), decision.get_left(), buff=0.1, color=GRAY)
+        def travel(arrow, color):
+            # The marker represents travel on a connector; processing occurs inside nodes.
+            marker = Dot(arrow.get_start(), radius=.09, color=color)
+            self.play(arrow.animate.set_color(color), FadeIn(marker), run_time=.15)
+            self.play(MoveAlongPath(marker, arrow), run_time=.75)
+            self.play(FadeOut(marker), run_time=.1)
 
-        yes_arrow = Arrow(
-            decision.get_corner(UR), yes_node.get_left(),
-            buff=0.1, color=GREEN
-        )
-        no_arrow = Arrow(
-            decision.get_corner(DR), no_node.get_left(),
-            buff=0.1, color=RED
-        )
-
-        yes_to_end = Arrow(yes_node.get_right(), end_node.get_left() + UP * 0.3, buff=0.1, color=GRAY)
-        no_to_end = Arrow(no_node.get_right(), end_node.get_left() + DOWN * 0.3, buff=0.1, color=GRAY)
-
-        # Labels
-        yes_label = Text("Yes", font_size=14, color=GREEN).next_to(yes_arrow, UL, buff=0.05)
-        no_label = Text("No", font_size=14, color=RED).next_to(no_arrow, DL, buff=0.05)
-
-        # Animate
-        self.play(GrowFromCenter(start))
-        self.play(GrowArrow(start_arrow), GrowFromCenter(decision))
-        self.play(
-            GrowArrow(yes_arrow), FadeIn(yes_label), GrowFromCenter(yes_node),
-            GrowArrow(no_arrow), FadeIn(no_label), GrowFromCenter(no_node)
-        )
-        self.play(GrowArrow(yes_to_end), GrowArrow(no_to_end), GrowFromCenter(end_node))
-        self.wait(1)
+        for index, record in enumerate([{"name": "Ada"}, {}]):
+            self.next_section("complete_request" if index == 0 else "missing_name")
+            has_name = bool(record.get("name"))
+            color = accepted if has_name else rejected
+            caption = label('A / name = "Ada"' if has_name else "B / name is missing", 34).move_to([0, -2.55, 0])
+            self.play(FadeIn(caption), run_time=.35)
+            self.wait(.7)
+            arrive(start, color)
+            travel(start_arrow, color)
+            arrive(decision, color)
+            self.wait(.5)
+            outgoing, selected, returning = (yes_arrow, yes_node, yes_to_end) if has_name else (no_arrow, no_node, no_to_end)
+            travel(outgoing, color)
+            arrive(selected, color)
+            self.wait(.5)
+            travel(returning, color)
+            arrive(end_node, color)
+            outcome = label("200 / processed" if has_name else "400 / missing name", 29, color).move_to([4.7, -.95, 0])
+            self.play(FadeIn(outcome), run_time=.3)
+            self.wait(1.2)
+            if index == 0:
+                self.play(FadeOut(caption), FadeOut(outcome),
+                          *[node[0].animate.set_stroke(neutral, width=2).set_fill(neutral, opacity=.3) for node in nodes],
+                          *[arrow.animate.set_color(neutral) for arrow in arrows], run_time=.4)
+        self.wait(.8)
 
 
 class VerticalFlow(Scene):

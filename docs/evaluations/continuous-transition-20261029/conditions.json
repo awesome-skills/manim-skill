@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-29",
+  "source_sha256": "e9c0444f4a69f08b863ff0a0eac991f8272ba95f329319e55ebd96632a5d8a0d",
+  "report": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/circle-wave-final/videos/circle_to_wave/720p30/CircleToWave.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 16.698697916666667,
+    "decoded_frames": 501,
+    "bytes": 440443,
+    "video_sha256": "2c8c4931678cdbeae419c50af7e0d2ccfb28bc093fcd4c9ee9d1c3f9d4164d74",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/circle-wave-final/review/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 2.0,
+        "actual_seconds": 2.0,
+        "frame_index": 60,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/circle-wave-final/review/frame-000060.png"
+      },
+      {
+        "requested_seconds": 4.8,
+        "actual_seconds": 4.799348958333334,
+        "frame_index": 144,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/circle-wave-final/review/frame-000144.png"
+      },
+      {
+        "requested_seconds": 5.3,
+        "actual_seconds": 5.299348958333334,
+        "frame_index": 159,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/circle-wave-final/review/frame-000159.png"
+      },
+      {
+        "requested_seconds": 5.8,
+        "actual_seconds": 5.799348958333334,
+        "frame_index": 174,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/circle-wave-final/review/frame-000174.png"
+      },
+      {
+        "requested_seconds": 8.5,
+        "actual_seconds": 8.499348958333334,
+        "frame_index": 255,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/circle-wave-final/review/frame-000255.png"
+      },
+      {
+        "requested_seconds": 11.0,
+        "actual_seconds": 10.999348958333334,
+        "frame_index": 330,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/circle-wave-final/review/frame-000330.png"
+      },
+      {
+        "requested_seconds": 15.5,
+        "actual_seconds": 15.498697916666666,
+        "frame_index": 465,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/circle-wave-final/review/frame-000465.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/circle-wave-final/review/review.html"
+  },
+  "smoke": {
+    "manim_version": "0.22.0",
+    "python": "3.13.16 (main, Sep 30 2026, 18:57:20) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "renderer": "cairo",
+    "visual_review": "not performed",
+    "results": [
+      {
+        "scene": "CircleToWave",
+        "source": "examples/circle_to_wave.py",
+        "source_sha256": "e9c0444f4a69f08b863ff0a0eac991f8272ba95f329319e55ebd96632a5d8a0d",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/circle-wave-smoke/CircleToWave",
+          "/Users/tsk/code/manim-skill/examples/circle_to_wave.py",
+          "CircleToWave"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/circle-wave-smoke/CircleToWave/videos/circle_to_wave/360p15/CircleToWave.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 16.7330078125,
+        "decoded_frames": 251,
+        "bytes": 186758,
+        "video_sha256": "9603ecf63835c0ef9c1ec26a1e38882104e56d3adfa50ee0bc831f6b9e506405",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/circle-wave-smoke/CircleToWave/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 4.183251953125,
+            "actual_seconds": 4.133333333333334,
+            "frame_index": 62
+          },
+          {
+            "requested_seconds": 8.36650390625,
+            "actual_seconds": 8.3330078125,
+            "frame_index": 125
+          },
+          {
+            "requested_seconds": 12.549755859374999,
+            "actual_seconds": 12.5330078125,
+            "frame_index": 188
+          },
+          {
+            "requested_seconds": 16.7330078125,
+            "actual_seconds": 16.666341145833332,
+            "frame_index": 250
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      }
+    ],
+    "skipped": []
+  },
+  "review": "Seven sampled frames at 360px including handoff midpoints; no full-speed aesthetic acceptance or user study."
+}

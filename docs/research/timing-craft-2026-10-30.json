@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-30",
+  "sources": [
+    {
+      "repo": "tweenjs/tween.js",
+      "url": "https://api.github.com/repos/tweenjs/tween.js/contents/README.md",
+      "sha256": "abcf8482c6d4f12e50fb1f0ef4dd6bb2d8692cd076683427c08ffecd7600e370",
+      "characters": 16049
+    },
+    {
+      "repo": "jeremyckahn/shifty",
+      "url": "https://api.github.com/repos/jeremyckahn/shifty/contents/README.md",
+      "sha256": "ddf24cc1e464c6fd5806815df5e60bd36eb2b53d46fc12b2ae402e84b2e1828b",
+      "characters": 5434
+    },
+    {
+      "repo": "d3/d3-ease",
+      "url": "https://api.github.com/repos/d3/d3-ease/contents/README.md",
+      "sha256": "7e6a6c0ef09ee53f2970f6c224f6e81a71d9bb6c98cab9d2051e9da47692dd45",
+      "characters": 698
+    },
+    {
+      "url": "https://api.github.com/repos/d3/d3-ease/contents/src/cubic.js",
+      "sha256": "c1262a47a090970879a63c9827076ab3a3a384c0c448b42383542be27c7bd837",
+      "characters": 210
+    },
+    {
+      "url": "https://api.github.com/repos/d3/d3-ease/contents/LICENSE",
+      "sha256": "b989d9085148d21ff64a75e14462aefa06b2589a55553b07b1460c70081c7d08",
+      "characters": 1504
+    }
+  ],
+  "scope": "Three READMEs plus d3 cubic source and license; no upstream demos played."
+}

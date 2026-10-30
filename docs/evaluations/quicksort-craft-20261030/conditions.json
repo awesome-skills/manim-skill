@@ -1,0 +1,59 @@
+{
+  "artifact": "/Users/tsk/code/manim-skill/verification/quicksort-craft-20261030/final-media/videos/quicksort/720p30/QuickSortBars.mp4",
+  "width": 1280,
+  "height": 720,
+  "duration_seconds": 60.2970703125,
+  "decoded_frames": 1809,
+  "bytes": 5331706,
+  "video_sha256": "1f774b6d816326f0ff53f5e64d5b254f32d3af8f31c5a43240d35c2cf299a2fa",
+  "contact_sheet": "/Users/tsk/code/manim-skill/verification/quicksort-craft-20261030/final-inspection/contact.png",
+  "samples": [
+    {
+      "requested_seconds": 4.0,
+      "actual_seconds": 4.0,
+      "frame_index": 120,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/quicksort-craft-20261030/final-inspection/frame-000120.png"
+    },
+    {
+      "requested_seconds": 5.2,
+      "actual_seconds": 5.2,
+      "frame_index": 156,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/quicksort-craft-20261030/final-inspection/frame-000156.png"
+    },
+    {
+      "requested_seconds": 8.0,
+      "actual_seconds": 8.0,
+      "frame_index": 240,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/quicksort-craft-20261030/final-inspection/frame-000240.png"
+    },
+    {
+      "requested_seconds": 30.0,
+      "actual_seconds": 29.999674479166668,
+      "frame_index": 900,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/quicksort-craft-20261030/final-inspection/frame-000900.png"
+    },
+    {
+      "requested_seconds": 50.0,
+      "actual_seconds": 49.997721354166664,
+      "frame_index": 1500,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/quicksort-craft-20261030/final-inspection/frame-001500.png"
+    },
+    {
+      "requested_seconds": 60.0,
+      "actual_seconds": 59.9970703125,
+      "frame_index": 1800,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/quicksort-craft-20261030/final-inspection/frame-001800.png"
+    }
+  ],
+  "contact_preview": {
+    "width": 360,
+    "height": 202,
+    "mode": "exact width"
+  },
+  "sampling": "displayed frame at requested time (presentation timestamps)",
+  "visual_review": "not performed",
+  "review_player": "/Users/tsk/code/manim-skill/verification/quicksort-craft-20261030/final-inspection/review.html",
+  "source_sha256": "1a2af8c996ffa5b540bccdaa5c59109e9c01680ee81854721251ed61dea12527",
+  "tests": "16 passed; build_events AST unchanged; completed state active box hidden; skill validator and diff check passed.",
+  "manual_review": "Sampled frames inspected at 360 pixels, not continuous full-speed aesthetic acceptance."
+}

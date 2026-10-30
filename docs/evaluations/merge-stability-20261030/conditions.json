@@ -1,0 +1,53 @@
+{
+  "artifact": "/Users/tsk/code/manim-skill/verification/merge-stability-20261030/final-media/videos/merge_step/720p30/MergeStep.mp4",
+  "width": 1280,
+  "height": 720,
+  "duration_seconds": 16.698046875,
+  "decoded_frames": 501,
+  "bytes": 776223,
+  "video_sha256": "7427402b2654765a66d84c58f295c9a8483a9fde6df8fb48fabd463a68168322",
+  "contact_sheet": "/Users/tsk/code/manim-skill/verification/merge-stability-20261030/final-inspection/contact.png",
+  "samples": [
+    {
+      "requested_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "frame_index": 60,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/merge-stability-20261030/final-inspection/frame-000060.png"
+    },
+    {
+      "requested_seconds": 7.0,
+      "actual_seconds": 7.0,
+      "frame_index": 210,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/merge-stability-20261030/final-inspection/frame-000210.png"
+    },
+    {
+      "requested_seconds": 8.2,
+      "actual_seconds": 8.2,
+      "frame_index": 246,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/merge-stability-20261030/final-inspection/frame-000246.png"
+    },
+    {
+      "requested_seconds": 10.0,
+      "actual_seconds": 10.0,
+      "frame_index": 300,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/merge-stability-20261030/final-inspection/frame-000300.png"
+    },
+    {
+      "requested_seconds": 16.0,
+      "actual_seconds": 15.998046875,
+      "frame_index": 480,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/merge-stability-20261030/final-inspection/frame-000480.png"
+    }
+  ],
+  "contact_preview": {
+    "width": 360,
+    "height": 202,
+    "mode": "exact width"
+  },
+  "sampling": "displayed frame at requested time (presentation timestamps)",
+  "visual_review": "not performed",
+  "review_player": "/Users/tsk/code/manim-skill/verification/merge-stability-20261030/final-inspection/review.html",
+  "source_sha256": "4ff1c377b80fa6f08d74f8ed3f6a7adc87bef6c11c87b681fe1c908e09a2a5fc",
+  "manual_review": "Inspected 360-pixel contact previews at 2, 7, 8.2, 10, 16 seconds and motion samples at 8.5, 8.8, 9.1 seconds. No full-speed continuous aesthetic review.",
+  "tests": "15 unit tests passed; git diff --check passed."
+}

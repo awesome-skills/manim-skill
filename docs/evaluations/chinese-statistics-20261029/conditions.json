@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-29",
+  "font": "PingFang SC",
+  "report": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/chinese-statistics/final/videos/mean_median/720p30/MeanMedianStory.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 14.665364583333334,
+    "decoded_frames": 440,
+    "bytes": 483208,
+    "video_sha256": "b307449302936361803a25b0d2f1ab80ea9530d05637ca1c89cb7d6acc317001",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/chinese-statistics/final-review/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 2.0,
+        "actual_seconds": 2.0,
+        "frame_index": 60,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/chinese-statistics/final-review/frame-000060.png"
+      },
+      {
+        "requested_seconds": 4.5,
+        "actual_seconds": 4.5,
+        "frame_index": 135,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/chinese-statistics/final-review/frame-000135.png"
+      },
+      {
+        "requested_seconds": 6.8,
+        "actual_seconds": 6.799348958333334,
+        "frame_index": 204,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/chinese-statistics/final-review/frame-000204.png"
+      },
+      {
+        "requested_seconds": 7.2,
+        "actual_seconds": 7.199348958333333,
+        "frame_index": 216,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/chinese-statistics/final-review/frame-000216.png"
+      },
+      {
+        "requested_seconds": 7.6,
+        "actual_seconds": 7.599348958333334,
+        "frame_index": 228,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/chinese-statistics/final-review/frame-000228.png"
+      },
+      {
+        "requested_seconds": 10.5,
+        "actual_seconds": 10.499348958333334,
+        "frame_index": 315,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/chinese-statistics/final-review/frame-000315.png"
+      },
+      {
+        "requested_seconds": 14.0,
+        "actual_seconds": 13.998697916666666,
+        "frame_index": 420,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/chinese-statistics/final-review/frame-000420.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/chinese-statistics/final-review/review.html"
+  },
+  "numeric_checks": [
+    {
+      "value": 4,
+      "mean": 3.2,
+      "median": 3
+    },
+    {
+      "value": 5,
+      "mean": 3.4,
+      "median": 3
+    },
+    {
+      "value": 6.8,
+      "mean": 3.76,
+      "median": 3
+    },
+    {
+      "value": 10.2,
+      "mean": 4.4399999999999995,
+      "median": 3
+    },
+    {
+      "value": 18,
+      "mean": 6,
+      "median": 3
+    }
+  ],
+  "source_sha256": "fe561e60a236285e55f1a3e393494aa2d0cf861e91475203e6d5cd1f997e76d2",
+  "visual_review": "Seven sampled 360px frames; no audience study or full-speed aesthetic acceptance.",
+  "tests": "13 unit tests passed; Skill validator passed."
+}

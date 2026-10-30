@@ -1,0 +1,1953 @@
+{
+  "manim_version": "0.22.0",
+  "python": "3.13.16 (main, Sep 30 2026, 18:57:20) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "renderer": "cairo",
+  "visual_review": "not performed",
+  "results": [
+    {
+      "scene": "CameraFocus",
+      "source": "examples/advanced_scene.py",
+      "source_sha256": "543750bdd7f8e8d1c75fa40f5aaf88835fac05ee6b848d5eff5eebbad17c6ff9",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/CameraFocus",
+        "/Users/tsk/code/manim-skill/examples/advanced_scene.py",
+        "CameraFocus"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/CameraFocus/videos/advanced_scene/360p15/CameraFocus.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 2.933333333333333,
+      "decoded_frames": 44,
+      "bytes": 47232,
+      "video_sha256": "e55988ef706750a888daef857faa4c62c31a18a62e7ad995ef32ff24da55da94",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/CameraFocus/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 0.7333333333333333,
+          "actual_seconds": 0.7333333333333333,
+          "frame_index": 11
+        },
+        {
+          "requested_seconds": 1.4666666666666666,
+          "actual_seconds": 1.4666666666666666,
+          "frame_index": 22
+        },
+        {
+          "requested_seconds": 2.1999999999999997,
+          "actual_seconds": 2.1333333333333333,
+          "frame_index": 32
+        },
+        {
+          "requested_seconds": 2.933333333333333,
+          "actual_seconds": 2.8666666666666667,
+          "frame_index": 43
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "Orbit3D",
+      "source": "examples/advanced_scene.py",
+      "source_sha256": "543750bdd7f8e8d1c75fa40f5aaf88835fac05ee6b848d5eff5eebbad17c6ff9",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/Orbit3D",
+        "/Users/tsk/code/manim-skill/examples/advanced_scene.py",
+        "Orbit3D"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/Orbit3D/videos/advanced_scene/360p15/Orbit3D.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 2.0,
+      "decoded_frames": 30,
+      "bytes": 42010,
+      "video_sha256": "34f0de890cb55fce6dea1927f4ab56a9e2b56cf90fb561584898c0b56bbb6cab",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/Orbit3D/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 0.5,
+          "actual_seconds": 0.4666666666666667,
+          "frame_index": 7
+        },
+        {
+          "requested_seconds": 1.0,
+          "actual_seconds": 1.0,
+          "frame_index": 15
+        },
+        {
+          "requested_seconds": 1.5,
+          "actual_seconds": 1.4666666666666666,
+          "frame_index": 22
+        },
+        {
+          "requested_seconds": 2.0,
+          "actual_seconds": 1.9333333333333333,
+          "frame_index": 29
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "AreaScaleStory",
+      "source": "examples/area_scale_story.py",
+      "source_sha256": "a06067743103de7e31ee4978f59515c68163e31e272dfb15a827da87e379dfe6",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/AreaScaleStory",
+        "/Users/tsk/code/manim-skill/examples/area_scale_story.py",
+        "AreaScaleStory"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/AreaScaleStory/videos/area_scale_story/360p15/AreaScaleStory.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 13.665690104166666,
+      "decoded_frames": 205,
+      "bytes": 141164,
+      "video_sha256": "2a18e6b8652bb35ac6968610a4a3499cc1efcb72604ee621b4004b96f0c15343",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/AreaScaleStory/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 3.4164225260416665,
+          "actual_seconds": 3.399674479166667,
+          "frame_index": 51
+        },
+        {
+          "requested_seconds": 6.832845052083333,
+          "actual_seconds": 6.799348958333334,
+          "frame_index": 102
+        },
+        {
+          "requested_seconds": 10.249267578125,
+          "actual_seconds": 10.199348958333333,
+          "frame_index": 153
+        },
+        {
+          "requested_seconds": 13.665690104166666,
+          "actual_seconds": 13.5990234375,
+          "frame_index": 204
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "BasicScene",
+      "source": "examples/basic_scene.py",
+      "source_sha256": "c08bf55ed7b9d25a69dffdcdb429a04b565e08d37764957f9edbf093243ae742",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/BasicScene",
+        "/Users/tsk/code/manim-skill/examples/basic_scene.py",
+        "BasicScene"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/BasicScene/videos/basic_scene/360p15/BasicScene.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 5.0,
+      "decoded_frames": 75,
+      "bytes": 27898,
+      "video_sha256": "a3daf445ffe1d7c4492ccb74cb1de0c764bbcf4aeb48bfbf868eb992bde8a220",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/BasicScene/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 1.25,
+          "actual_seconds": 1.2,
+          "frame_index": 18
+        },
+        {
+          "requested_seconds": 2.5,
+          "actual_seconds": 2.466666666666667,
+          "frame_index": 37
+        },
+        {
+          "requested_seconds": 3.75,
+          "actual_seconds": 3.7333333333333334,
+          "frame_index": 56
+        },
+        {
+          "requested_seconds": 5.0,
+          "actual_seconds": 4.933333333333334,
+          "frame_index": 74
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "CodeExample",
+      "source": "examples/basic_scene.py",
+      "source_sha256": "c08bf55ed7b9d25a69dffdcdb429a04b565e08d37764957f9edbf093243ae742",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/CodeExample",
+        "/Users/tsk/code/manim-skill/examples/basic_scene.py",
+        "CodeExample"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/CodeExample/videos/basic_scene/360p15/CodeExample.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 3.0,
+      "decoded_frames": 45,
+      "bytes": 14330,
+      "video_sha256": "7b2fdc9267eb998c3296ce132806889637073e0fa699b830497dc1e30208d1de",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/CodeExample/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 0.75,
+          "actual_seconds": 0.7333333333333333,
+          "frame_index": 11
+        },
+        {
+          "requested_seconds": 1.5,
+          "actual_seconds": 1.4666666666666666,
+          "frame_index": 22
+        },
+        {
+          "requested_seconds": 2.25,
+          "actual_seconds": 2.2,
+          "frame_index": 33
+        },
+        {
+          "requested_seconds": 3.0,
+          "actual_seconds": 2.933333333333333,
+          "frame_index": 44
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "GraphExample",
+      "source": "examples/basic_scene.py",
+      "source_sha256": "c08bf55ed7b9d25a69dffdcdb429a04b565e08d37764957f9edbf093243ae742",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/GraphExample",
+        "/Users/tsk/code/manim-skill/examples/basic_scene.py",
+        "GraphExample"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/GraphExample/videos/basic_scene/360p15/GraphExample.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 3.0,
+      "decoded_frames": 45,
+      "bytes": 18351,
+      "video_sha256": "f3d14b71fda62559fd4de25a9da166e8227c02888336ef50b062fb1d6769adcb",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/GraphExample/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 0.75,
+          "actual_seconds": 0.7333333333333333,
+          "frame_index": 11
+        },
+        {
+          "requested_seconds": 1.5,
+          "actual_seconds": 1.4666666666666666,
+          "frame_index": 22
+        },
+        {
+          "requested_seconds": 2.25,
+          "actual_seconds": 2.2,
+          "frame_index": 33
+        },
+        {
+          "requested_seconds": 3.0,
+          "actual_seconds": 2.933333333333333,
+          "frame_index": 44
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "BezierConstruction",
+      "source": "examples/bezier_construction.py",
+      "source_sha256": "fa31faf7a5dc08c8ad7c3c287f088c9fd448e9d5405fd97fa14ea2d06764cdf1",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/BezierConstruction",
+        "/Users/tsk/code/manim-skill/examples/bezier_construction.py",
+        "BezierConstruction"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/BezierConstruction/videos/bezier_construction/360p15/BezierConstruction.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 19.132682291666665,
+      "decoded_frames": 287,
+      "bytes": 253080,
+      "video_sha256": "cea944e23f0de03ef651071405f2422c8090126c5170e8986748ce98354ae85f",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/BezierConstruction/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 4.783170572916666,
+          "actual_seconds": 4.7330078125,
+          "frame_index": 71
+        },
+        {
+          "requested_seconds": 9.566341145833333,
+          "actual_seconds": 9.5330078125,
+          "frame_index": 143
+        },
+        {
+          "requested_seconds": 14.349511718749998,
+          "actual_seconds": 14.3330078125,
+          "frame_index": 215
+        },
+        {
+          "requested_seconds": 19.132682291666665,
+          "actual_seconds": 19.066015625,
+          "frame_index": 286
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "CircleToWave",
+      "source": "examples/circle_to_wave.py",
+      "source_sha256": "e9c0444f4a69f08b863ff0a0eac991f8272ba95f329319e55ebd96632a5d8a0d",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/CircleToWave",
+        "/Users/tsk/code/manim-skill/examples/circle_to_wave.py",
+        "CircleToWave"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/CircleToWave/videos/circle_to_wave/360p15/CircleToWave.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 16.7330078125,
+      "decoded_frames": 251,
+      "bytes": 186758,
+      "video_sha256": "9603ecf63835c0ef9c1ec26a1e38882104e56d3adfa50ee0bc831f6b9e506405",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/CircleToWave/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 4.183251953125,
+          "actual_seconds": 4.133333333333334,
+          "frame_index": 62
+        },
+        {
+          "requested_seconds": 8.36650390625,
+          "actual_seconds": 8.3330078125,
+          "frame_index": 125
+        },
+        {
+          "requested_seconds": 12.549755859374999,
+          "actual_seconds": 12.5330078125,
+          "frame_index": 188
+        },
+        {
+          "requested_seconds": 16.7330078125,
+          "actual_seconds": 16.666341145833332,
+          "frame_index": 250
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "DampingStory",
+      "source": "examples/damping_story.py",
+      "source_sha256": "17fa7e3d101924f2a0cced3acea43221eaecefe09e952946ddef3006d4e8f9a1",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/DampingStory",
+        "/Users/tsk/code/manim-skill/examples/damping_story.py",
+        "DampingStory"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/DampingStory/videos/damping_story/360p15/DampingStory.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 23.666015625,
+      "decoded_frames": 355,
+      "bytes": 326209,
+      "video_sha256": "6e7bb655d9f5f7a48bce9574669933299baf72002725bda7ab3f86295aaf3e05",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/DampingStory/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 5.91650390625,
+          "actual_seconds": 5.866341145833333,
+          "frame_index": 88
+        },
+        {
+          "requested_seconds": 11.8330078125,
+          "actual_seconds": 11.799348958333333,
+          "frame_index": 177
+        },
+        {
+          "requested_seconds": 17.74951171875,
+          "actual_seconds": 17.732682291666666,
+          "frame_index": 266
+        },
+        {
+          "requested_seconds": 23.666015625,
+          "actual_seconds": 23.599348958333334,
+          "frame_index": 354
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "DataToDecision",
+      "source": "examples/data_to_decision.py",
+      "source_sha256": "0af389f076cf67ca958c381f4a2e89335e7202b73c4bf4ae90b69079988a67c9",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/DataToDecision",
+        "/Users/tsk/code/manim-skill/examples/data_to_decision.py",
+        "DataToDecision"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/DataToDecision/videos/data_to_decision/360p15/DataToDecision.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 15.199348958333333,
+      "decoded_frames": 228,
+      "bytes": 249348,
+      "video_sha256": "eafecf475ab5d60757375ce6ce93d7ffa8188b9947a032ccfb34af78348978c6",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/DataToDecision/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 3.7998372395833333,
+          "actual_seconds": 3.799674479166667,
+          "frame_index": 57
+        },
+        {
+          "requested_seconds": 7.599674479166667,
+          "actual_seconds": 7.599674479166667,
+          "frame_index": 114
+        },
+        {
+          "requested_seconds": 11.39951171875,
+          "actual_seconds": 11.3330078125,
+          "frame_index": 170
+        },
+        {
+          "requested_seconds": 15.199348958333333,
+          "actual_seconds": 15.132682291666667,
+          "frame_index": 227
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "ExplodedLayers",
+      "source": "examples/exploded_layers.py",
+      "source_sha256": "6237a00b8ae9cd8796a2661f32029e9fd1bb9d1b2d085115ce23728fac0f4e79",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/ExplodedLayers",
+        "/Users/tsk/code/manim-skill/examples/exploded_layers.py",
+        "ExplodedLayers"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/ExplodedLayers/videos/exploded_layers/360p15/ExplodedLayers.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 15.333333333333334,
+      "decoded_frames": 230,
+      "bytes": 181541,
+      "video_sha256": "8e6a01015ececae5ff5c26255438dd13a9fa45304f15a2b667448b14b1774b0c",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/ExplodedLayers/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 3.8333333333333335,
+          "actual_seconds": 3.8,
+          "frame_index": 57
+        },
+        {
+          "requested_seconds": 7.666666666666667,
+          "actual_seconds": 7.666666666666667,
+          "frame_index": 115
+        },
+        {
+          "requested_seconds": 11.5,
+          "actual_seconds": 11.466666666666667,
+          "frame_index": 172
+        },
+        {
+          "requested_seconds": 15.333333333333334,
+          "actual_seconds": 15.266666666666667,
+          "frame_index": 229
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "SimpleFlow",
+      "source": "examples/flowchart.py",
+      "source_sha256": "aa64afeb0e73a07c62bd550f4dc289417d013f9760f08b27e692f9cc0af2bb88",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/SimpleFlow",
+        "/Users/tsk/code/manim-skill/examples/flowchart.py",
+        "SimpleFlow"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/SimpleFlow/videos/flowchart/360p15/SimpleFlow.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 4.0,
+      "decoded_frames": 60,
+      "bytes": 20407,
+      "video_sha256": "ccfbeefa2f752067fe90185dccd2cdf58e35685e76cc8f6ff9d4fe62f6276568",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/SimpleFlow/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 1.0,
+          "actual_seconds": 1.0,
+          "frame_index": 15
+        },
+        {
+          "requested_seconds": 2.0,
+          "actual_seconds": 2.0,
+          "frame_index": 30
+        },
+        {
+          "requested_seconds": 3.0,
+          "actual_seconds": 3.0,
+          "frame_index": 45
+        },
+        {
+          "requested_seconds": 4.0,
+          "actual_seconds": 3.933333333333333,
+          "frame_index": 59
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "BranchingFlow",
+      "source": "examples/flowchart.py",
+      "source_sha256": "aa64afeb0e73a07c62bd550f4dc289417d013f9760f08b27e692f9cc0af2bb88",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/BranchingFlow",
+        "/Users/tsk/code/manim-skill/examples/flowchart.py",
+        "BranchingFlow"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/BranchingFlow/videos/flowchart/360p15/BranchingFlow.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 18.866666666666667,
+      "decoded_frames": 283,
+      "bytes": 512391,
+      "video_sha256": "58987baab30771fa30898485e4c64987e673e413df34effd0e8eb87d598d695b",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/BranchingFlow/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 4.716666666666667,
+          "actual_seconds": 4.666666666666667,
+          "frame_index": 70
+        },
+        {
+          "requested_seconds": 9.433333333333334,
+          "actual_seconds": 9.4,
+          "frame_index": 141
+        },
+        {
+          "requested_seconds": 14.15,
+          "actual_seconds": 14.133333333333333,
+          "frame_index": 212
+        },
+        {
+          "requested_seconds": 18.866666666666667,
+          "actual_seconds": 18.8,
+          "frame_index": 282
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "VerticalFlow",
+      "source": "examples/flowchart.py",
+      "source_sha256": "aa64afeb0e73a07c62bd550f4dc289417d013f9760f08b27e692f9cc0af2bb88",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/VerticalFlow",
+        "/Users/tsk/code/manim-skill/examples/flowchart.py",
+        "VerticalFlow"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/VerticalFlow/videos/flowchart/360p15/VerticalFlow.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 4.333333333333333,
+      "decoded_frames": 65,
+      "bytes": 33261,
+      "video_sha256": "4a93d3cdebffbf9f48a8746074325156e2100107111f8283bec32de72a1c219d",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/VerticalFlow/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 1.0833333333333333,
+          "actual_seconds": 1.0666666666666667,
+          "frame_index": 16
+        },
+        {
+          "requested_seconds": 2.1666666666666665,
+          "actual_seconds": 2.1333333333333333,
+          "frame_index": 32
+        },
+        {
+          "requested_seconds": 3.25,
+          "actual_seconds": 3.2,
+          "frame_index": 48
+        },
+        {
+          "requested_seconds": 4.333333333333333,
+          "actual_seconds": 4.266666666666667,
+          "frame_index": 64
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "ProcessHighlight",
+      "source": "examples/flowchart.py",
+      "source_sha256": "aa64afeb0e73a07c62bd550f4dc289417d013f9760f08b27e692f9cc0af2bb88",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/ProcessHighlight",
+        "/Users/tsk/code/manim-skill/examples/flowchart.py",
+        "ProcessHighlight"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/ProcessHighlight/videos/flowchart/360p15/ProcessHighlight.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 5.733333333333333,
+      "decoded_frames": 86,
+      "bytes": 54552,
+      "video_sha256": "bd3a81c9dd75197b17d3a7d16b60465ee268599490e9eeffb20485ce47119bb6",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/ProcessHighlight/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 1.4333333333333333,
+          "actual_seconds": 1.4,
+          "frame_index": 21
+        },
+        {
+          "requested_seconds": 2.8666666666666667,
+          "actual_seconds": 2.8666666666666667,
+          "frame_index": 43
+        },
+        {
+          "requested_seconds": 4.3,
+          "actual_seconds": 4.266666666666667,
+          "frame_index": 64
+        },
+        {
+          "requested_seconds": 5.733333333333333,
+          "actual_seconds": 5.666666666666667,
+          "frame_index": 85
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "InterferenceStudy",
+      "source": "examples/interference_study.py",
+      "source_sha256": "beefe25991fdfa7bd13618146b46eff9147c964bdf795743b0601b9345752a9e",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/InterferenceStudy",
+        "/Users/tsk/code/manim-skill/examples/interference_study.py",
+        "InterferenceStudy"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/InterferenceStudy/videos/interference_study/360p15/InterferenceStudy.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 18.199674479166667,
+      "decoded_frames": 273,
+      "bytes": 267361,
+      "video_sha256": "31d2d4b2dfb122accbf89b11db6ba107da94ca0702a60bea27a00d29e1a1f8bd",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/InterferenceStudy/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 4.549918619791667,
+          "actual_seconds": 4.5330078125,
+          "frame_index": 68
+        },
+        {
+          "requested_seconds": 9.099837239583334,
+          "actual_seconds": 9.066341145833333,
+          "frame_index": 136
+        },
+        {
+          "requested_seconds": 13.649755859375,
+          "actual_seconds": 13.599674479166667,
+          "frame_index": 204
+        },
+        {
+          "requested_seconds": 18.199674479166667,
+          "actual_seconds": 18.1330078125,
+          "frame_index": 272
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "LocalLinearity",
+      "source": "examples/local_linearity.py",
+      "source_sha256": "8dfd9821e3a8fccbe6cc0cb1d80be4f77fd9a8ae2202a9f44b31d0b79f3fbedc",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/LocalLinearity",
+        "/Users/tsk/code/manim-skill/examples/local_linearity.py",
+        "LocalLinearity"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/LocalLinearity/videos/local_linearity/360p15/LocalLinearity.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 17.8,
+      "decoded_frames": 267,
+      "bytes": 271147,
+      "video_sha256": "d21b927071ba611cef54743b6f2882a2860d93f75806771dc600b0264176007f",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/LocalLinearity/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 4.45,
+          "actual_seconds": 4.4,
+          "frame_index": 66
+        },
+        {
+          "requested_seconds": 8.9,
+          "actual_seconds": 8.866666666666667,
+          "frame_index": 133
+        },
+        {
+          "requested_seconds": 13.350000000000001,
+          "actual_seconds": 13.333333333333334,
+          "frame_index": 200
+        },
+        {
+          "requested_seconds": 17.8,
+          "actual_seconds": 17.733333333333334,
+          "frame_index": 266
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "MergeStep",
+      "source": "examples/merge_step.py",
+      "source_sha256": "4ff1c377b80fa6f08d74f8ed3f6a7adc87bef6c11c87b681fe1c908e09a2a5fc",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/MergeStep",
+        "/Users/tsk/code/manim-skill/examples/merge_step.py",
+        "MergeStep"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/MergeStep/videos/merge_step/360p15/MergeStep.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 16.7330078125,
+      "decoded_frames": 251,
+      "bytes": 320330,
+      "video_sha256": "e94bd097073656e3dc6b7b7d63b9cf75843f04e9430540f13261cb44315c1508",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/MergeStep/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 4.183251953125,
+          "actual_seconds": 4.133333333333334,
+          "frame_index": 62
+        },
+        {
+          "requested_seconds": 8.36650390625,
+          "actual_seconds": 8.3330078125,
+          "frame_index": 125
+        },
+        {
+          "requested_seconds": 12.549755859374999,
+          "actual_seconds": 12.5330078125,
+          "frame_index": 188
+        },
+        {
+          "requested_seconds": 16.7330078125,
+          "actual_seconds": 16.666341145833332,
+          "frame_index": 250
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "PacketJourney",
+      "source": "examples/packet_journey.py",
+      "source_sha256": "8998843fcb3adf4ff106f792c5d4bd8fc721e84c28de193a9ecd5c1b218fdc5b",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/PacketJourney",
+        "/Users/tsk/code/manim-skill/examples/packet_journey.py",
+        "PacketJourney"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/PacketJourney/videos/packet_journey/360p15/PacketJourney.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 11.999348958333334,
+      "decoded_frames": 180,
+      "bytes": 136135,
+      "video_sha256": "996d78e6159ddb10f4dbfec0a7a45bbf272e03de40b84a9fd10f84639840319c",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/PacketJourney/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 2.9998372395833335,
+          "actual_seconds": 2.933333333333333,
+          "frame_index": 44
+        },
+        {
+          "requested_seconds": 5.999674479166667,
+          "actual_seconds": 5.999674479166667,
+          "frame_index": 90
+        },
+        {
+          "requested_seconds": 8.99951171875,
+          "actual_seconds": 8.999348958333334,
+          "frame_index": 135
+        },
+        {
+          "requested_seconds": 11.999348958333334,
+          "actual_seconds": 11.932682291666667,
+          "frame_index": 179
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "QuickSortBars",
+      "source": "examples/quicksort.py",
+      "source_sha256": "1a2af8c996ffa5b540bccdaa5c59109e9c01680ee81854721251ed61dea12527",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/QuickSortBars",
+        "/Users/tsk/code/manim-skill/examples/quicksort.py",
+        "QuickSortBars"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/QuickSortBars/videos/quicksort/360p15/QuickSortBars.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 62.86080729166667,
+      "decoded_frames": 943,
+      "bytes": 2404526,
+      "video_sha256": "8940564401626247aa6ea90d37101da67403b6212f1549bf88b5b5eae0a87aba",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/QuickSortBars/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 15.715201822916667,
+          "actual_seconds": 15.665364583333334,
+          "frame_index": 235
+        },
+        {
+          "requested_seconds": 31.430403645833334,
+          "actual_seconds": 31.397395833333334,
+          "frame_index": 471
+        },
+        {
+          "requested_seconds": 47.14560546875,
+          "actual_seconds": 47.12942708333333,
+          "frame_index": 707
+        },
+        {
+          "requested_seconds": 62.86080729166667,
+          "actual_seconds": 62.794140625,
+          "frame_index": 942
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "SimpleStates",
+      "source": "examples/state_diagram.py",
+      "source_sha256": "d6e48761fd882545f781c8d51f036782cbd745da268f271a485779f83f4eaf24",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/SimpleStates",
+        "/Users/tsk/code/manim-skill/examples/state_diagram.py",
+        "SimpleStates"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/SimpleStates/videos/state_diagram/360p15/SimpleStates.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 6.266666666666667,
+      "decoded_frames": 94,
+      "bytes": 53391,
+      "video_sha256": "eaa8829ab66fcc591950ea573d4da67c38f078f5e3b2bd16f111351f86ae6914",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/SimpleStates/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 1.5666666666666667,
+          "actual_seconds": 1.5333333333333334,
+          "frame_index": 23
+        },
+        {
+          "requested_seconds": 3.1333333333333333,
+          "actual_seconds": 3.1333333333333333,
+          "frame_index": 47
+        },
+        {
+          "requested_seconds": 4.7,
+          "actual_seconds": 4.666666666666667,
+          "frame_index": 70
+        },
+        {
+          "requested_seconds": 6.266666666666667,
+          "actual_seconds": 6.2,
+          "frame_index": 93
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "StateWithLabels",
+      "source": "examples/state_diagram.py",
+      "source_sha256": "d6e48761fd882545f781c8d51f036782cbd745da268f271a485779f83f4eaf24",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/StateWithLabels",
+        "/Users/tsk/code/manim-skill/examples/state_diagram.py",
+        "StateWithLabels"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/StateWithLabels/videos/state_diagram/360p15/StateWithLabels.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 16.73203125,
+      "decoded_frames": 251,
+      "bytes": 385247,
+      "video_sha256": "17e7d34bca5020108626f2aa3fdf6f01231d8e65feb7a2f2f0174ab0745fc0b9",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/StateWithLabels/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 4.1830078125,
+          "actual_seconds": 4.1330078125,
+          "frame_index": 62
+        },
+        {
+          "requested_seconds": 8.366015625,
+          "actual_seconds": 8.332682291666666,
+          "frame_index": 125
+        },
+        {
+          "requested_seconds": 12.549023437499999,
+          "actual_seconds": 12.532356770833333,
+          "frame_index": 188
+        },
+        {
+          "requested_seconds": 16.73203125,
+          "actual_seconds": 16.665364583333332,
+          "frame_index": 250
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "LinkedListMismatch",
+      "source": "examples/state_diagram.py",
+      "source_sha256": "d6e48761fd882545f781c8d51f036782cbd745da268f271a485779f83f4eaf24",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/LinkedListMismatch",
+        "/Users/tsk/code/manim-skill/examples/state_diagram.py",
+        "LinkedListMismatch"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/LinkedListMismatch/videos/state_diagram/360p15/LinkedListMismatch.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 6.933333333333334,
+      "decoded_frames": 104,
+      "bytes": 70867,
+      "video_sha256": "48a95cf63f423e3c1b893a411c585d82bff80537c61992cf19da407e14b1e0e7",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/LinkedListMismatch/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 1.7333333333333334,
+          "actual_seconds": 1.7333333333333334,
+          "frame_index": 26
+        },
+        {
+          "requested_seconds": 3.466666666666667,
+          "actual_seconds": 3.466666666666667,
+          "frame_index": 52
+        },
+        {
+          "requested_seconds": 5.2,
+          "actual_seconds": 5.2,
+          "frame_index": 78
+        },
+        {
+          "requested_seconds": 6.933333333333334,
+          "actual_seconds": 6.866666666666666,
+          "frame_index": 103
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "CyclicStates",
+      "source": "examples/state_diagram.py",
+      "source_sha256": "d6e48761fd882545f781c8d51f036782cbd745da268f271a485779f83f4eaf24",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/CyclicStates",
+        "/Users/tsk/code/manim-skill/examples/state_diagram.py",
+        "CyclicStates"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/CyclicStates/videos/state_diagram/360p15/CyclicStates.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 10.8,
+      "decoded_frames": 162,
+      "bytes": 135237,
+      "video_sha256": "ddadabd46a86562be3c222e51dc45259c2f48aaef32935b07103987258458007",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/CyclicStates/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 2.7,
+          "actual_seconds": 2.6666666666666665,
+          "frame_index": 40
+        },
+        {
+          "requested_seconds": 5.4,
+          "actual_seconds": 5.4,
+          "frame_index": 81
+        },
+        {
+          "requested_seconds": 8.100000000000001,
+          "actual_seconds": 8.066666666666666,
+          "frame_index": 121
+        },
+        {
+          "requested_seconds": 10.8,
+          "actual_seconds": 10.733333333333333,
+          "frame_index": 161
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "TypstDerivation",
+      "source": "examples/typst_derivation.py",
+      "source_sha256": "011f30b159c07fd4686a695527579ba8c89ce36b0997af0b68d3878fb017bada",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/TypstDerivation",
+        "/Users/tsk/code/manim-skill/examples/typst_derivation.py",
+        "TypstDerivation"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/TypstDerivation/videos/typst_derivation/360p15/TypstDerivation.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 11.399348958333333,
+      "decoded_frames": 171,
+      "bytes": 113562,
+      "video_sha256": "e25547fa4175f7f626fb10d203414dc4f7096fcd6dd46e89f11cd5597298d294",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/TypstDerivation/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 2.849837239583333,
+          "actual_seconds": 2.8,
+          "frame_index": 42
+        },
+        {
+          "requested_seconds": 5.699674479166666,
+          "actual_seconds": 5.666341145833333,
+          "frame_index": 85
+        },
+        {
+          "requested_seconds": 8.549511718749999,
+          "actual_seconds": 8.532682291666667,
+          "frame_index": 128
+        },
+        {
+          "requested_seconds": 11.399348958333333,
+          "actual_seconds": 11.332682291666666,
+          "frame_index": 170
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "TypstFormula",
+      "source": "examples/typst_scene.py",
+      "source_sha256": "b6c8faf0e6019796fa4e8f0aee08d6ca7f553589a51f86739be027c8e8dbcc23",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/TypstFormula",
+        "/Users/tsk/code/manim-skill/examples/typst_scene.py",
+        "TypstFormula"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/TypstFormula/videos/typst_scene/360p15/TypstFormula.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 3.0,
+      "decoded_frames": 45,
+      "bytes": 18045,
+      "video_sha256": "f6d75b465f4216fec20acf2c4a06cda12e3aac3c176c991f1e41926aaa35fc20",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/TypstFormula/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 0.75,
+          "actual_seconds": 0.7333333333333333,
+          "frame_index": 11
+        },
+        {
+          "requested_seconds": 1.5,
+          "actual_seconds": 1.4666666666666666,
+          "frame_index": 22
+        },
+        {
+          "requested_seconds": 2.25,
+          "actual_seconds": 2.2,
+          "frame_index": 33
+        },
+        {
+          "requested_seconds": 3.0,
+          "actual_seconds": 2.933333333333333,
+          "frame_index": 44
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "VectorStory",
+      "source": "examples/visual_story.py",
+      "source_sha256": "87e357109bd6138470584d7788818ac5f2b0194462b3937dcebf03597c380ac2",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/VectorStory",
+        "/Users/tsk/code/manim-skill/examples/visual_story.py",
+        "VectorStory"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/VectorStory/videos/visual_story/360p15/VectorStory.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 15.0,
+      "decoded_frames": 225,
+      "bytes": 184471,
+      "video_sha256": "5148dfffca6e0b478b8723ae1b3e3d2d5e1c4cae4cce86af8770a2a599ebaad8",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/VectorStory/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 3.75,
+          "actual_seconds": 3.7333333333333334,
+          "frame_index": 56
+        },
+        {
+          "requested_seconds": 7.5,
+          "actual_seconds": 7.466666666666667,
+          "frame_index": 112
+        },
+        {
+          "requested_seconds": 11.25,
+          "actual_seconds": 11.2,
+          "frame_index": 168
+        },
+        {
+          "requested_seconds": 15.0,
+          "actual_seconds": 14.933333333333334,
+          "frame_index": 224
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    },
+    {
+      "scene": "WaveSuperposition",
+      "source": "examples/wave_superposition.py",
+      "source_sha256": "870becc386bee9536ad2ecaccdba4b56b9923279055869ce2ca9577ef07699e5",
+      "command": [
+        "/Users/tsk/code/manim-skill/.venv/bin/python",
+        "-m",
+        "manim",
+        "render",
+        "-ql",
+        "--renderer",
+        "cairo",
+        "--format",
+        "mp4",
+        "--resolution",
+        "640,360",
+        "--fps",
+        "15",
+        "--disable_caching",
+        "--media_dir",
+        "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/WaveSuperposition",
+        "/Users/tsk/code/manim-skill/examples/wave_superposition.py",
+        "WaveSuperposition"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "artifact": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/WaveSuperposition/videos/wave_superposition/360p15/WaveSuperposition.mp4",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 17.666666666666668,
+      "decoded_frames": 265,
+      "bytes": 228433,
+      "video_sha256": "c2714905e4e437536ae4faa807ece960acd7cba7b7fbb57d5a9e78e84f4b79fa",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/full-craft-regression-20261030/WaveSuperposition/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0,
+          "actual_seconds": 0.0,
+          "frame_index": 0
+        },
+        {
+          "requested_seconds": 4.416666666666667,
+          "actual_seconds": 4.4,
+          "frame_index": 66
+        },
+        {
+          "requested_seconds": 8.833333333333334,
+          "actual_seconds": 8.8,
+          "frame_index": 132
+        },
+        {
+          "requested_seconds": 13.25,
+          "actual_seconds": 13.2,
+          "frame_index": 198
+        },
+        {
+          "requested_seconds": 17.666666666666668,
+          "actual_seconds": 17.6,
+          "frame_index": 264
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed"
+    }
+  ],
+  "skipped": [
+    {
+      "scene": "MathExample",
+      "reason": "optional TeX backend not requested"
+    }
+  ],
+  "verification_scope": "All discovered non-TeX example scenes, including optional Typst, rendered via Cairo at 640x360 15 fps with caching disabled. Every encoded frame decoded. Source and video SHA-256 rechecked against current files.",
+  "visual_acceptance": "Not established by this regression. Existing scene-specific reviews describe their sampled-frame checks; this report does not replace them.",
+  "unit_tests": "16 tests passed on 2026-10-30.",
+  "exclusions": [
+    "MathExample: optional TeX not requested; no TeX toolchain installed in this environment.",
+    "OpenGL, cross-platform fonts, and full-generation aesthetic benchmark not covered."
+  ]
+}

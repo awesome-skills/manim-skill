@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-29",
+  "before": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/delivery-1/videos/wave_superposition/720p30/WaveSuperposition.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 17.6,
+    "decoded_frames": 528,
+    "bytes": 564616,
+    "video_sha256": "e4326c8f01a5a970e8a0bed2a6bf55cc295fa775214e2125e23b164350cc6918",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/art-direction-final/before/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 2.8,
+        "actual_seconds": 2.8,
+        "frame_index": 84,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/art-direction-final/before/frame-000084.png"
+      },
+      {
+        "requested_seconds": 11.8,
+        "actual_seconds": 11.8,
+        "frame_index": 354,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/art-direction-final/before/frame-000354.png"
+      }
+    ],
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/art-direction-final/before/review.html"
+  },
+  "after": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/art-direction-final/videos/interference_study/720p30/InterferenceStudy.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 18.064713541666666,
+    "decoded_frames": 542,
+    "bytes": 672290,
+    "video_sha256": "1cb8f8f05b2aa10d1f8f82da08d7de19437810f895c93d8385f5ad673fda16d1",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/art-direction-final/review/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 0.4,
+        "actual_seconds": 0.4,
+        "frame_index": 12,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/art-direction-final/review/frame-000012.png"
+      },
+      {
+        "requested_seconds": 1.6,
+        "actual_seconds": 1.6,
+        "frame_index": 48,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/art-direction-final/review/frame-000048.png"
+      },
+      {
+        "requested_seconds": 4.8,
+        "actual_seconds": 4.8,
+        "frame_index": 144,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/art-direction-final/review/frame-000144.png"
+      },
+      {
+        "requested_seconds": 7.8,
+        "actual_seconds": 7.799348958333334,
+        "frame_index": 234,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/art-direction-final/review/frame-000234.png"
+      },
+      {
+        "requested_seconds": 9.399999999999999,
+        "actual_seconds": 9.399348958333333,
+        "frame_index": 282,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/art-direction-final/review/frame-000282.png"
+      },
+      {
+        "requested_seconds": 9.549999999999999,
+        "actual_seconds": 9.532682291666667,
+        "frame_index": 286,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/art-direction-final/review/frame-000286.png"
+      },
+      {
+        "requested_seconds": 9.7,
+        "actual_seconds": 9.699348958333333,
+        "frame_index": 291,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/art-direction-final/review/frame-000291.png"
+      },
+      {
+        "requested_seconds": 9.849999999999998,
+        "actual_seconds": 9.832682291666666,
+        "frame_index": 295,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/art-direction-final/review/frame-000295.png"
+      },
+      {
+        "requested_seconds": 9.999999999999998,
+        "actual_seconds": 9.998697916666666,
+        "frame_index": 300,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/art-direction-final/review/frame-000300.png"
+      },
+      {
+        "requested_seconds": 10.4,
+        "actual_seconds": 10.398697916666666,
+        "frame_index": 312,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/art-direction-final/review/frame-000312.png"
+      },
+      {
+        "requested_seconds": 17.5,
+        "actual_seconds": 17.498046875,
+        "frame_index": 525,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/art-direction-final/review/frame-000525.png"
+      }
+    ],
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/art-direction-final/review/review.html"
+  },
+  "source_sha256": {
+    "examples/interference_study.py": "ae5e9d677e43ec12cf5c89cf3c153283abbb18f8102e60ee86f2536c4de1630d",
+    "references/aesthetic-refinement.md": "b87b4c9246aea436a16e3988d7a4f26e3df8aabdc663e1e305ec41ee937116cd",
+    "references/visual-direction.md": "de21acf187f2787e5879e726c88c2ccb98d653d699a027672403d7aab68bf9c8",
+    "SKILL.md": "9c7d775db3030bc1086c64233ad657ca4224b5016ec85daa49ea2e83aa54cd7c"
+  },
+  "amplitude_check": {
+    "phases": 17,
+    "positions_per_phase": 100001,
+    "max_error": 4.387268326411231e-10
+  },
+  "visual_review": "Sampled opening, aligned, transition, opposed and final states; see review.md. Not an audience test."
+}

@@ -1,0 +1,176 @@
+{
+  "before": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/art-direction-final/videos/interference_study/720p30/InterferenceStudy.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 18.064713541666666,
+    "decoded_frames": 542,
+    "bytes": 672290,
+    "video_sha256": "1cb8f8f05b2aa10d1f8f82da08d7de19437810f895c93d8385f5ad673fda16d1",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/interference-phone/before/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 5.0,
+        "actual_seconds": 5.0,
+        "frame_index": 150,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/interference-phone/before/frame-000150.png"
+      },
+      {
+        "requested_seconds": 10.5,
+        "actual_seconds": 10.498697916666666,
+        "frame_index": 315,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/interference-phone/before/frame-000315.png"
+      },
+      {
+        "requested_seconds": 17.0,
+        "actual_seconds": 16.998046875,
+        "frame_index": 510,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/interference-phone/before/frame-000510.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/interference-phone/before/review.html"
+  },
+  "after": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/interference-phone/final-media/videos/interference_study/720p30/InterferenceStudy.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 18.064713541666666,
+    "decoded_frames": 542,
+    "bytes": 655256,
+    "video_sha256": "b3511098614e5349b70c4c54e44050e3c2b4711460760e85b4ecdd429c4f6d6d",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/interference-phone/after/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 5.0,
+        "actual_seconds": 5.0,
+        "frame_index": 150,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/interference-phone/after/frame-000150.png"
+      },
+      {
+        "requested_seconds": 8.0,
+        "actual_seconds": 7.999348958333333,
+        "frame_index": 240,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/interference-phone/after/frame-000240.png"
+      },
+      {
+        "requested_seconds": 10.5,
+        "actual_seconds": 10.498697916666666,
+        "frame_index": 315,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/interference-phone/after/frame-000315.png"
+      },
+      {
+        "requested_seconds": 14.0,
+        "actual_seconds": 13.998697916666666,
+        "frame_index": 420,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/interference-phone/after/frame-000420.png"
+      },
+      {
+        "requested_seconds": 17.0,
+        "actual_seconds": 16.998046875,
+        "frame_index": 510,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/interference-phone/after/frame-000510.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/interference-phone/after/review.html"
+  },
+  "smoke": {
+    "manim_version": "0.22.0",
+    "python": "3.13.16 (main, Sep 30 2026, 18:57:20) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "renderer": "cairo",
+    "visual_review": "not performed",
+    "results": [
+      {
+        "scene": "InterferenceStudy",
+        "source": "examples/interference_study.py",
+        "source_sha256": "beefe25991fdfa7bd13618146b46eff9147c964bdf795743b0601b9345752a9e",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/interference-phone/smoke/InterferenceStudy",
+          "/Users/tsk/code/manim-skill/examples/interference_study.py",
+          "InterferenceStudy"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/interference-phone/smoke/InterferenceStudy/videos/interference_study/360p15/InterferenceStudy.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 18.199674479166667,
+        "decoded_frames": 273,
+        "bytes": 267361,
+        "video_sha256": "31d2d4b2dfb122accbf89b11db6ba107da94ca0702a60bea27a00d29e1a1f8bd",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/interference-phone/smoke/InterferenceStudy/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 4.549918619791667,
+            "actual_seconds": 4.5330078125,
+            "frame_index": 68
+          },
+          {
+            "requested_seconds": 9.099837239583334,
+            "actual_seconds": 9.066341145833333,
+            "frame_index": 136
+          },
+          {
+            "requested_seconds": 13.649755859375,
+            "actual_seconds": 13.599674479166667,
+            "frame_index": 204
+          },
+          {
+            "requested_seconds": 18.199674479166667,
+            "actual_seconds": 18.1330078125,
+            "frame_index": 272
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      }
+    ],
+    "skipped": []
+  },
+  "source_sha256": {
+    "baseline.py": "ae5e9d677e43ec12cf5c89cf3c153283abbb18f8102e60ee86f2536c4de1630d",
+    "interference_study.py": "beefe25991fdfa7bd13618146b46eff9147c964bdf795743b0601b9345752a9e"
+  },
+  "invariants_checked": [
+    "Same baselines, xs, screen_x, scale AST",
+    "Same play run_time and wait arguments AST"
+  ]
+}

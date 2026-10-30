@@ -1,0 +1,12 @@
+[
+  {
+    "file": "verification/motion-timing-20261030/media/videos/motion_timing/720p30/MotionTiming.mp4",
+    "frames": 435,
+    "pixels_sha256": "5cf1884c50f22124e38517f89c1485c2487b1d0a8d11d83309ff5d077b905598"
+  },
+  {
+    "file": "verification/motion-portrait-20261030/landscape/videos/motion_timing/720p30/MotionTiming.mp4",
+    "frames": 435,
+    "pixels_sha256": "5cf1884c50f22124e38517f89c1485c2487b1d0a8d11d83309ff5d077b905598"
+  }
+]

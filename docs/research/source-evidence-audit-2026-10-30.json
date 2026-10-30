@@ -1,0 +1,121 @@
+{
+  "audit_date": "2026-10-30",
+  "license_checks": [
+    {
+      "repo": "paperjs/paper.js",
+      "files": [
+        {
+          "name": "LICENSE.txt",
+          "url": "https://api.github.com/repos/paperjs/paper.js/contents/LICENSE.txt?ref=develop",
+          "sha": "84e905d812d93807dbcc0e370b5706ecca0fe4dc"
+        }
+      ],
+      "classification": "MIT",
+      "checked": "2026-10-29",
+      "scope": "Root directory and listed license file only"
+    },
+    {
+      "repo": "pygfx/pygfx",
+      "files": [
+        {
+          "name": "LICENSE",
+          "url": "https://api.github.com/repos/pygfx/pygfx/contents/LICENSE?ref=main",
+          "sha": "d7f2262a3d98ddfe71f5b0cae55fe58d1ee649ff"
+        }
+      ],
+      "classification": "BSD-2-Clause",
+      "checked": "2026-10-29",
+      "scope": "Root directory and listed license file only"
+    },
+    {
+      "repo": "vispy/vispy",
+      "files": [
+        {
+          "name": "LICENSE.txt",
+          "url": "https://api.github.com/repos/vispy/vispy/contents/LICENSE.txt?ref=main",
+          "sha": "efb75b29a926deb47398b66f6be29faa8243fffa"
+        }
+      ],
+      "classification": "BSD-3-Clause; examples exception described in license",
+      "checked": "2026-10-29",
+      "scope": "Root directory and listed license file only"
+    },
+    {
+      "repo": "pablostanley/typexperiments",
+      "files": [],
+      "classification": "unverified: no root license file found",
+      "checked": "2026-10-29",
+      "scope": "Root directory and listed license file only"
+    },
+    {
+      "repo": "kelvinleandro/manim-animations",
+      "files": [],
+      "classification": "unverified: no root license file found",
+      "checked": "2026-10-29",
+      "scope": "Root directory and listed license file only"
+    },
+    {
+      "repo": "JacquesLucke/animation_nodes",
+      "files": [
+        {
+          "name": "license.txt",
+          "url": "https://api.github.com/repos/JacquesLucke/animation_nodes/contents/license.txt?ref=master",
+          "sha": "9b31ecf4b4d1e47ed9852eb3d6c1083101167292"
+        }
+      ],
+      "classification": "GPL-3.0-or-later",
+      "checked": "2026-10-29",
+      "scope": "Root directory and listed license file only"
+    }
+  ],
+  "archive_migration": [
+    {
+      "file": "docs/research/bezier-craft-2026-10-29.json",
+      "archived_sha256": "3cd0c2248a02664fb66e1443ac5ed48ffa3f3f9b70f24ec40e94391101b830b1",
+      "fields": 4,
+      "before_bytes": 22286,
+      "after_bytes": 2409
+    },
+    {
+      "file": "docs/research/three-d-craft-2026-10-29.json",
+      "archived_sha256": "f243ba084e748e70991bc8f869ca7f67b0e40c071336326b758912579f07f5e9",
+      "fields": 8,
+      "before_bytes": 76656,
+      "after_bytes": 6064
+    },
+    {
+      "file": "docs/research/continuous-transition-2026-10-29.json",
+      "archived_sha256": "686fb21194479e217ca9c9fd20835bb8a1add4a3d61fff841e8f7f46f5f85636",
+      "fields": 8,
+      "before_bytes": 32334,
+      "after_bytes": 5504
+    },
+    {
+      "file": "docs/research/kinetic-type-2026-10-29.json",
+      "archived_sha256": "ebff48a97ccde3acb21ab38679c73a5ca003047f9d455680a0ffdf342a47c4ea",
+      "fields": 8,
+      "before_bytes": 45537,
+      "after_bytes": 6057
+    },
+    {
+      "file": "docs/research/chinese-statistics-2026-10-29.json",
+      "archived_sha256": "4b8d9bd6bf50f3e93f5146118025b3b3bee9965d7c0391fa58004489f08218f3",
+      "fields": 5,
+      "before_bytes": 24370,
+      "after_bytes": 3606
+    },
+    {
+      "file": "docs/research/damping-story-2026-10-29.json",
+      "archived_sha256": "c9bd669faac37cd6e84d786a1f76540b87bbe47d418d720818ccf3a8f97ac790",
+      "fields": 6,
+      "before_bytes": 38513,
+      "after_bytes": 4361
+    }
+  ],
+  "verified_field_fingerprints": 39,
+  "limits": [
+    "License checks cover only the named repositories and paths.",
+    "Ignored local archives are not distributed with the repository.",
+    "Source fingerprints establish identity, not permission or aesthetic quality."
+  ]
+}

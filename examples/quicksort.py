@@ -25,7 +25,7 @@ class Event:
 
 class QuickSortBars(Scene):
     """
-    Cinematic quicksort visualization (Lomuto partition).
+    Quicksort with persistent moving bars (Lomuto partition).
 
     4K render reference:
       manim -pqh --fps 60 --resolution 3840,2160 examples/quicksort.py QuickSortBars
@@ -34,8 +34,8 @@ class QuickSortBars(Scene):
     BAR_WIDTH = 0.48
     BAR_GAP = 0.12
     BASELINE_Y = -2.55
-    MAX_BAR_HEIGHT = 3.25
-    MESSAGE_FONT_SIZE = 26
+    MAX_BAR_HEIGHT = 2.65
+    MESSAGE_FONT_SIZE = 28
 
     def construct(self) -> None:
         data = [14, 3, 9, 1, 11, 7, 2, 13, 5, 10, 6, 12, 4, 8]
@@ -44,12 +44,12 @@ class QuickSortBars(Scene):
 
         self.add(*self.build_background())
 
-        title = Text("Quick Sort", font_size=56, weight=BOLD, color=WHITE).to_edge(UP, buff=0.2)
+        title = Text("Quick Sort", font_size=48, weight=BOLD, color=WHITE).move_to([-4.8, 3.3, 0])
         subtitle = Text(
-            "Lomuto Partition | AI-ready Showcase",
-            font_size=24,
+            "Compare. Partition. Repeat.",
+            font_size=30,
             color=GRAY_A,
-        ).next_to(title, DOWN, buff=0.08)
+        ).move_to([3.1, 3.3, 0])
         self.play(FadeIn(title, shift=0.15 * DOWN), FadeIn(subtitle, shift=0.15 * DOWN), run_time=1.0)
 
         bars, value_labels, index_labels = self.build_bars(events[0], len(data), max_value)
@@ -63,15 +63,9 @@ class QuickSortBars(Scene):
         message = Text(events[0].message, font_size=self.MESSAGE_FONT_SIZE, color=GRAY_A).to_edge(DOWN, buff=0.38)
 
         legend = self.build_legend()
-        legend.to_corner(UR, buff=0.28)
+        legend.move_to([0, 2.55, 0])
 
-        stats_panel = RoundedRectangle(corner_radius=0.14, width=3.9, height=1.7)
-        stats_panel.set_stroke(color=GRAY_C, width=1.5, opacity=0.8)
-        stats_panel.set_fill(color="#101827", opacity=0.84)
-        stats_panel.to_corner(UL, buff=0.28)
-        stats_text = self.build_stats_text(events[0]).move_to(stats_panel.get_center()).align_to(stats_panel, LEFT).shift(
-            RIGHT * 0.2
-        )
+        stats_text = self.build_stats_text(events[0]).move_to([0, 1.9, 0])
 
         active_range = self.build_active_range_box(events[0], bars)
         pivot_marker = self.build_pivot_marker(events[0], bars)
@@ -79,7 +73,6 @@ class QuickSortBars(Scene):
         self.play(
             Create(baseline),
             FadeIn(legend, shift=0.1 * UP),
-            FadeIn(stats_panel, shift=0.1 * UP),
             FadeIn(stats_text, shift=0.1 * UP),
             LaggedStart(*[Create(bar) for bar in bars], lag_ratio=0.04),
             FadeIn(value_labels),
@@ -93,31 +86,32 @@ class QuickSortBars(Scene):
         for event in events[1:]:
             target_bars, target_labels, _ = self.build_bars(event, len(data), max_value)
             target_message = Text(event.message, font_size=self.MESSAGE_FONT_SIZE, color=GRAY_A).to_edge(DOWN, buff=0.38)
-            target_stats = self.build_stats_text(event).move_to(stats_text).align_to(stats_panel, LEFT).shift(RIGHT * 0.2)
+            target_stats = self.build_stats_text(event).move_to([0, 1.9, 0])
             target_range = self.build_active_range_box(event, target_bars)
             target_pivot = self.build_pivot_marker(event, target_bars)
+
+            # Decision text changes as a discrete state, not a glyph morph.
+            self.remove(message, stats_text)
+            message, stats_text = target_message, target_stats
+            self.add(message, stats_text)
+            if len(event.swap_indices) == 2:
+                self.play(FadeOut(pivot_marker), run_time=0.15)
+                for index in event.swap_indices:
+                    bars[index].set_fill(RED_C)
+                self.move_swap(bars, value_labels, *event.swap_indices)
+                self.add(pivot_marker)
 
             self.play(
                 Transform(bars, target_bars),
                 Transform(value_labels, target_labels),
-                Transform(message, target_message),
-                Transform(stats_text, target_stats),
                 Transform(active_range, target_range),
                 Transform(pivot_marker, target_pivot),
-                run_time=self.duration_for(event.action),
+                run_time=0.18 if event.action == "swap" else self.duration_for(event.action),
             )
 
             if event.compare_indices:
                 highlights = VGroup(*[bars[i] for i in event.compare_indices])
                 self.play(Indicate(highlights, color=ORANGE, scale_factor=1.02), run_time=0.18)
-
-            if len(event.swap_indices) == 2:
-                left_idx, right_idx = event.swap_indices
-                self.play(
-                    Flash(bars[left_idx].get_top(), color=RED_C, flash_radius=0.28),
-                    Flash(bars[right_idx].get_top(), color=RED_C, flash_radius=0.28),
-                    run_time=0.25,
-                )
 
             if event.action == "pivot_fixed" and event.pivot_index is not None:
                 self.play(
@@ -130,12 +124,12 @@ class QuickSortBars(Scene):
                     run_time=0.26,
                 )
 
-        final_badge = Text("Sorted", font_size=48, weight=BOLD, color=GREEN_A).next_to(subtitle, DOWN, buff=0.12)
+        final_badge = Text("Sorted", font_size=48, weight=BOLD, color=GREEN_A).move_to([0, 1.1, 0])
         complexity = VGroup(
             Text("Average: O(n log n)", font_size=24, color=GRAY_A),
             Text("Worst: O(n^2)", font_size=24, color=GRAY_A),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.05)
-        complexity.to_edge(DOWN, buff=0.28).shift(UP * 0.28 + LEFT * 4.35)
+        complexity.to_edge(DOWN, buff=0.28)
 
         self.play(FadeOut(message, shift=0.12 * DOWN), FadeIn(complexity, shift=0.1 * UP), run_time=0.6)
         self.play(FadeIn(final_badge, scale=0.94), run_time=0.6)
@@ -146,25 +140,25 @@ class QuickSortBars(Scene):
         base.set_fill(color="#05070f", opacity=1.0)
         base.set_stroke(width=0)
 
-        glow_1 = Circle(radius=3.6).set_fill(color=BLUE_E, opacity=0.16).set_stroke(width=0)
-        glow_1.move_to(np.array([-4.4, 2.5, 0]))
+        return [base]
 
-        glow_2 = Circle(radius=3.9).set_fill(color=PURPLE_E, opacity=0.11).set_stroke(width=0)
-        glow_2.move_to(np.array([4.8, -2.8, 0]))
+    def move_swap(self, bars: VGroup, labels: VGroup, left: int, right: int) -> None:
+        """Translate existing items; never interpolate their numerical values."""
+        animations = []
+        for source, destination, lift in [(left, right, 0.6), (right, left, -0.2)]:
+            dx = bars[destination].get_x() - bars[source].get_x()
+            for item in (bars[source], labels[source]):
+                start = item.get_center()
+                end = start + dx * RIGHT
+                path = CubicBezier(start, start + lift * UP,
+                                   end + lift * UP, end)
+                animations.append(MoveAlongPath(item, path))
+        self.play(*animations, run_time=0.8)
+        # Subsequent event snapshots are indexed by position, not item identity.
+        for group in (bars, labels):
+            group.submobjects[left], group.submobjects[right] = (
+                group.submobjects[right], group.submobjects[left])
 
-        grid = NumberPlane(
-            x_range=[-7, 7, 1],
-            y_range=[-4, 4, 1],
-            background_line_style={
-                "stroke_color": GRAY_E,
-                "stroke_opacity": 0.08,
-                "stroke_width": 1,
-            },
-            axis_config={"stroke_opacity": 0},
-            faded_line_ratio=2,
-        )
-        grid.scale(0.92)
-        return [base, glow_1, glow_2, grid]
 
     def build_events(self, source: list[int]) -> list[Event]:
         arr = source[:]
@@ -351,18 +345,18 @@ class QuickSortBars(Scene):
             bar.move_to(np.array([x, self.BASELINE_Y + height / 2, 0]))
             bars.add(bar)
 
-            value_label = Text(str(value), font_size=22, color=WHITE)
+            value_label = Text(str(value), font_size=28, color=WHITE)
             value_label.next_to(bar, UP, buff=0.09)
             labels.add(value_label)
 
-            idx_label = Text(str(idx), font_size=14, color=GRAY_C)
+            idx_label = Text(str(idx), font_size=22, color=GRAY_C)
             idx_label.next_to(bar, DOWN, buff=0.09)
             index_labels.add(idx_label)
 
         return bars, labels, index_labels
 
     def build_active_range_box(self, event: Event, bars: VGroup) -> VMobject:
-        if event.left <= event.right and event.left >= 0 and event.right < len(bars):
+        if event.action != "done" and event.left <= event.right and event.left >= 0 and event.right < len(bars):
             subset = VGroup(*[bars[i] for i in range(event.left, event.right + 1)])
             box = SurroundingRectangle(subset, buff=0.12, corner_radius=0.1)
             box.set_fill(color=BLUE_E, opacity=0.12)
@@ -383,7 +377,7 @@ class QuickSortBars(Scene):
             stroke_width=4,
             color=YELLOW_B,
         )
-        label = Text("pivot", font_size=18, color=YELLOW_A)
+        label = Text("pivot", font_size=23, color=YELLOW_A)
 
         if event.pivot_index is not None and 0 <= event.pivot_index < len(bars):
             target = bars[event.pivot_index]
@@ -405,7 +399,7 @@ class QuickSortBars(Scene):
             swatch = Square(side_length=0.2)
             swatch.set_fill(color, opacity=1.0)
             swatch.set_stroke(WHITE, width=0.8, opacity=0.9)
-            text = Text(label, font_size=17, color=GRAY_A)
+            text = Text(label, font_size=28, color=GRAY_A)
             row = VGroup(swatch, text).arrange(RIGHT, buff=0.12)
             return row
 
@@ -415,23 +409,16 @@ class QuickSortBars(Scene):
             item(ORANGE, "comparison"),
             item(RED_C, "swap"),
             item(GREEN_C, "sorted"),
-        ).arrange(DOWN, aligned_edge=LEFT, buff=0.08)
+        ).arrange(RIGHT, buff=0.40)
 
-        panel = RoundedRectangle(corner_radius=0.12, width=2.95, height=1.72)
-        panel.set_stroke(color=GRAY_C, width=1.2, opacity=0.8)
-        panel.set_fill(color="#101827", opacity=0.84)
-        rows.move_to(panel.get_center()).align_to(panel, LEFT).shift(RIGHT * 0.18)
-        return VGroup(panel, rows)
+        return rows
 
     @staticmethod
     def build_stats_text(event: Event) -> VGroup:
         lines = VGroup(
-            Text(f"step: {event.step}", font_size=17, color=GRAY_A),
-            Text(f"depth: {event.depth}", font_size=17, color=GRAY_A),
-            Text(f"range: [{event.left}, {event.right}]", font_size=17, color=GRAY_A),
-            Text(f"comparisons: {event.comparisons}", font_size=17, color=GRAY_A),
-            Text(f"swaps: {event.swaps}", font_size=17, color=GRAY_A),
-        ).arrange(DOWN, aligned_edge=LEFT, buff=0.06)
+            Text(f"Comparisons  {event.comparisons:02d}", font_size=24, color=GRAY_A),
+            Text(f"Swaps  {event.swaps:02d}", font_size=24, color=GRAY_A),
+        ).arrange(RIGHT, buff=0.65)
         return lines
 
     @staticmethod

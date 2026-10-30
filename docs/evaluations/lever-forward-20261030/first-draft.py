@@ -1,0 +1,53 @@
+from manim import *
+import numpy as np
+
+BG='#101820'; INK='#F5F1E8'; DIM='#A7B5BC'; GOLD='#EABF78'; BLUE='#8CC9D3'
+FONT='Hiragino Sans GB'
+class Lever(Scene):
+ def construct(self):
+  self.camera.background_color=BG
+  def txt(s,size=34,color=INK): return Text(s,font=FONT,font_size=size,color=color)
+  def caption(s): return txt(s,36).move_to([0,-2.85,0])
+  self.next_section('question')
+  title=txt('为什么离支点越远，越省力？',42).to_edge(UP,buff=.48)
+  self.play(FadeIn(title,shift=UP*.12),run_time=1); self.wait(1)
+  pivot=np.array([-1.,-.4,0]); left=pivot+LEFT*1.6; near=pivot+RIGHT*1.6; far=pivot+RIGHT*3.2
+  beam=Line(pivot+LEFT*2,pivot+RIGHT*3.7,color=INK,stroke_width=12)
+  support=Polygon(pivot+DOWN*.08,pivot+[-.43,-.85,0],pivot+[.43,-.85,0],fill_color=DIM,fill_opacity=1,stroke_width=0)
+  base=Line(pivot+[-.8,-.87,0],pivot+[.8,-.87,0],color=DIM,stroke_width=3)
+  load=RoundedRectangle(width=.72,height=.72,corner_radius=.08,fill_color=BLUE,fill_opacity=1,stroke_width=0).next_to(left,UP,buff=.08)
+  loadtext=txt('重物',25,BG).move_to(load)
+  dot=Dot(pivot,color=GOLD,radius=.075); pivotlabel=txt('支点',25,DIM).next_to(support,DOWN,buff=.12)
+  self.play(Create(beam),FadeIn(support),Create(base),FadeIn(load),FadeIn(loadtext),FadeIn(dot),FadeIn(pivotlabel),run_time=1.4)
+  c=caption('同一重物，先在近处向下压')
+  self.play(FadeIn(c),run_time=.4)
+  force=Arrow(near+UP*1.35,near+UP*.12,buff=0,color=GOLD,stroke_width=8,max_tip_length_to_length_ratio=.2)
+  fl=txt('用力',28,GOLD).next_to(force,UP,buff=.12)
+  self.play(GrowArrow(force),FadeIn(fl),run_time=.8); self.wait(1)
+  self.next_section('compare_distance')
+  dleft=Line(left+DOWN*.32,pivot+DOWN*.32,color=BLUE,stroke_width=3)
+  dright=Line(pivot+DOWN*.32,near+DOWN*.32,color=GOLD,stroke_width=3)
+  dl=txt('重物臂',25,BLUE).next_to(dleft,DOWN,buff=.1)
+  dr=txt('用力臂',25,GOLD).next_to(dright,DOWN,buff=.1)
+  self.play(Create(dleft),Create(dright),FadeIn(dl),FadeIn(dr),run_time=.8); self.wait(1)
+  self.play(FadeOut(c),run_time=.25)
+  c=caption('用力臂和重物臂一样长：力也一样大')
+  self.play(FadeIn(c),run_time=.35); self.wait(2)
+  self.next_section('farther')
+  self.play(FadeOut(c),FadeOut(dr),run_time=.3)
+  c=caption('把用力点移远，用力臂变成两倍')
+  self.play(force.animate.shift(RIGHT*1.6),fl.animate.shift(RIGHT*1.6),Transform(dright,Line(pivot+DOWN*.32,far+DOWN*.32,color=GOLD,stroke_width=3)),FadeIn(c),run_time=1.6)
+  dr2=txt('用力臂 × 2',25,GOLD).next_to(dright,DOWN,buff=.1)
+  self.play(FadeIn(dr2),run_time=.35); self.wait(1.2)
+  self.next_section('less_force')
+  self.play(FadeOut(c),run_time=.25)
+  c=caption('力减半，仍能平衡同一重物')
+  shorter=Arrow(far+UP*.74,far+UP*.12,buff=0,color=GOLD,stroke_width=8,max_tip_length_to_length_ratio=.3)
+  self.play(Transform(force,shorter),fl.animate.next_to(shorter,UP,buff=.12),FadeIn(c),run_time=1.2)
+  halflabel=txt('力 × ½',29,GOLD).next_to(fl,RIGHT,buff=.22)
+  self.play(FadeIn(halflabel),run_time=.35); self.wait(1.5)
+  self.next_section('conclusion')
+  self.play(FadeOut(c),FadeOut(title),run_time=.4)
+  conclusion=txt('力 × 力臂 = 转动作用',42).to_edge(UP,buff=.55)
+  c=caption('力臂越长，达到同样转动作用所需的力越小')
+  self.play(FadeIn(conclusion),FadeIn(c),run_time=.7); self.wait(3)

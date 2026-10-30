@@ -1,0 +1,158 @@
+{
+  "date": "2026-10-29",
+  "source_sha256": "17fa7e3d101924f2a0cced3acea43221eaecefe09e952946ddef3006d4e8f9a1",
+  "report": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/damping-story-final/videos/damping_story/720p30/DampingStory.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 23.6,
+    "decoded_frames": 708,
+    "bytes": 847931,
+    "video_sha256": "d761b017c8c8cbcf9c16aa1b4617ffc55b6d8e5f9c5fb9f955b70b6e044abad3",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/damping-story-final/review/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 1.0,
+        "actual_seconds": 1.0,
+        "frame_index": 30,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/damping-story-final/review/frame-000030.png"
+      },
+      {
+        "requested_seconds": 4.0,
+        "actual_seconds": 4.0,
+        "frame_index": 120,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/damping-story-final/review/frame-000120.png"
+      },
+      {
+        "requested_seconds": 8.5,
+        "actual_seconds": 8.5,
+        "frame_index": 255,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/damping-story-final/review/frame-000255.png"
+      },
+      {
+        "requested_seconds": 11.0,
+        "actual_seconds": 11.0,
+        "frame_index": 330,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/damping-story-final/review/frame-000330.png"
+      },
+      {
+        "requested_seconds": 16.0,
+        "actual_seconds": 16.0,
+        "frame_index": 480,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/damping-story-final/review/frame-000480.png"
+      },
+      {
+        "requested_seconds": 19.900000000000002,
+        "actual_seconds": 19.9,
+        "frame_index": 597,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/damping-story-final/review/frame-000597.png"
+      },
+      {
+        "requested_seconds": 20.3,
+        "actual_seconds": 20.3,
+        "frame_index": 609,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/damping-story-final/review/frame-000609.png"
+      },
+      {
+        "requested_seconds": 20.700000000000003,
+        "actual_seconds": 20.7,
+        "frame_index": 621,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/damping-story-final/review/frame-000621.png"
+      },
+      {
+        "requested_seconds": 23.0,
+        "actual_seconds": 23.0,
+        "frame_index": 690,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/damping-story-final/review/frame-000690.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/damping-story-final/review/review.html"
+  },
+  "smoke": {
+    "manim_version": "0.22.0",
+    "python": "3.13.16 (main, Sep 30 2026, 18:57:20) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "renderer": "cairo",
+    "visual_review": "not performed",
+    "results": [
+      {
+        "scene": "DampingStory",
+        "source": "examples/damping_story.py",
+        "source_sha256": "17fa7e3d101924f2a0cced3acea43221eaecefe09e952946ddef3006d4e8f9a1",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/damping-story-smoke/DampingStory",
+          "/Users/tsk/code/manim-skill/examples/damping_story.py",
+          "DampingStory"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/damping-story-smoke/DampingStory/videos/damping_story/360p15/DampingStory.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 23.666015625,
+        "decoded_frames": 355,
+        "bytes": 326209,
+        "video_sha256": "6e7bb655d9f5f7a48bce9574669933299baf72002725bda7ab3f86295aaf3e05",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/damping-story-smoke/DampingStory/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 5.91650390625,
+            "actual_seconds": 5.866341145833333,
+            "frame_index": 88
+          },
+          {
+            "requested_seconds": 11.8330078125,
+            "actual_seconds": 11.799348958333333,
+            "frame_index": 177
+          },
+          {
+            "requested_seconds": 17.74951171875,
+            "actual_seconds": 17.732682291666666,
+            "frame_index": 266
+          },
+          {
+            "requested_seconds": 23.666015625,
+            "actual_seconds": 23.599348958333334,
+            "frame_index": 354
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      }
+    ],
+    "skipped": []
+  },
+  "checks": "14 unit tests; skill validator; diff check passed",
+  "visual_review": "Nine sampled 360px frames including chapter transition. No audience study or full-speed aesthetic acceptance."
+}

@@ -1,0 +1,312 @@
+{
+  "date": "2026-10-29",
+  "status": "iteration checkpoint; overall goal active",
+  "reports": {
+    "data_final": {
+      "artifact": "/Users/tsk/code/manim-skill/verification/data-story-staged/videos/data_to_decision/720p30/DataToDecision.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 15.066015625,
+      "decoded_frames": 452,
+      "bytes": 567016,
+      "video_sha256": "ea98b506a721e39e6cf92ec0a742d0fcd667594532c36cf5c70c8c9554ef1a44",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/data-story-staged/review/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 2.0,
+          "actual_seconds": 2.0,
+          "frame_index": 60,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/data-story-staged/review/frame-000060.png"
+        },
+        {
+          "requested_seconds": 6.3,
+          "actual_seconds": 6.3,
+          "frame_index": 189,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/data-story-staged/review/frame-000189.png"
+        },
+        {
+          "requested_seconds": 7.999999999999999,
+          "actual_seconds": 7.999348958333333,
+          "frame_index": 240,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/data-story-staged/review/frame-000240.png"
+        },
+        {
+          "requested_seconds": 8.35,
+          "actual_seconds": 8.332682291666666,
+          "frame_index": 250,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/data-story-staged/review/frame-000250.png"
+        },
+        {
+          "requested_seconds": 8.7,
+          "actual_seconds": 8.699348958333333,
+          "frame_index": 261,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/data-story-staged/review/frame-000261.png"
+        },
+        {
+          "requested_seconds": 9.049999999999999,
+          "actual_seconds": 9.032682291666667,
+          "frame_index": 271,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/data-story-staged/review/frame-000271.png"
+        },
+        {
+          "requested_seconds": 9.399999999999999,
+          "actual_seconds": 9.399348958333333,
+          "frame_index": 282,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/data-story-staged/review/frame-000282.png"
+        },
+        {
+          "requested_seconds": 14.8,
+          "actual_seconds": 14.799348958333333,
+          "frame_index": 444,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/data-story-staged/review/frame-000444.png"
+        }
+      ],
+      "contact_preview": {
+        "width": 360,
+        "height": 202,
+        "mode": "exact width"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed",
+      "review_player": "/Users/tsk/code/manim-skill/verification/data-story-staged/review/review.html"
+    },
+    "cache_first": {
+      "artifact": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final/videos/cache/720p30/CacheStory.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 23.298697916666665,
+      "decoded_frames": 699,
+      "bytes": 696398,
+      "video_sha256": "a036b8d1a5b38ac27a8e00ad0259deb6de04178f1b536695207c3332514acdd8",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final-review/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 0.8,
+          "actual_seconds": 0.8,
+          "frame_index": 24,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final-review/frame-000024.png"
+        },
+        {
+          "requested_seconds": 4.5,
+          "actual_seconds": 4.5,
+          "frame_index": 135,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final-review/frame-000135.png"
+        },
+        {
+          "requested_seconds": 6.0,
+          "actual_seconds": 6.0,
+          "frame_index": 180,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final-review/frame-000180.png"
+        },
+        {
+          "requested_seconds": 8.0,
+          "actual_seconds": 8.0,
+          "frame_index": 240,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final-review/frame-000240.png"
+        },
+        {
+          "requested_seconds": 10.7,
+          "actual_seconds": 10.699348958333333,
+          "frame_index": 321,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final-review/frame-000321.png"
+        },
+        {
+          "requested_seconds": 12.4,
+          "actual_seconds": 12.399348958333333,
+          "frame_index": 372,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final-review/frame-000372.png"
+        },
+        {
+          "requested_seconds": 13.5,
+          "actual_seconds": 13.499348958333334,
+          "frame_index": 405,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final-review/frame-000405.png"
+        },
+        {
+          "requested_seconds": 15.0,
+          "actual_seconds": 14.999348958333334,
+          "frame_index": 450,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final-review/frame-000450.png"
+        },
+        {
+          "requested_seconds": 17.5,
+          "actual_seconds": 17.498697916666668,
+          "frame_index": 525,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final-review/frame-000525.png"
+        },
+        {
+          "requested_seconds": 21.0,
+          "actual_seconds": 20.998697916666668,
+          "frame_index": 630,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final-review/frame-000630.png"
+        },
+        {
+          "requested_seconds": 23.0,
+          "actual_seconds": 22.998697916666668,
+          "frame_index": 690,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final-review/frame-000690.png"
+        }
+      ],
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed",
+      "review_player": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/final-review/review.html"
+    },
+    "cache_final": {
+      "artifact": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-final/videos/cache/720p30/CacheStory.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 23.298697916666665,
+      "decoded_frames": 699,
+      "bytes": 766566,
+      "video_sha256": "c54efa418707a06b4198cc38d9c893521da8f5607d68c4459b28599b89c2471f",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-review/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 3.0,
+          "actual_seconds": 3.0,
+          "frame_index": 90,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-review/frame-000090.png"
+        },
+        {
+          "requested_seconds": 6.0,
+          "actual_seconds": 6.0,
+          "frame_index": 180,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-review/frame-000180.png"
+        },
+        {
+          "requested_seconds": 11.5,
+          "actual_seconds": 11.499348958333334,
+          "frame_index": 345,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-review/frame-000345.png"
+        },
+        {
+          "requested_seconds": 14.25,
+          "actual_seconds": 14.232682291666666,
+          "frame_index": 427,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-review/frame-000427.png"
+        },
+        {
+          "requested_seconds": 14.3,
+          "actual_seconds": 14.299348958333333,
+          "frame_index": 429,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-review/frame-000429.png"
+        },
+        {
+          "requested_seconds": 14.35,
+          "actual_seconds": 14.332682291666666,
+          "frame_index": 430,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-review/frame-000430.png"
+        },
+        {
+          "requested_seconds": 14.4,
+          "actual_seconds": 14.399348958333333,
+          "frame_index": 432,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-review/frame-000432.png"
+        },
+        {
+          "requested_seconds": 14.45,
+          "actual_seconds": 14.432682291666667,
+          "frame_index": 433,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-review/frame-000433.png"
+        },
+        {
+          "requested_seconds": 14.5,
+          "actual_seconds": 14.499348958333334,
+          "frame_index": 435,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-review/frame-000435.png"
+        },
+        {
+          "requested_seconds": 14.55,
+          "actual_seconds": 14.532682291666667,
+          "frame_index": 436,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-review/frame-000436.png"
+        },
+        {
+          "requested_seconds": 14.6,
+          "actual_seconds": 14.599348958333334,
+          "frame_index": 438,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-review/frame-000438.png"
+        }
+      ],
+      "contact_preview": {
+        "width": 640,
+        "height": 360,
+        "mode": "fit 640x360"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed",
+      "review_player": "/Users/tsk/code/manim-skill/verification/transfer-cache-20261029/revision/label-review/review.html"
+    },
+    "area_final": {
+      "artifact": "/Users/tsk/code/manim-skill/verification/area-scale-final/videos/area_scale_story/720p30/AreaScaleStory.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 13.566015625,
+      "decoded_frames": 407,
+      "bytes": 339659,
+      "video_sha256": "9a99c902786a589a6c0c84a532cec9b990e699db74bcad57451a1e95d322629b",
+      "contact_sheet": "/Users/tsk/code/manim-skill/verification/area-scale-final/review/contact.png",
+      "samples": [
+        {
+          "requested_seconds": 2.0,
+          "actual_seconds": 2.0,
+          "frame_index": 60,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/area-scale-final/review/frame-000060.png"
+        },
+        {
+          "requested_seconds": 4.8,
+          "actual_seconds": 4.8,
+          "frame_index": 144,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/area-scale-final/review/frame-000144.png"
+        },
+        {
+          "requested_seconds": 6.3,
+          "actual_seconds": 6.3,
+          "frame_index": 189,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/area-scale-final/review/frame-000189.png"
+        },
+        {
+          "requested_seconds": 9.5,
+          "actual_seconds": 9.499348958333334,
+          "frame_index": 285,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/area-scale-final/review/frame-000285.png"
+        },
+        {
+          "requested_seconds": 12.0,
+          "actual_seconds": 11.999348958333334,
+          "frame_index": 360,
+          "frame_path": "/Users/tsk/code/manim-skill/verification/area-scale-final/review/frame-000360.png"
+        }
+      ],
+      "contact_preview": {
+        "width": 360,
+        "height": 202,
+        "mode": "exact width"
+      },
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed",
+      "review_player": "/Users/tsk/code/manim-skill/verification/area-scale-final/review/review.html"
+    }
+  },
+  "files_sha256": {
+    "SKILL.md": "eef6c78c74cda6e49f9d7f9e3f3321ce0448549fc86b931e5f4d82bf30fd754a",
+    "references/animation-recipes.md": "9b0fdbfb717e6c50d60128222c825c01c0e9d3aef4d662f41f8b50fe965c0968",
+    "references/aesthetic-refinement.md": "90c2e0d4e4d5c7b8026098adffa68914afe0b5d76808e15c74089a5efa76e3f4",
+    "scripts/video_inspection.py": "ceef1e338dc22636f58dc8f04b64144838665a8e39dd1815532a3cf95f2b7950",
+    "examples/data_to_decision.py": "0af389f076cf67ca958c381f4a2e89335e7202b73c4bf4ae90b69079988a67c9",
+    "examples/area_scale_story.py": "a06067743103de7e31ee4978f59515c68163e31e272dfb15a827da87e379dfe6"
+  },
+  "snapshots_sha256": {
+    "data-first.py": "f287b3bf566fb1788a291d74b5b4d54b776093abf1f0057114c2683e310454cb",
+    "data-final.py": "0af389f076cf67ca958c381f4a2e89335e7202b73c4bf4ae90b69079988a67c9",
+    "cache-first.py": "24b8666fdbb8bcd0967eadeaf46213cc89661f118080d09081cfca6595f6062c",
+    "cache-final.py": "3b70f898019f822f0968a8ff1865678148a298c4d659c4cb5c098d541dff4fae",
+    "data-first-phone.png": "213fd2f746e63c0212cfad08683db8337a7891902a2fff61568b50c1e08baf84",
+    "data-final-phone.png": "ecccdbcc8a8b3e7838fba67e4a48ade8584b4eda54560d87d4f02f46982d1ec2",
+    "cache-first.png": "22a150541d87e2e5617138287f0a71969234b08dd0ec8e6d0fedb9e86047e025",
+    "cache-final-transition.png": "2fbc54b31733857832d4a2845100bf7d510b3d9435e95038fbb5432159099d89",
+    "area-final.py": "a06067743103de7e31ee4978f59515c68163e31e272dfb15a827da87e379dfe6",
+    "area-final-phone.png": "352a480fbfb285281d2cc9a667d734adfb364ab0a20417e18806371ff94e608d"
+  },
+  "cache_trial": "fresh context request, followed by explicit parent feedback; later revisions are not blind first-pass results"
+}

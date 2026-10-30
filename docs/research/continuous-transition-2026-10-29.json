@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-29",
+  "screenings": [
+    {
+      "repo": "rezoo/movis",
+      "content_evidence": {
+        "sha256": "15ce34bfbdf3115bae544183f0c9f7cec4a946c460638afc1595ce83934e297e",
+        "characters": 10849,
+        "source_url": "https://api.github.com/repos/rezoo/movis/contents/README.md",
+        "local_archive": "verification/research-source-archive-20261029/continuous-transition-2026-10-29.json",
+        "json_pointer": "/screenings/0/content"
+      },
+      "title": "README.md",
+      "modified_date": null,
+      "url": "https://api.github.com/repos/rezoo/movis/contents/README.md",
+      "display_url": "https://api.github.com/repos/rezoo/movis/contents/README.md",
+      "display_title": "README.md",
+      "structuredContent": {
+        "title": "README.md",
+        "content_evidence": {
+          "sha256": "15ce34bfbdf3115bae544183f0c9f7cec4a946c460638afc1595ce83934e297e",
+          "characters": 10849,
+          "source_url": "https://api.github.com/repos/rezoo/movis/contents/README.md",
+          "local_archive": "verification/research-source-archive-20261029/continuous-transition-2026-10-29.json",
+          "json_pointer": "/screenings/0/structuredContent/content"
+        },
+        "display_url": "https://api.github.com/repos/rezoo/movis/contents/README.md"
+      }
+    },
+    {
+      "repo": "JacquesLucke/animation_nodes",
+      "content_evidence": {
+        "sha256": "41e5e15037850cc3d960b9fa9a381e6e2619bd2d688ec8dfb1480bb0288a9314",
+        "characters": 566,
+        "source_url": "https://api.github.com/repos/JacquesLucke/animation_nodes/contents/README.md",
+        "local_archive": "verification/research-source-archive-20261029/continuous-transition-2026-10-29.json",
+        "json_pointer": "/screenings/1/content"
+      },
+      "title": "README.md",
+      "modified_date": null,
+      "url": "https://api.github.com/repos/JacquesLucke/animation_nodes/contents/README.md",
+      "display_url": "https://api.github.com/repos/JacquesLucke/animation_nodes/contents/README.md",
+      "display_title": "README.md",
+      "structuredContent": {
+        "title": "README.md",
+        "content_evidence": {
+          "sha256": "41e5e15037850cc3d960b9fa9a381e6e2619bd2d688ec8dfb1480bb0288a9314",
+          "characters": 566,
+          "source_url": "https://api.github.com/repos/JacquesLucke/animation_nodes/contents/README.md",
+          "local_archive": "verification/research-source-archive-20261029/continuous-transition-2026-10-29.json",
+          "json_pointer": "/screenings/1/structuredContent/content"
+        },
+        "display_url": "https://api.github.com/repos/JacquesLucke/animation_nodes/contents/README.md"
+      }
+    },
+    {
+      "repo": "baku89/automaton",
+      "content_evidence": {
+        "sha256": "f8443c32cea6192b6f11c78df0c9df1eba3bdee583460e01e8b01f600f198443",
+        "characters": 654,
+        "source_url": "https://api.github.com/repos/baku89/automaton/contents/README.md",
+        "local_archive": "verification/research-source-archive-20261029/continuous-transition-2026-10-29.json",
+        "json_pointer": "/screenings/2/content"
+      },
+      "title": "README.md",
+      "modified_date": null,
+      "url": "https://api.github.com/repos/baku89/automaton/contents/README.md",
+      "display_url": "https://api.github.com/repos/baku89/automaton/contents/README.md",
+      "display_title": "README.md",
+      "structuredContent": {
+        "title": "README.md",
+        "content_evidence": {
+          "sha256": "f8443c32cea6192b6f11c78df0c9df1eba3bdee583460e01e8b01f600f198443",
+          "characters": 654,
+          "source_url": "https://api.github.com/repos/baku89/automaton/contents/README.md",
+          "local_archive": "verification/research-source-archive-20261029/continuous-transition-2026-10-29.json",
+          "json_pointer": "/screenings/2/structuredContent/content"
+        },
+        "display_url": "https://api.github.com/repos/baku89/automaton/contents/README.md"
+      }
+    }
+  ],
+  "deep": {
+    "content_evidence": {
+      "sha256": "26af7447507c27a77b4cfdcf135ae5a7f48776dd90ba1f60fc1c4279d6fe8799",
+      "characters": 2525,
+      "source_url": "https://api.github.com/repos/rezoo/movis/contents/examples/basic/custom_transition/render.py",
+      "local_archive": "verification/research-source-archive-20261029/continuous-transition-2026-10-29.json",
+      "json_pointer": "/deep/content"
+    },
+    "title": "render.py",
+    "modified_date": null,
+    "url": "https://api.github.com/repos/rezoo/movis/contents/examples/basic/custom_transition/render.py",
+    "display_url": "https://api.github.com/repos/rezoo/movis/contents/examples/basic/custom_transition/render.py",
+    "display_title": "render.py",
+    "structuredContent": {
+      "title": "render.py",
+      "content_evidence": {
+        "sha256": "26af7447507c27a77b4cfdcf135ae5a7f48776dd90ba1f60fc1c4279d6fe8799",
+        "characters": 2525,
+        "source_url": "https://api.github.com/repos/rezoo/movis/contents/examples/basic/custom_transition/render.py",
+        "local_archive": "verification/research-source-archive-20261029/continuous-transition-2026-10-29.json",
+        "json_pointer": "/deep/structuredContent/content"
+      },
+      "display_url": "https://api.github.com/repos/rezoo/movis/contents/examples/basic/custom_transition/render.py"
+    }
+  },
+  "note": "README endpoints were rejected; contents/README.md succeeded. No upstream code or assets copied. README license statements only; no dependency added."
+}

@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-29",
+  "readme_screenings": [
+    {
+      "repo": "kelvinleandro/manim-animations",
+      "result": {
+        "content_evidence": {
+          "sha256": "5f787cede8b61ba0a41bd5e9629cf1856b1dd7d0b3fb86021405eff1b1674588",
+          "characters": 2334,
+          "source_url": null,
+          "local_archive": "verification/research-source-archive-20261029/chinese-statistics-2026-10-29.json",
+          "json_pointer": "/readme_screenings/0/result/content"
+        },
+        "encoding": "utf-8",
+        "sha": "f29c6270b9e56080e431100aca82bbf35386e3df",
+        "display_url": "https://github.com/kelvinleandro/manim-animations/blob/main/README.md",
+        "display_title": "README.md"
+      }
+    },
+    {
+      "repo": "rishabhbhartiya/STATANIM",
+      "result": {
+        "content_evidence": {
+          "sha256": "10e4012d6026fe0c04b7b20c75ec7b2e1be1928446346a6a348583b06e415c86",
+          "characters": 7091,
+          "source_url": null,
+          "local_archive": "verification/research-source-archive-20261029/chinese-statistics-2026-10-29.json",
+          "json_pointer": "/readme_screenings/1/result/content"
+        },
+        "encoding": "utf-8",
+        "sha": "c5c9f02ad5836d36fb2a9ae4f5654f32297e539b",
+        "display_url": "https://github.com/rishabhbhartiya/STATANIM/blob/main/README.md",
+        "display_title": "README.md"
+      }
+    },
+    {
+      "repo": "CountCamp/ManimProject",
+      "result": {
+        "content": "# ManimProject\n\n\n# to activate the virtual environment\nsource .venv/bin/activate",
+        "encoding": "utf-8",
+        "sha": "709fe4dfa4fd838a60d26abfdc9c46543d7ec6b4",
+        "display_url": "https://github.com/CountCamp/ManimProject/blob/main/README.md",
+        "display_title": "README.md"
+      }
+    },
+    {
+      "repo": "Praedyth9/Manim_for_stats",
+      "result": {
+        "content_evidence": {
+          "sha256": "2de4ba93870f7a28036211629dc5cb9a1cfbcb4337c44463a080a52ef5868c88",
+          "characters": 6243,
+          "source_url": null,
+          "local_archive": "verification/research-source-archive-20261029/chinese-statistics-2026-10-29.json",
+          "json_pointer": "/readme_screenings/3/result/content"
+        },
+        "encoding": "utf-8",
+        "sha": "57290409eb71711d22bbb8a22f9bde23806b0f69",
+        "display_url": "https://github.com/Praedyth9/Manim_for_stats/blob/main/README.md",
+        "display_title": "README.md"
+      }
+    }
+  ],
+  "text_source": {
+    "content_evidence": {
+      "sha256": "9d013b688af16f965454dc37eb9d246d313dec27d4635d282bb11b5387024ba3",
+      "characters": 4300,
+      "source_url": null,
+      "local_archive": "verification/research-source-archive-20261029/chinese-statistics-2026-10-29.json",
+      "json_pointer": "/text_source/content"
+    },
+    "encoding": "utf-8",
+    "sha": "62e7d8e463c11caaa0f7ea2a313c21b0ebc8b73d",
+    "display_url": "https://github.com/ManimCommunity/manim/blob/main/manim/mobject/text/text_mobject.py",
+    "display_title": "text_mobject.py"
+  },
+  "normalization_source": {
+    "content_evidence": {
+      "sha256": "0136e4e3359d61d6e97e684891c46104e0b054067bd62625896458c1ed60dbbc",
+      "characters": 1749,
+      "source_url": null,
+      "local_archive": "verification/research-source-archive-20261029/chinese-statistics-2026-10-29.json",
+      "json_pointer": "/normalization_source/content"
+    },
+    "encoding": "utf-8",
+    "sha": "5a4c845022eafa7db44be15f7ea3b44c70a85b8f",
+    "display_url": "https://github.com/kelvinleandro/manim-animations/blob/main/src/normalization.py",
+    "display_title": "normalization.py"
+  }
+}

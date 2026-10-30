@@ -1,0 +1,136 @@
+{
+  "artifact": "/Users/tsk/code/manim-skill/verification/motion-timing-20261030/media/videos/motion_timing/720p30/MotionTiming.mp4",
+  "width": 1280,
+  "height": 720,
+  "duration_seconds": 14.5,
+  "decoded_frames": 435,
+  "bytes": 319469,
+  "video_sha256": "c760b606674e941b33ca1f661e05ed33f08987181eabb5ea3057b8d4edd90f77",
+  "contact_sheet": "/Users/tsk/code/manim-skill/verification/motion-timing-20261030/inspection/contact.png",
+  "samples": [
+    {
+      "requested_seconds": 2.5,
+      "actual_seconds": 2.5,
+      "frame_index": 75,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/motion-timing-20261030/inspection/frame-000075.png"
+    },
+    {
+      "requested_seconds": 4.8,
+      "actual_seconds": 4.8,
+      "frame_index": 144,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/motion-timing-20261030/inspection/frame-000144.png"
+    },
+    {
+      "requested_seconds": 8.0,
+      "actual_seconds": 8.0,
+      "frame_index": 240,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/motion-timing-20261030/inspection/frame-000240.png"
+    },
+    {
+      "requested_seconds": 10.0,
+      "actual_seconds": 10.0,
+      "frame_index": 300,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/motion-timing-20261030/inspection/frame-000300.png"
+    },
+    {
+      "requested_seconds": 14.0,
+      "actual_seconds": 14.0,
+      "frame_index": 420,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/motion-timing-20261030/inspection/frame-000420.png"
+    }
+  ],
+  "contact_preview": {
+    "width": 360,
+    "height": 202,
+    "mode": "exact width"
+  },
+  "sampling": "displayed frame at requested time (presentation timestamps)",
+  "visual_review": "not performed",
+  "review_player": "/Users/tsk/code/manim-skill/verification/motion-timing-20261030/inspection/review.html",
+  "source_sha256": "20b94271c3fcbdf533ca94b976a30014e8cef81ac8e5e00369e34e103e9aeaac",
+  "smoke": {
+    "manim_version": "0.22.0",
+    "python": "3.13.16 (main, Sep 30 2026, 18:57:20) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "renderer": "cairo",
+    "visual_review": "not performed",
+    "results": [
+      {
+        "scene": "MotionTiming",
+        "source": "examples/motion_timing.py",
+        "source_sha256": "20b94271c3fcbdf533ca94b976a30014e8cef81ac8e5e00369e34e103e9aeaac",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/motion-timing-20261030/smoke/MotionTiming",
+          "/Users/tsk/code/manim-skill/examples/motion_timing.py",
+          "MotionTiming"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/motion-timing-20261030/smoke/MotionTiming/videos/motion_timing/360p15/MotionTiming.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 14.533333333333333,
+        "decoded_frames": 218,
+        "bytes": 134802,
+        "video_sha256": "edc9f094f138edb4f42416751e35aca410ce29b2926ed1881f9eca235deaf2be",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/motion-timing-20261030/smoke/MotionTiming/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 3.6333333333333333,
+            "actual_seconds": 3.6,
+            "frame_index": 54
+          },
+          {
+            "requested_seconds": 7.266666666666667,
+            "actual_seconds": 7.266666666666667,
+            "frame_index": 109
+          },
+          {
+            "requested_seconds": 10.9,
+            "actual_seconds": 10.866666666666667,
+            "frame_index": 163
+          },
+          {
+            "requested_seconds": 14.533333333333333,
+            "actual_seconds": 14.466666666666667,
+            "frame_index": 217
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      }
+    ],
+    "skipped": []
+  },
+  "numeric_checks": [
+    "Monotonic progress and endpoint values on [0,1].",
+    "Symmetry around midpoint.",
+    "Finite-difference endpoint velocities near zero.",
+    "Equal-time spatial samples denser near endpoints."
+  ],
+  "manual_review": "Inspected 360-pixel contact preview at 2.5, 4.8, 8, 10 and 14 seconds. No full-speed aesthetic acceptance."
+}

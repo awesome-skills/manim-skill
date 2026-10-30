@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-30",
+  "records": [
+    {
+      "repo": "pybox2d/pybox2d",
+      "url": "https://api.github.com/repos/pybox2d/pybox2d/contents/README.md",
+      "content_sha256": "d5fe426e11419d6c2c924fc502c6b1c3efe193b0a27c6bb2a706485bce467643",
+      "characters": 5195
+    },
+    {
+      "repo": "pmndrs/use-cannon",
+      "url": "https://api.github.com/repos/pmndrs/use-cannon/contents/README.md",
+      "content_sha256": "5b435aceb18c707250d2245203fb9e2a94efe1b51600bf594a7061317793bedb",
+      "characters": 2141
+    },
+    {
+      "repo": "viblo/pymunk",
+      "url": "https://api.github.com/repos/viblo/pymunk/contents/README.rst?ref=master",
+      "sha": "effcfbc0af282e9254f91cb6f82dbb5b13fcdb1b",
+      "content_sha256": "67784184403d6ac26b03484296a9f87d595de38329d5bc44104c8ad504a8ad69",
+      "characters": 5876
+    },
+    {
+      "repo": "pybox2d/pybox2d",
+      "url": "https://api.github.com/repos/pybox2d/pybox2d/contents/library/Box2D/examples/cantilever.py",
+      "content_sha256": "b4b737877c709fb03e473758336536483ec52896bcd5ab0fa6ea7813a4a32d02",
+      "characters": 4465
+    }
+  ],
+  "failed_lookup": "pymunk/pymunk returned 404; GitHub repository search resolved viblo/pymunk. Failed alias not counted.",
+  "limits": "Read source material only; engines not installed or executed; upstream demo quality not evaluated."
+}
