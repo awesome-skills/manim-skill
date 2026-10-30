@@ -1,7 +1,7 @@
 """Original editorial-style merge: persistent cards travel through clear lanes."""
 from manim import (
     Circle, Create, DOWN, FadeIn, FadeOut, LaggedStart, Line,
-    MoveAlongPath, CubicBezier, RoundedRectangle, Scene, Text, UP, VGroup, ReplacementTransform,
+    MoveAlongPath, CubicBezier, RoundedRectangle, Scene, Text, UP, VGroup,
 )
 
 
@@ -75,7 +75,9 @@ class MergeStep(Scene):
                      "Compare the heads. Take the smaller value.")
             if caption_words != words:
                 next_caption = text(words, color=ink, font_size=29).move_to([0, -2.85, 0])
-                self.play(ReplacementTransform(caption, next_caption), run_time=0.25)
+                self.remove(caption)
+                self.add(next_caption)
+                self.wait(0.25)
                 caption = next_caption
                 caption_words = words
             markers = VGroup(*[
