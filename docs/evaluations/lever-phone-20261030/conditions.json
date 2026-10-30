@@ -1,0 +1,59 @@
+{
+  "artifact": "/Users/tsk/code/manim-skill/verification/lever-phone-20261030/media/videos/lever/720p30/Lever.mp4",
+  "width": 1280,
+  "height": 720,
+  "duration_seconds": 20.7,
+  "decoded_frames": 621,
+  "bytes": 652658,
+  "video_sha256": "5a638765d81dd7de659d3ba42516c0ca38dab6ab1ca4ac2452e247e776c72698",
+  "contact_sheet": "/Users/tsk/code/manim-skill/verification/lever-phone-20261030/inspection/contact.png",
+  "samples": [
+    {
+      "requested_seconds": 6.0,
+      "actual_seconds": 6.0,
+      "frame_index": 180,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/lever-phone-20261030/inspection/frame-000180.png"
+    },
+    {
+      "requested_seconds": 9.0,
+      "actual_seconds": 9.0,
+      "frame_index": 270,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/lever-phone-20261030/inspection/frame-000270.png"
+    },
+    {
+      "requested_seconds": 11.0,
+      "actual_seconds": 11.0,
+      "frame_index": 330,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/lever-phone-20261030/inspection/frame-000330.png"
+    },
+    {
+      "requested_seconds": 13.0,
+      "actual_seconds": 13.0,
+      "frame_index": 390,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/lever-phone-20261030/inspection/frame-000390.png"
+    },
+    {
+      "requested_seconds": 16.0,
+      "actual_seconds": 16.0,
+      "frame_index": 480,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/lever-phone-20261030/inspection/frame-000480.png"
+    },
+    {
+      "requested_seconds": 20.0,
+      "actual_seconds": 20.0,
+      "frame_index": 600,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/lever-phone-20261030/inspection/frame-000600.png"
+    }
+  ],
+  "contact_preview": {
+    "width": 360,
+    "height": 202,
+    "mode": "exact width"
+  },
+  "sampling": "displayed frame at requested time (presentation timestamps)",
+  "visual_review": "not performed",
+  "review_player": "/Users/tsk/code/manim-skill/verification/lever-phone-20261030/inspection/review.html",
+  "source_sha256": "2dbe808878144c5ffb3d4f5381a7f90eb9508be1bfc4edfbf6aee0d6287db97d",
+  "invariants": "Force-length expression AST and ordered play/wait timing AST unchanged. Horizontal scene-unit scale increased to 1.3; physical W,a,r unchanged.",
+  "manual_review": "Inspected 360px samples at 6,9,11,13,16,20 seconds; no full-speed aesthetic acceptance."
+}

@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-29",
+  "scope": "README screening plus selected source inspection; not upstream execution or aesthetic acceptance",
+  "repositories": [
+    {
+      "repository": "coldtype/coldtype",
+      "readme_sha": "dd483166812c68d0b14d847042bffea3bdd84eb3",
+      "url": "https://github.com/coldtype/coldtype/blob/main/README.md",
+      "status": "readme screened"
+    },
+    {
+      "repository": "uwdata/gemini",
+      "status": "fetch failed",
+      "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}"
+    },
+    {
+      "repository": "microsoft/datamations",
+      "readme_sha": "77520ddadc4c8683bdacabcf0996e653d952093f",
+      "url": "https://github.com/microsoft/datamations/blob/main/README.md",
+      "status": "readme screened"
+    },
+    {
+      "repository": "manim-kindergarten/manim_physics",
+      "status": "fetch failed",
+      "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}"
+    },
+    {
+      "repository": "vincenzomadaghiele/manim-dsa",
+      "status": "fetch failed",
+      "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}"
+    },
+    {
+      "repository": "processing/p5.js",
+      "readme_sha": "b243c9a478d62817637b0cb9ba4eb2de584afd0a",
+      "url": "https://github.com/processing/p5.js/blob/main/README.md",
+      "status": "readme screened"
+    },
+    {
+      "repository": "jonobr1/two.js",
+      "readme_sha": "c1d4cfb64746c1faa2d27cdbee2cf1a4a8d3683d",
+      "url": "https://github.com/jonobr1/two.js/blob/dev/README.md",
+      "status": "readme screened"
+    },
+    {
+      "repository": "d3/d3-transition",
+      "readme_sha": "f5ff5d3853951fce6d16a9e2fb2c96dcdd12990b",
+      "url": "https://github.com/d3/d3-transition/blob/main/README.md",
+      "status": "readme screened"
+    },
+    {
+      "repository": "popmotion/popmotion",
+      "readme_sha": "4570fd54c4700f647b7238dcabe9bfe2b9580da6",
+      "url": "https://github.com/Popmotion/popmotion/blob/master/README.md",
+      "status": "readme screened"
+    },
+    {
+      "repository": "maotoumao/MathLikeAnim-rs",
+      "status": "fetch failed",
+      "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}"
+    },
+    {
+      "repository": "imMamdouhaboammar/motion-graphics-skills",
+      "readme_sha": "f163e1b404b6b84f4948ba54d880071f20e25c87",
+      "url": "https://github.com/imMamdouhaboammar/motion-graphics-skills/blob/main/README.md",
+      "status": "readme screened"
+    },
+    {
+      "repository": "iwerry/code2video",
+      "readme_sha": "6453e5cd08455333e06ae703a26a7fc9ae9ffdd4",
+      "url": "https://github.com/iwerry/code2video/blob/main/README.md",
+      "status": "readme screened"
+    },
+    {
+      "repository": "F4bbi/manim-dsa",
+      "readme_sha": "56934ba6f6e1e2c4d204ec193fe8e087be1399a0",
+      "url": "https://github.com/F4bbi/manim-dsa/blob/main/README.md",
+      "status": "readme screened"
+    },
+    {
+      "repository": "heygen-com/hyperframes",
+      "readme_sha": "ffe9f4c2c439c263ae3f3040fc22480fdd877c15",
+      "url": "https://github.com/heygen-com/hyperframes/blob/main/README.md",
+      "status": "readme screened"
+    }
+  ],
+  "deep_reads": [
+    {
+      "repository": "coldtype/coldtype",
+      "path": "examples/animations/ascii_words.py",
+      "sha": "bc902577cf93b303d69f3313ee6eb7fa6d410d11",
+      "url": "https://github.com/coldtype/coldtype/blob/main/examples/animations/ascii_words.py"
+    },
+    {
+      "repository": "coldtype/coldtype",
+      "path": "examples/animations/ascii_keyframes_entrance.py",
+      "sha": "6a69adaaf0d5071e06cc245517338c97b0e39b48",
+      "url": "https://github.com/coldtype/coldtype/blob/main/examples/animations/ascii_keyframes_entrance.py"
+    },
+    {
+      "repository": "microsoft/datamations",
+      "path": "R/prep_specs_group_by.R",
+      "sha": "c0afd99c023985bae90ce6f70472263177504058",
+      "url": "https://github.com/microsoft/datamations/blob/main/R/prep_specs_group_by.R"
+    },
+    {
+      "repository": "microsoft/datamations",
+      "path": "R/prep_specs_count.R",
+      "sha": "2be2ddd555ef6215299eb48a7312cb60998e65c2",
+      "url": "https://github.com/microsoft/datamations/blob/main/R/prep_specs_count.R"
+    },
+    {
+      "repository": "iwerry/code2video",
+      "path": "ai-motion-director/references/script-storyboard.md",
+      "sha": "2f0eff8ce3c681cc8ac13393c05fed62f458481f",
+      "url": "https://github.com/iwerry/code2video/blob/main/ai-motion-director/references/script-storyboard.md"
+    }
+  ]
+}

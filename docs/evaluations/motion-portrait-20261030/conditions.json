@@ -1,0 +1,41 @@
+{
+  "artifact": "/Users/tsk/code/manim-skill/verification/motion-portrait-20261030/media/videos/motion_timing/1280p30/MotionTiming.mp4",
+  "width": 720,
+  "height": 1280,
+  "duration_seconds": 14.5,
+  "decoded_frames": 435,
+  "bytes": 382967,
+  "video_sha256": "65d4bc18e9c941d1a62dd6cf83e63462cf9158c49ddae60b2a172243179997be",
+  "contact_sheet": "/Users/tsk/code/manim-skill/verification/motion-portrait-20261030/inspection/contact.png",
+  "samples": [
+    {
+      "requested_seconds": 2.5,
+      "actual_seconds": 2.5,
+      "frame_index": 75,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/motion-portrait-20261030/inspection/frame-000075.png"
+    },
+    {
+      "requested_seconds": 8.0,
+      "actual_seconds": 8.0,
+      "frame_index": 240,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/motion-portrait-20261030/inspection/frame-000240.png"
+    },
+    {
+      "requested_seconds": 14.0,
+      "actual_seconds": 14.0,
+      "frame_index": 420,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/motion-portrait-20261030/inspection/frame-000420.png"
+    }
+  ],
+  "contact_preview": {
+    "width": 360,
+    "height": 640,
+    "mode": "exact width"
+  },
+  "sampling": "displayed frame at requested time (presentation timestamps)",
+  "visual_review": "not performed",
+  "review_player": "/Users/tsk/code/manim-skill/verification/motion-portrait-20261030/inspection/review.html",
+  "source_sha256": "68a0dfd73ca1881a76c58e9393f0dbfb52a566d70b1c0fe4418ebc3de484e1ec",
+  "tests": "16 tests passed, including both responsive scenes camera aspect and global-config isolation.",
+  "manual_review": "Inspected 360x640 portrait samples at 2.5, 8, 14 seconds. No full-speed aesthetic acceptance."
+}

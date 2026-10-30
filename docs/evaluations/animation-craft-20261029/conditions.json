@@ -1,0 +1,411 @@
+{
+  "date": "2026-10-29",
+  "python": "3.13.16 (main, Sep 30 2026, 18:57:20) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "manim": "0.22.0",
+  "renderer": "Cairo",
+  "artifacts": [
+    {
+      "name": "merge",
+      "source": "examples/merge_step.py",
+      "source_sha256": "582870a112f933da40ee4447a426ad0746f742e637f5967dba2c2afd5c1ebbc5",
+      "artifact": "verification/delivery-0/videos/merge_step/720p30/MergeStep.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 14.297395833333333,
+      "decoded_frames": 429,
+      "video_sha256": "224830e788090d9c76a62f829a9a404e91eef704b89ffb722eec303df95bfe45",
+      "samples": [
+        {
+          "requested_seconds": 1.8,
+          "actual_seconds": 1.8,
+          "frame_index": 54
+        },
+        {
+          "requested_seconds": 3.6500000000000004,
+          "actual_seconds": 3.6333333333333333,
+          "frame_index": 109
+        },
+        {
+          "requested_seconds": 3.8000000000000003,
+          "actual_seconds": 3.8,
+          "frame_index": 114
+        },
+        {
+          "requested_seconds": 3.95,
+          "actual_seconds": 3.933333333333333,
+          "frame_index": 118
+        },
+        {
+          "requested_seconds": 4.1000000000000005,
+          "actual_seconds": 4.1,
+          "frame_index": 123
+        },
+        {
+          "requested_seconds": 4.25,
+          "actual_seconds": 4.233333333333333,
+          "frame_index": 127
+        },
+        {
+          "requested_seconds": 5.55,
+          "actual_seconds": 5.533333333333333,
+          "frame_index": 166
+        },
+        {
+          "requested_seconds": 5.7,
+          "actual_seconds": 5.7,
+          "frame_index": 171
+        },
+        {
+          "requested_seconds": 5.85,
+          "actual_seconds": 5.833333333333333,
+          "frame_index": 175
+        },
+        {
+          "requested_seconds": 6.0,
+          "actual_seconds": 6.0,
+          "frame_index": 180
+        },
+        {
+          "requested_seconds": 6.1499999999999995,
+          "actual_seconds": 6.133333333333334,
+          "frame_index": 184
+        },
+        {
+          "requested_seconds": 9,
+          "actual_seconds": 8.998697916666666,
+          "frame_index": 270
+        },
+        {
+          "requested_seconds": 13,
+          "actual_seconds": 12.997395833333334,
+          "frame_index": 390
+        }
+      ]
+    },
+    {
+      "name": "wave",
+      "source": "examples/wave_superposition.py",
+      "source_sha256": "870becc386bee9536ad2ecaccdba4b56b9923279055869ce2ca9577ef07699e5",
+      "artifact": "verification/delivery-1/videos/wave_superposition/720p30/WaveSuperposition.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 17.6,
+      "decoded_frames": 528,
+      "video_sha256": "e4326c8f01a5a970e8a0bed2a6bf55cc295fa775214e2125e23b164350cc6918",
+      "samples": [
+        {
+          "requested_seconds": 2.7,
+          "actual_seconds": 2.7,
+          "frame_index": 81
+        },
+        {
+          "requested_seconds": 4.5,
+          "actual_seconds": 4.5,
+          "frame_index": 135
+        },
+        {
+          "requested_seconds": 8.2,
+          "actual_seconds": 8.2,
+          "frame_index": 246
+        },
+        {
+          "requested_seconds": 8.35,
+          "actual_seconds": 8.333333333333334,
+          "frame_index": 250
+        },
+        {
+          "requested_seconds": 8.5,
+          "actual_seconds": 8.5,
+          "frame_index": 255
+        },
+        {
+          "requested_seconds": 8.649999999999999,
+          "actual_seconds": 8.633333333333333,
+          "frame_index": 259
+        },
+        {
+          "requested_seconds": 8.799999999999999,
+          "actual_seconds": 8.766666666666667,
+          "frame_index": 263
+        },
+        {
+          "requested_seconds": 10,
+          "actual_seconds": 10.0,
+          "frame_index": 300
+        },
+        {
+          "requested_seconds": 14,
+          "actual_seconds": 14.0,
+          "frame_index": 420
+        },
+        {
+          "requested_seconds": 16,
+          "actual_seconds": 16.0,
+          "frame_index": 480
+        }
+      ]
+    },
+    {
+      "name": "packet",
+      "source": "examples/packet_journey.py",
+      "source_sha256": "8998843fcb3adf4ff106f792c5d4bd8fc721e84c28de193a9ecd5c1b218fdc5b",
+      "artifact": "verification/delivery-2/videos/packet_journey/720p30/PacketJourney.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 11.797395833333333,
+      "decoded_frames": 354,
+      "video_sha256": "c115566e9eb9251b1ae1bfdf133f026316d2109347c163d66bcab85ef1767d07",
+      "samples": [
+        {
+          "requested_seconds": 1.5,
+          "actual_seconds": 1.5,
+          "frame_index": 45
+        },
+        {
+          "requested_seconds": 3.3000000000000003,
+          "actual_seconds": 3.3,
+          "frame_index": 99
+        },
+        {
+          "requested_seconds": 3.45,
+          "actual_seconds": 3.433333333333333,
+          "frame_index": 103
+        },
+        {
+          "requested_seconds": 3.6,
+          "actual_seconds": 3.6,
+          "frame_index": 108
+        },
+        {
+          "requested_seconds": 3.75,
+          "actual_seconds": 3.7333333333333334,
+          "frame_index": 112
+        },
+        {
+          "requested_seconds": 3.9000000000000004,
+          "actual_seconds": 3.9,
+          "frame_index": 117
+        },
+        {
+          "requested_seconds": 7.2,
+          "actual_seconds": 7.198697916666666,
+          "frame_index": 216
+        },
+        {
+          "requested_seconds": 10.5,
+          "actual_seconds": 10.497395833333334,
+          "frame_index": 315
+        }
+      ]
+    },
+    {
+      "name": "portrait",
+      "source": "examples/packet_journey.py",
+      "source_sha256": "8998843fcb3adf4ff106f792c5d4bd8fc721e84c28de193a9ecd5c1b218fdc5b",
+      "artifact": "verification/delivery-3/videos/packet_journey/1280p30/PacketJourney.mp4",
+      "width": 720,
+      "height": 1280,
+      "duration_seconds": 11.797395833333333,
+      "decoded_frames": 354,
+      "video_sha256": "607cf40ae54c6bcfa4d2e651dd8ed87d85c58f634133b7548cc303bb85a8c4c3",
+      "samples": [
+        {
+          "requested_seconds": 1.5,
+          "actual_seconds": 1.5,
+          "frame_index": 45
+        },
+        {
+          "requested_seconds": 3.3000000000000003,
+          "actual_seconds": 3.2993489583333333,
+          "frame_index": 99
+        },
+        {
+          "requested_seconds": 3.45,
+          "actual_seconds": 3.4326822916666666,
+          "frame_index": 103
+        },
+        {
+          "requested_seconds": 3.6,
+          "actual_seconds": 3.599348958333333,
+          "frame_index": 108
+        },
+        {
+          "requested_seconds": 3.75,
+          "actual_seconds": 3.732682291666667,
+          "frame_index": 112
+        },
+        {
+          "requested_seconds": 3.9000000000000004,
+          "actual_seconds": 3.8993489583333334,
+          "frame_index": 117
+        },
+        {
+          "requested_seconds": 7.2,
+          "actual_seconds": 7.198046875,
+          "frame_index": 216
+        },
+        {
+          "requested_seconds": 10.5,
+          "actual_seconds": 10.497395833333334,
+          "frame_index": 315
+        }
+      ]
+    }
+  ],
+  "upstream_execution": "not performed",
+  "audience_test": "not performed",
+  "old_skill_comparison": "not performed",
+  "trial_input_files": {
+    "SKILL.md": "6f628b81e2c3bef5ae1c095b0849edd43deefacad91ecfb1686c99d74671d749",
+    "references/visual-direction.md": "d464b1442a14c10bf3cd0da9d84e662c7fa9eb268732e3527c83e37093c0e24f",
+    "references/animation-recipes.md": "48533f816ced94d1b9531fd3ba5e547499486b4a0b58dbdc61558928f405ef9b",
+    "uv.lock": "d9aea4be913e25ca517e81404ef1fdbef1bfb90ae651b6b8b0e7c2d1d5ed2c15",
+    "scripts/video_inspection.py": "63e56e7ae4f859f14ca578d53b85b84af2264be9dc416eb96b70bd503147bc78"
+  },
+  "final_files": {
+    "SKILL.md": "6f628b81e2c3bef5ae1c095b0849edd43deefacad91ecfb1686c99d74671d749",
+    "references/visual-direction.md": "d464b1442a14c10bf3cd0da9d84e662c7fa9eb268732e3527c83e37093c0e24f",
+    "references/animation-recipes.md": "158aafbb936bae5ddd0ea0e44d3f0d41fff59ecf306e4f596a15f61ce0739956",
+    "uv.lock": "d9aea4be913e25ca517e81404ef1fdbef1bfb90ae651b6b8b0e7c2d1d5ed2c15",
+    "scripts/video_inspection.py": "63e56e7ae4f859f14ca578d53b85b84af2264be9dc416eb96b70bd503147bc78"
+  },
+  "trials": [
+    {
+      "artifact": "verification/forward-trial/final/videos/binary_search/720p30/BinarySearch.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 22.3,
+      "decoded_frames": 669,
+      "bytes": 749310,
+      "video_sha256": "1e85ec420821e97722fe1216e4ccafef97c41d9f23c61055c1310c6c0d682337",
+      "samples": [
+        {
+          "requested_seconds": 2.8,
+          "actual_seconds": 2.8,
+          "frame_index": 84
+        },
+        {
+          "requested_seconds": 5.0,
+          "actual_seconds": 5.0,
+          "frame_index": 150
+        },
+        {
+          "requested_seconds": 7.8,
+          "actual_seconds": 7.8,
+          "frame_index": 234
+        },
+        {
+          "requested_seconds": 9.8,
+          "actual_seconds": 9.8,
+          "frame_index": 294
+        },
+        {
+          "requested_seconds": 11.2,
+          "actual_seconds": 11.2,
+          "frame_index": 336
+        },
+        {
+          "requested_seconds": 13.4,
+          "actual_seconds": 13.4,
+          "frame_index": 402
+        },
+        {
+          "requested_seconds": 15.3,
+          "actual_seconds": 15.3,
+          "frame_index": 459
+        },
+        {
+          "requested_seconds": 17.5,
+          "actual_seconds": 17.5,
+          "frame_index": 525
+        },
+        {
+          "requested_seconds": 21.0,
+          "actual_seconds": 21.0,
+          "frame_index": 630
+        }
+      ],
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed",
+      "source": "binary_search-v1.py",
+      "source_sha256": "b98ef36ba8bf39d73803f3e7156e76ba0b342988bc162c10432d8c0e1b1df5ba",
+      "pass": "v1"
+    },
+    {
+      "artifact": "verification/forward-trial/revision/final/videos/binary_search/720p30/BinarySearch.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 22.098697916666666,
+      "decoded_frames": 663,
+      "bytes": 822082,
+      "video_sha256": "c56602f7a21da96cfaeed8621c4404a59caf3135739171b3459128ce98cac490",
+      "samples": [
+        {
+          "requested_seconds": 6.0,
+          "actual_seconds": 6.0,
+          "frame_index": 180
+        },
+        {
+          "requested_seconds": 7.25,
+          "actual_seconds": 7.233333333333333,
+          "frame_index": 217
+        },
+        {
+          "requested_seconds": 8.1,
+          "actual_seconds": 8.1,
+          "frame_index": 243
+        },
+        {
+          "requested_seconds": 8.5,
+          "actual_seconds": 8.5,
+          "frame_index": 255
+        },
+        {
+          "requested_seconds": 10.5,
+          "actual_seconds": 10.5,
+          "frame_index": 315
+        },
+        {
+          "requested_seconds": 10.8,
+          "actual_seconds": 10.8,
+          "frame_index": 324
+        },
+        {
+          "requested_seconds": 12.3,
+          "actual_seconds": 12.3,
+          "frame_index": 369
+        },
+        {
+          "requested_seconds": 13.4,
+          "actual_seconds": 13.399348958333333,
+          "frame_index": 402
+        },
+        {
+          "requested_seconds": 15.2,
+          "actual_seconds": 15.199348958333333,
+          "frame_index": 456
+        },
+        {
+          "requested_seconds": 16.4,
+          "actual_seconds": 16.398697916666666,
+          "frame_index": 492
+        },
+        {
+          "requested_seconds": 18.8,
+          "actual_seconds": 18.798697916666665,
+          "frame_index": 564
+        },
+        {
+          "requested_seconds": 21.0,
+          "actual_seconds": 20.998697916666668,
+          "frame_index": 630
+        }
+      ],
+      "sampling": "displayed frame at requested time (presentation timestamps)",
+      "visual_review": "not performed",
+      "source": "binary_search-v2.py",
+      "source_sha256": "149be0f02089cb65b71d1323ab8aa6d58ea88fda152a9ce3e003d434b86ac0a7",
+      "pass": "v2"
+    }
+  ]
+}

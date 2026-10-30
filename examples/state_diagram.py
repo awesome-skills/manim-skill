@@ -5,6 +5,7 @@ Run with: manim -pql state_diagram.py SimpleStates
 """
 
 from manim import *
+import numpy as np
 
 
 def make_state(label, color=BLUE, radius=0.6):
@@ -61,33 +62,73 @@ class SimpleStates(Scene):
 
 
 class StateWithLabels(Scene):
-    """State transitions with labeled arrows."""
+    """An event trace shows a retry without leaving the Loading state."""
 
     def construct(self):
-        # States
-        idle = make_state("Idle", GREEN).shift(LEFT * 3)
-        loading = make_state("Loading", BLUE)
-        ready = make_state("Ready", PURPLE).shift(RIGHT * 3)
+        paper, ink, quiet = "#F2EEE6", "#253A4A", "#84949A"
+        blue, amber = "#326EA8", "#A36725"
+        self.camera.background_color = paper
 
-        # Arrows with labels
-        start_arrow = Arrow(idle.get_right(), loading.get_left(), buff=0.1)
-        start_label = Text("start", font_size=14).next_to(start_arrow, UP, buff=0.05)
+        def label(words, size=30, color=ink):
+            return Text(words, font="sans-serif", warn_missing_font=False,
+                        font_size=size, color=color)
 
-        finish_arrow = Arrow(loading.get_right(), ready.get_left(), buff=0.1)
-        finish_label = Text("done", font_size=14).next_to(finish_arrow, UP, buff=0.05)
+        def state(words, x):
+            circle = Circle(radius=.9, stroke_color=quiet, stroke_width=2,
+                            fill_color=paper, fill_opacity=1).move_to([x, -.4, 0])
+            return VGroup(circle, label(words, 31).move_to(circle))
 
-        # Self-loop for retry
-        retry_arc = Arc(radius=0.4, start_angle=PI/4, angle=3*PI/2, color=ORANGE)
-        retry_arc.add_tip(tip_length=0.12)
-        retry_arc.next_to(loading, UP, buff=0.1)
-        retry_label = Text("retry", font_size=12, color=ORANGE).next_to(retry_arc, UP, buff=0.05)
-
-        # Build
-        self.play(FadeIn(idle))
-        self.play(GrowArrow(start_arrow), FadeIn(start_label), FadeIn(loading))
-        self.play(Create(retry_arc), FadeIn(retry_label))
-        self.play(GrowArrow(finish_arrow), FadeIn(finish_label), FadeIn(ready))
+        heading = label("A retry can keep the same state.", 44).move_to([-6.1, 3, 0], aligned_edge=LEFT)
+        self.add(heading)
+        idle, loading, ready = state("Idle", -4), state("Loading", 0), state("Ready", 4)
+        start_arrow = Arrow(idle.get_right(), loading.get_left(), buff=.13, color=quiet, stroke_width=2)
+        finish_arrow = Arrow(loading.get_right(), ready.get_left(), buff=.13, color=quiet, stroke_width=2)
+        start_label = label("start", 28).next_to(start_arrow, UP, buff=.18)
+        finish_label = label("done", 28).next_to(finish_arrow, UP, buff=.18)
+        # Keep a path without an arrow tip for sampling; add a separate display tip.
+        loop_path = CubicBezier(loading[0].point_at_angle(PI/4),
+                                [1.8, 1.8, 0], [-1.8, 1.8, 0],
+                                loading[0].point_at_angle(3*PI/4))
+        tip_direction = normalize(loop_path.get_end() - np.array([-1.8, 1.8, 0]))
+        tip = Arrow(loop_path.get_end() - .2*tip_direction, loop_path.get_end(),
+                    buff=0, color=amber, stroke_width=0, tip_length=.13,
+                    max_tip_length_to_length_ratio=1)
+        retry_arc = VGroup(loop_path.copy().set_stroke(amber, width=3), tip)
+        retry_label = label("retry", 28, amber).move_to([0, 1.75, 0])
+        self.play(FadeIn(idle), FadeIn(loading), FadeIn(ready),
+                  GrowArrow(start_arrow), GrowArrow(finish_arrow), Create(retry_arc),
+                  FadeIn(start_label), FadeIn(finish_label), FadeIn(retry_label), run_time=1)
+        indicator = Circle(radius=1.02, color=blue, stroke_width=3).move_to(idle)
+        current = label("Current state: Idle", 34).move_to([0, -2.05, 0])
+        self.play(FadeIn(indicator), FadeIn(current), run_time=.4)
         self.wait(1)
+
+        for event, path, destination, color in [
+            ("start", start_arrow, loading, blue),
+            ("retry", loop_path, loading, amber),
+            ("done", finish_arrow, ready, blue),
+        ]:
+            self.next_section(event)
+            event_text = label("Event: " + event, 31, color).move_to([0, -2.85, 0])
+            self.play(FadeIn(event_text), run_time=.3)
+            self.wait(.5)
+            marker = Dot(path.get_start(), radius=.09, color=color)
+            self.play(FadeIn(marker), run_time=.15)
+            self.play(MoveAlongPath(marker, path), run_time=1.5 if event == "retry" else 1.1)
+            self.play(FadeOut(marker), run_time=.15)
+            if event != "retry":
+                self.play(FadeOut(indicator), FadeOut(current), run_time=.2)
+                indicator.move_to(destination)
+                current = label("Current state: " + ("Loading" if event == "start" else "Ready"), 34).move_to([0, -2.05, 0])
+                self.play(FadeIn(indicator), FadeIn(current), run_time=.25)
+            else:
+                # The active ring and current-state text deliberately remain unchanged.
+                self.play(Indicate(retry_label, color=amber, scale_factor=1.08), run_time=.35)
+            self.wait(.9)
+            self.play(FadeOut(event_text), run_time=.2)
+        conclusion = label("Retry kept Loading active.", 29).move_to([0, -2.85, 0])
+        self.play(FadeIn(conclusion), run_time=.4)
+        self.wait(2)
 
 
 class LinkedListMismatch(Scene):

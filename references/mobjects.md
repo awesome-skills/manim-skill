@@ -16,6 +16,14 @@ Choose an installed font with glyph coverage for the requested language; list ca
 
 `Text` character indexing omits whitespace in some cases; do not assume Python string offsets map directly to submobject indices. Separate semantic labels when highlighting them is important.
 
+### Chinese lines and live numeric labels
+
+`Text(..., width=...)` scales the rendered text; it does **not** wrap a long sentence. In a local CE 0.22 / PingFang SC check, a 40-point Chinese sentence measured 12.417 × 0.550 scene units; `width=5` reduced it to 5.000 × 0.221. Explicitly breaking that sentence into two semantic lines instead produced 7.335 × 1.143. These are font-specific measurements, not universal layout constants.
+
+For long Chinese copy, shorten the sentence or insert intentional `\n` breaks before shrinking it. Keep quantities with their units and preserve meaningful phrases. Budget the extra line height against the diagram, then inspect the actual 360-pixel preview; checking only the full-resolution render can hide unreadable captions.
+
+Live numbers should use a verified font consistent with surrounding labels, a stable alignment anchor, and explicit display precision. Derive both positions and summaries from the same underlying value; independently rounded input and summary labels need not recompute exactly from the displayed digits. Explain rounding when exact reconciliation matters. In a median explanation, show the ordered values and the selected rank, rather than expecting viewers to infer rank from overlapping dots. This was exercised in the [Chinese statistics evaluation](../docs/evaluations/chinese-statistics-20261029/review.md).
+
 ## Math backends
 
 TeX:

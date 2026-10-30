@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-30",
+  "sources": [
+    {
+      "repo": "vbohush/SortingAlgorithmAnimations",
+      "url": "https://api.github.com/repos/vbohush/SortingAlgorithmAnimations/contents/README.md",
+      "content_sha256": "f81203b97af4f68a02068747aaaa541243b8b1a11224ce2e012a72e4351a1b0c",
+      "characters": 532
+    },
+    {
+      "repo": "zamhown/sorting-visualizer",
+      "url": "https://api.github.com/repos/zamhown/sorting-visualizer/contents/README.md",
+      "content_sha256": "52eb8de32c3141bf9c850fe421c8768e9e4a6768bbea31644589ca6ada960a1a",
+      "characters": 2587
+    },
+    {
+      "repo": "ramiz-rahman/sort-visualizer",
+      "url": "https://api.github.com/repos/ramiz-rahman/sort-visualizer/contents/README.md",
+      "content_sha256": "49beff6d69846f5db5f3af5e862169f4af6f0c97759dd72755d04ba9bb53de5d",
+      "characters": 4838
+    },
+    {
+      "repo": "ramiz-rahman/sort-visualizer",
+      "url": "https://api.github.com/repos/ramiz-rahman/sort-visualizer/contents/src/algorithms/QuickSort.js?ref=master",
+      "sha": "b0e3e249af252220f5324d285088c20abbf8e16c",
+      "content_sha256": "d5b9714ff0b055cfa5ef932c1018770859369f4e6d532e393e397d7146fa2922",
+      "characters": 4626
+    }
+  ],
+  "limits": "README and one algorithm source inspected; upstream demos not played; README license claims not file-level verification."
+}

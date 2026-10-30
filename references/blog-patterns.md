@@ -16,6 +16,19 @@ Use animation when the order or change explains something that a still cannot. A
 
 Use the runnable example as the source of truth. Copy only the relevant scene and its helpers; this file intentionally avoids maintaining a second copy of each implementation.
 
+`BranchingFlow` uses two explicit sample requests: one includes a nonempty name,
+the other omits it. The route is chosen from that field check; one connector at a
+time becomes active, the destination responds after arrival, and the reply appears
+last. The map stays fixed between requests and its highlights reset before the next
+case. It is an illustrative field check, not production request validation. Merely
+revealing both outgoing arrows demonstrates topology, not conditional execution.
+
+`StateWithLabels` separates the event marker from the active-state ring. Its retry
+travels a connected loop back to Loading while the ring and current-state caption
+stay there. Start and done change the highlighted state only after travel finishes.
+Make clear what an indicator represents: a moving event is not an extra state. A
+loop floating above a node with neither end connected is an ambiguous diagram.
+
 ## Plan the visual progression
 
 - Start with the minimum context needed to interpret the action.

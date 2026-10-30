@@ -2,6 +2,9 @@
 
 Read before storyboarding a new animation or improving its appearance. Use the user's style when specified. Otherwise choose a composition suited to the concept, rather than reproducing the same dashboard for every topic.
 
+For concrete CE patterns for discrete items, continuous state, causal flow, stagger/easing
+and portrait recomposition, read the matching [animation craft recipe](animation-recipes.md).
+
 ## Storyboard the insight
 
 Write a compact shot list in the working notes: viewer question → visible action → insight → approximate duration. This is an authoring aid, not a mandatory approval gate. Design the hardest transition first; if the explanation needs a paragraph beside it, try a simpler visual action.
@@ -14,6 +17,10 @@ Write a compact shot list in the working notes: viewer question → visible acti
 For heap sort, a useful sequence is: reveal why a maximum belongs at the end → show the root/last swap → isolate the violated parent-child relation → visibly repair it → pull back to the shrinking heap and growing sorted suffix. Explain the heap property and build phase where the intended audience needs them. Avoid leaving every status label and rule visible throughout.
 
 ## Art direction
+
+For requests for refined, beautiful or premium-looking animation, follow the
+[aesthetic refinement pass](aesthetic-refinement.md), including a comparable before/after
+state and inspection of typography, spacing and motion detail.
 
 Choose a restrained palette, a type hierarchy, margins and a focal object before coding. Dark backgrounds and pastel accents are one option, not a required signature.
 
@@ -49,6 +56,14 @@ Render the hardest few seconds cheaply before polishing the whole timeline. Insp
 - Does the transition show the claimed relationship without teleportation or false intermediate data?
 - Do text, arrowheads, values and motion paths stay clear of each other?
 - Does each pause allow the new idea to register, and do repetitions advance the explanation?
+
+For a mechanism, identify the visible cause and its consequence separately. A labeled
+object plus a sentence saying what it does may still omit the actual interaction.
+In a camera-aperture trial, two front-view openings established size but did not show
+why light was restricted. A short side-view schematic made the blocked and passing
+paths visible before returning to the aperture comparison. Use another view only when
+it supplies missing evidence; keep schematic ray samples distinct from quantitative
+light ratios. For ratio labels such as “2×”, identify the baseline explicitly.
 
 Use `python scripts/video_inspection.py scene.mp4 --at 6.8 --at 8 --columns 2 --output verification/review` to inspect chosen transition times in an existing rendered MP4 (replace the video and times). It decodes the same artifact rather than rerunning the scene, saves full-resolution PNGs and a multirow contact sheet, and records requested/actual presentation times, indices and the input hash. It selects the frame displayed at the requested time, not a future frame or an index estimated from average fps. The duration endpoint selects the last frame; out-of-range requests fail. Omit `--at` for five overview samples. Read `report.json` alongside the images; the tool deliberately leaves visual review unperformed.
 

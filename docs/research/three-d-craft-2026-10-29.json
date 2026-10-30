@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-29",
+  "screenings": [
+    {
+      "repo": "pygfx/pygfx",
+      "result": {
+        "content_evidence": {
+          "sha256": "426244fcd9d524e0fc4be30da679069f4b03cf3607b2935ac1fec339874d6ef1",
+          "characters": 5842,
+          "source_url": "https://api.github.com/repos/pygfx/pygfx/contents/README.md",
+          "local_archive": "verification/research-source-archive-20261029/three-d-craft-2026-10-29.json",
+          "json_pointer": "/screenings/0/result/content"
+        },
+        "title": "README.md",
+        "modified_date": null,
+        "url": "https://api.github.com/repos/pygfx/pygfx/contents/README.md",
+        "display_url": "https://api.github.com/repos/pygfx/pygfx/contents/README.md",
+        "display_title": "README.md",
+        "structuredContent": {
+          "title": "README.md",
+          "content_evidence": {
+            "sha256": "426244fcd9d524e0fc4be30da679069f4b03cf3607b2935ac1fec339874d6ef1",
+            "characters": 5842,
+            "source_url": "https://api.github.com/repos/pygfx/pygfx/contents/README.md",
+            "local_archive": "verification/research-source-archive-20261029/three-d-craft-2026-10-29.json",
+            "json_pointer": "/screenings/0/result/structuredContent/content"
+          },
+          "display_url": "https://api.github.com/repos/pygfx/pygfx/contents/README.md"
+        }
+      }
+    },
+    {
+      "repo": "vispy/vispy",
+      "result": {
+        "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}",
+        "error_code": "NOT_FOUND",
+        "error_data": {
+          "message": "Not Found",
+          "documentation_url": "https://docs.github.com/rest/repos/contents#get-repository-content",
+          "status": "404"
+        }
+      }
+    },
+    {
+      "repo": "marcomusy/vedo",
+      "result": {
+        "content_evidence": {
+          "sha256": "531f659f15259cd2e980dee4eec36260210082452af611f5c8b7ca1a041f72e8",
+          "characters": 21164,
+          "source_url": "https://api.github.com/repos/marcomusy/vedo/contents/README.md",
+          "local_archive": "verification/research-source-archive-20261029/three-d-craft-2026-10-29.json",
+          "json_pointer": "/screenings/2/result/content"
+        },
+        "title": "README.md",
+        "modified_date": null,
+        "url": "https://api.github.com/repos/marcomusy/vedo/contents/README.md",
+        "display_url": "https://api.github.com/repos/marcomusy/vedo/contents/README.md",
+        "display_title": "README.md",
+        "structuredContent": {
+          "title": "README.md",
+          "content_evidence": {
+            "sha256": "531f659f15259cd2e980dee4eec36260210082452af611f5c8b7ca1a041f72e8",
+            "characters": 21164,
+            "source_url": "https://api.github.com/repos/marcomusy/vedo/contents/README.md",
+            "local_archive": "verification/research-source-archive-20261029/three-d-craft-2026-10-29.json",
+            "json_pointer": "/screenings/2/result/structuredContent/content"
+          },
+          "display_url": "https://api.github.com/repos/marcomusy/vedo/contents/README.md"
+        }
+      }
+    }
+  ],
+  "vispy_corrected_readme": {
+    "content_evidence": {
+      "sha256": "236ba8ea77add62e334ef80d281149545b838be2fac93fa1dab02eac834f6e78",
+      "characters": 5898,
+      "source_url": "https://api.github.com/repos/vispy/vispy/contents/README.rst",
+      "local_archive": "verification/research-source-archive-20261029/three-d-craft-2026-10-29.json",
+      "json_pointer": "/vispy_corrected_readme/content"
+    },
+    "title": "README.rst",
+    "modified_date": null,
+    "url": "https://api.github.com/repos/vispy/vispy/contents/README.rst",
+    "display_url": "https://api.github.com/repos/vispy/vispy/contents/README.rst",
+    "display_title": "README.rst",
+    "structuredContent": {
+      "title": "README.rst",
+      "content_evidence": {
+        "sha256": "236ba8ea77add62e334ef80d281149545b838be2fac93fa1dab02eac834f6e78",
+        "characters": 5898,
+        "source_url": "https://api.github.com/repos/vispy/vispy/contents/README.rst",
+        "local_archive": "verification/research-source-archive-20261029/three-d-craft-2026-10-29.json",
+        "json_pointer": "/vispy_corrected_readme/structuredContent/content"
+      },
+      "display_url": "https://api.github.com/repos/vispy/vispy/contents/README.rst"
+    }
+  },
+  "deep": {
+    "content_evidence": {
+      "sha256": "65f2db56867f447235dd2191970ee4c16c70ac7c14ec01bc280e5643cbc3eb94",
+      "characters": 2953,
+      "source_url": "https://api.github.com/repos/pygfx/pygfx/contents/examples/feature_demo/transparency2.py",
+      "local_archive": "verification/research-source-archive-20261029/three-d-craft-2026-10-29.json",
+      "json_pointer": "/deep/content"
+    },
+    "title": "transparency2.py",
+    "modified_date": null,
+    "url": "https://api.github.com/repos/pygfx/pygfx/contents/examples/feature_demo/transparency2.py",
+    "display_url": "https://api.github.com/repos/pygfx/pygfx/contents/examples/feature_demo/transparency2.py",
+    "display_title": "transparency2.py",
+    "structuredContent": {
+      "title": "transparency2.py",
+      "content_evidence": {
+        "sha256": "65f2db56867f447235dd2191970ee4c16c70ac7c14ec01bc280e5643cbc3eb94",
+        "characters": 2953,
+        "source_url": "https://api.github.com/repos/pygfx/pygfx/contents/examples/feature_demo/transparency2.py",
+        "local_archive": "verification/research-source-archive-20261029/three-d-craft-2026-10-29.json",
+        "json_pointer": "/deep/structuredContent/content"
+      },
+      "display_url": "https://api.github.com/repos/pygfx/pygfx/contents/examples/feature_demo/transparency2.py"
+    }
+  },
+  "notes": "README.md failed for VisPy; repository listing located README.rst, which succeeded. Three new successful repository screenings. Vedo README declares MIT; other licenses not checked this round. No engine installed; no upstream implementation transplanted."
+}

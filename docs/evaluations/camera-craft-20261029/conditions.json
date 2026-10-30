@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-29",
+  "report": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/local-linearity-final/videos/local_linearity/720p30/LocalLinearity.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 17.699348958333335,
+    "decoded_frames": 531,
+    "bytes": 667564,
+    "video_sha256": "ce8e695513bab165459b87350144aabc27a65b12e6af28be45b3a0bffa0e3be0",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/local-linearity-final/review/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 3.0,
+        "actual_seconds": 3.0,
+        "frame_index": 90,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/local-linearity-final/review/frame-000090.png"
+      },
+      {
+        "requested_seconds": 4.3,
+        "actual_seconds": 4.3,
+        "frame_index": 129,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/local-linearity-final/review/frame-000129.png"
+      },
+      {
+        "requested_seconds": 5.6,
+        "actual_seconds": 5.599348958333334,
+        "frame_index": 168,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/local-linearity-final/review/frame-000168.png"
+      },
+      {
+        "requested_seconds": 8.3,
+        "actual_seconds": 8.299348958333333,
+        "frame_index": 249,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/local-linearity-final/review/frame-000249.png"
+      },
+      {
+        "requested_seconds": 10.3,
+        "actual_seconds": 10.299348958333333,
+        "frame_index": 309,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/local-linearity-final/review/frame-000309.png"
+      },
+      {
+        "requested_seconds": 12.5,
+        "actual_seconds": 12.499348958333334,
+        "frame_index": 375,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/local-linearity-final/review/frame-000375.png"
+      },
+      {
+        "requested_seconds": 15.0,
+        "actual_seconds": 14.999348958333334,
+        "frame_index": 450,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/local-linearity-final/review/frame-000450.png"
+      },
+      {
+        "requested_seconds": 17.2,
+        "actual_seconds": 17.199348958333335,
+        "frame_index": 516,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/local-linearity-final/review/frame-000516.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/local-linearity-final/review/review.html"
+  },
+  "source_sha256": {
+    "examples/local_linearity.py": "8dfd9821e3a8fccbe6cc0cb1d80be4f77fd9a8ae2202a9f44b31d0b79f3fbedc",
+    "references/advanced.md": "35260fbc2bcff223cd3870fb384beaa6eca4011005529b2baf92c255307affa1",
+    "tests/test_examples.py": "41608def53aa410d42a589a5f5d90a270ea073d6965a29b0dd0fcbc262906e60",
+    "SKILL.md": "881c8ccd6b5b57df31dbe53584194f17f1d422c24c9ccf3aa52205105911dbbe"
+  },
+  "visual_review": "8 sampled frames including local camera transitions and restored overview; not full-speed aesthetic or audience acceptance"
+}

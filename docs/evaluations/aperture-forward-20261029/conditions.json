@@ -1,0 +1,149 @@
+{
+  "first": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/final_media/videos/scene/720p30/Aperture.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 27.5,
+    "decoded_frames": 825,
+    "bytes": 846922,
+    "video_sha256": "e1ec0ebaf30749bc6d7b6abff9de9e48fa8e6a6dc68696ca13520c3fbd521157",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/parent-first-pass-360/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 3.0,
+        "actual_seconds": 3.0,
+        "frame_index": 90,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/parent-first-pass-360/frame-000090.png"
+      },
+      {
+        "requested_seconds": 9.0,
+        "actual_seconds": 9.0,
+        "frame_index": 270,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/parent-first-pass-360/frame-000270.png"
+      },
+      {
+        "requested_seconds": 14.0,
+        "actual_seconds": 14.0,
+        "frame_index": 420,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/parent-first-pass-360/frame-000420.png"
+      },
+      {
+        "requested_seconds": 21.0,
+        "actual_seconds": 21.0,
+        "frame_index": 630,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/parent-first-pass-360/frame-000630.png"
+      },
+      {
+        "requested_seconds": 26.0,
+        "actual_seconds": 26.0,
+        "frame_index": 780,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/parent-first-pass-360/frame-000780.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/parent-first-pass-360/review.html"
+  },
+  "revision": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_media/videos/scene/720p30/Aperture.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 26.8,
+    "decoded_frames": 804,
+    "bytes": 854776,
+    "video_sha256": "6bd8722b581987a00cf6639b9bfe4748ddfa22b13bf106ff6f32758dd3c38cf6",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 3.0,
+        "actual_seconds": 3.0,
+        "frame_index": 90,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/frame-000090.png"
+      },
+      {
+        "requested_seconds": 7.0,
+        "actual_seconds": 7.0,
+        "frame_index": 210,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/frame-000210.png"
+      },
+      {
+        "requested_seconds": 8.0,
+        "actual_seconds": 8.0,
+        "frame_index": 240,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/frame-000240.png"
+      },
+      {
+        "requested_seconds": 9.0,
+        "actual_seconds": 9.0,
+        "frame_index": 270,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/frame-000270.png"
+      },
+      {
+        "requested_seconds": 9.5,
+        "actual_seconds": 9.5,
+        "frame_index": 285,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/frame-000285.png"
+      },
+      {
+        "requested_seconds": 10.0,
+        "actual_seconds": 10.0,
+        "frame_index": 300,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/frame-000300.png"
+      },
+      {
+        "requested_seconds": 11.0,
+        "actual_seconds": 11.0,
+        "frame_index": 330,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/frame-000330.png"
+      },
+      {
+        "requested_seconds": 14.0,
+        "actual_seconds": 14.0,
+        "frame_index": 420,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/frame-000420.png"
+      },
+      {
+        "requested_seconds": 17.0,
+        "actual_seconds": 17.0,
+        "frame_index": 510,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/frame-000510.png"
+      },
+      {
+        "requested_seconds": 20.0,
+        "actual_seconds": 20.0,
+        "frame_index": 600,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/frame-000600.png"
+      },
+      {
+        "requested_seconds": 22.0,
+        "actual_seconds": 22.0,
+        "frame_index": 660,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/frame-000660.png"
+      },
+      {
+        "requested_seconds": 26.0,
+        "actual_seconds": 26.0,
+        "frame_index": 780,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/frame-000780.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/aperture-forward-20261029/revision/final_review/review.html"
+  },
+  "source_sha256": {
+    "first_pass.py": "fc51492087685e027a9dbe6f34871115c15433b8dc1560dbd12cdf9dba7d839e",
+    "revision.py": "25c706056cc4d9ee338a98df6744893191b5702e65ce76196d850708c30dbc47"
+  },
+  "limits": "Independent task first pass followed by explicit parent feedback; sampled frames, no audience acceptance. CJK font required; prototype mutates global config at module import, not promoted to runnable example."
+}

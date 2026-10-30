@@ -2,7 +2,7 @@
 name: manim
 description: Create and edit programmatic explanatory animations, videos, and GIFs with Manim Community Edition. Use for mathematical animation, algorithm animation, animated technical diagrams, or an explicit Manim request. Static diagrams, ordinary charts, and interactive web UI do not need this skill unless the user chooses Manim.
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
 ---
 
 # Manim animations
@@ -15,8 +15,9 @@ This edition targets **ManimCE 0.22.x, Python 3.11+**. Check `python --version` 
 
 1. Establish the explanation: what changes over time, what the viewer should understand, and the requested output (video/GIF/still, duration, aspect ratio, language). Infer sensible defaults for unspecified presentation choices; ask only when the answer changes the work materially.
 2. Before coding a new animation or improving its appearance, read [visual direction](references/visual-direction.md). Choose a focal object and sketch a short shot list: question, visible action, insight, timing. Make the changing geometry carry the explanation; use captions to support it. Use explicit labels as well as color to convey state.
+   For object transfers, continuous plots, causal flows, timing choices or portrait composition, read the matching [animation craft recipe](references/animation-recipes.md). Choose palette/type and motion rules for this subject; keep a stable identity for each tracked item.
 3. Write a runnable scene in the user's project, keeping output media separate from source. Use public scene APIs. Configure resolution, renderer, and output **before** constructing a scene; use CLI flags or `tempconfig` rather than changing global config after `super().__init__()`.
-4. Render a low-quality **video** first. Inspect opening, intermediate, and final frames, and review transitions for pacing and semantic correctness. A last-frame PNG or a successful command alone does not verify an animation. Fix clipping, unreadable labels, overlaps, wrong states, and unexpected jumps before increasing quality.
+4. Render a low-quality **video** first. Inspect opening, intermediate, and final frames, and review transitions for pacing and semantic correctness. Check essential labels at the intended display width, not only in enlarged frames. A last-frame PNG or a successful command alone does not verify an animation. Fix clipping, unreadable labels, overlaps, wrong states, and unexpected jumps before increasing quality.
 5. Render the requested artifact and verify it exists, decodes, and has the intended dimensions, duration, and format. Deliver the source path, artifact path, exact render command, environment version, and any verification limits. Do not claim visual acceptance when only syntax or rendering was checked.
 
 For a blog embed, a short 16:9 MP4 is a reasonable starting point; GIF is useful when required but can be larger and less efficient. Follow the user's duration and style rather than imposing a fixed length or banning titles.
@@ -51,10 +52,19 @@ python -m manim render -ql --format png scene.py Explain
 | Need | Reference / runnable starting point |
 |---|---|
 | Composition, visual storytelling, choreography, appearance review | [visual direction](references/visual-direction.md); `examples/visual_story.py`: `VectorStory` |
+| Refined / beautiful / premium appearance | [aesthetic refinement](references/aesthetic-refinement.md); `examples/interference_study.py`, `examples/area_scale_story.py` |
+| Visual language, item transfers, continuous state, causal timing, portrait | [animation recipes](references/animation-recipes.md); `merge_step.py`, `wave_superposition.py`, `packet_journey.py` in `examples/` |
 | Labels, formulas, code, axes, graphs, layout | [mobjects](references/mobjects.md); `examples/basic_scene.py` |
+| Easing choices and equal-time motion comparison | [motion clock](references/animation-recipes.md#separate-the-clock-from-the-motion-curve); `examples/motion_timing.py` |
 | Transforms, timing, live values, object identity | [animations](references/animations.md) |
+| Camera-led focus, local/global comparison | [camera-led explanation](references/advanced.md#camera-led-explanation); `examples/local_linearity.py` |
+| Continuous handoff between representations | [visual anchor](references/animation-recipes.md#carry-a-visual-anchor-across-scenes); `examples/circle_to_wave.py` |
+| Multi-beat physical explanation | [aesthetic refinement](references/aesthetic-refinement.md); `examples/damping_story.py` |
+| Bézier construction, curve parameters and path speed | [continuous state](references/animation-recipes.md#continuous-state-derive-the-whole-frame-from-one-value); `examples/bezier_construction.py` |
+| Explanatory 3D, exploded views and camera-safe labels | [3D](references/advanced.md#3d); `examples/exploded_layers.py` |
 | Camera, 3D, updaters, programmatic rendering | [advanced](references/advanced.md); `examples/advanced_scene.py` |
 | Formula without a TeX installation, including labeled derivations | [mobjects: math backends](references/mobjects.md#math-backends); `examples/typst_scene.py`, `examples/typst_derivation.py` |
+| Records becoming counts / visible aggregation | [animation recipes](references/animation-recipes.md#data-becoming-a-summary); `examples/data_to_decision.py` |
 | Process, state, comparison, algorithm explanation | [storytelling patterns](references/blog-patterns.md); `examples/flowchart.py`, `examples/state_diagram.py`, `examples/quicksort.py` |
 | Installation or older Manim code | [setup and migration](references/setup-and-migration.md) |
 

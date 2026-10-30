@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-29",
+  "screenings": [
+    {
+      "repo": "paperjs/paper.js",
+      "readme_url": "https://api.github.com/repos/paperjs/paper.js/contents/README.md",
+      "content_evidence": {
+        "sha256": "9c8ea922b8bbd8767e75b49c7cdd4caf19a33a26542f7b01048ec4a55d48e7e8",
+        "characters": 15322,
+        "source_url": "https://api.github.com/repos/paperjs/paper.js/contents/README.md",
+        "local_archive": "verification/research-source-archive-20261029/bezier-craft-2026-10-29.json",
+        "json_pointer": "/screenings/0/content"
+      }
+    },
+    {
+      "repo": "Pomax/bezierjs",
+      "readme_url": "https://api.github.com/repos/Pomax/bezierjs/contents/README.md",
+      "content_evidence": {
+        "sha256": "80ffecba87c48e8da98e87e95cb2431313868e9d6193698336d6cec0fbda5d4b",
+        "characters": 3083,
+        "source_url": "https://api.github.com/repos/Pomax/bezierjs/contents/README.md",
+        "local_archive": "verification/research-source-archive-20261029/bezier-craft-2026-10-29.json",
+        "json_pointer": "/screenings/1/content"
+      }
+    },
+    {
+      "repo": "svgdotjs/svg.js",
+      "readme_url": "https://api.github.com/repos/svgdotjs/svg.js/contents/README.md",
+      "content_evidence": {
+        "sha256": "8f3103cff1f96f7414ce19f9f621ae304e4ab29834d6b101848a94f92835f5fe",
+        "characters": 1740,
+        "source_url": "https://api.github.com/repos/svgdotjs/svg.js/contents/README.md",
+        "local_archive": "verification/research-source-archive-20261029/bezier-craft-2026-10-29.json",
+        "json_pointer": "/screenings/2/content"
+      }
+    }
+  ],
+  "deep_source": {
+    "url": "https://api.github.com/repos/Pomax/bezierjs/contents/src/bezier.js",
+    "inspected_methods": [
+      "hull",
+      "split",
+      "compute"
+    ],
+    "excerpt_evidence": {
+      "sha256": "faaaf1c06fa203cc34fb896e5af5cd2e14e060edec86861f127e45017f2880c3",
+      "characters": 650,
+      "source_url": "https://api.github.com/repos/Pomax/bezierjs/contents/src/bezier.js",
+      "local_archive": "verification/research-source-archive-20261029/bezier-craft-2026-10-29.json",
+      "json_pointer": "/deep_source/excerpt"
+    }
+  },
+  "notes": "Three README screenings. Bezier.js and SVG.js README state MIT. Paper.js license not checked this round. Original CE scene uses repeated affine interpolation; no JS dependency or source transplanted into the scene."
+}

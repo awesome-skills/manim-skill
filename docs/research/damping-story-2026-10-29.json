@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-29",
+  "readmes": [
+    {
+      "content_evidence": {
+        "sha256": "da0cbee7062c930588042dbf30995163108b07708c2fb935d76d212f35b1db1e",
+        "characters": 2330,
+        "source_url": "https://api.github.com/repos/jwilling/JNWSpringAnimation/contents/README.md",
+        "local_archive": "verification/research-source-archive-20261029/damping-story-2026-10-29.json",
+        "json_pointer": "/readmes/0/content"
+      },
+      "title": "README.md",
+      "modified_date": null,
+      "url": "https://api.github.com/repos/jwilling/JNWSpringAnimation/contents/README.md",
+      "display_url": "https://api.github.com/repos/jwilling/JNWSpringAnimation/contents/README.md",
+      "display_title": "README.md",
+      "structuredContent": {
+        "title": "README.md",
+        "content_evidence": {
+          "sha256": "da0cbee7062c930588042dbf30995163108b07708c2fb935d76d212f35b1db1e",
+          "characters": 2330,
+          "source_url": "https://api.github.com/repos/jwilling/JNWSpringAnimation/contents/README.md",
+          "local_archive": "verification/research-source-archive-20261029/damping-story-2026-10-29.json",
+          "json_pointer": "/readmes/0/structuredContent/content"
+        },
+        "display_url": "https://api.github.com/repos/jwilling/JNWSpringAnimation/contents/README.md"
+      }
+    },
+    {
+      "content_evidence": {
+        "sha256": "b8a799ec56cc42197b4c556b633298b66922122a6e11042b2e03291ccd5b3e68",
+        "characters": 3448,
+        "source_url": "https://api.github.com/repos/pmndrs/react-spring/contents/README.md",
+        "local_archive": "verification/research-source-archive-20261029/damping-story-2026-10-29.json",
+        "json_pointer": "/readmes/1/content"
+      },
+      "title": "README.md",
+      "modified_date": null,
+      "url": "https://api.github.com/repos/pmndrs/react-spring/contents/README.md",
+      "display_url": "https://api.github.com/repos/pmndrs/react-spring/contents/README.md",
+      "display_title": "README.md",
+      "structuredContent": {
+        "title": "README.md",
+        "content_evidence": {
+          "sha256": "b8a799ec56cc42197b4c556b633298b66922122a6e11042b2e03291ccd5b3e68",
+          "characters": 3448,
+          "source_url": "https://api.github.com/repos/pmndrs/react-spring/contents/README.md",
+          "local_archive": "verification/research-source-archive-20261029/damping-story-2026-10-29.json",
+          "json_pointer": "/readmes/1/structuredContent/content"
+        },
+        "display_url": "https://api.github.com/repos/pmndrs/react-spring/contents/README.md"
+      }
+    }
+  ],
+  "source": {
+    "content_evidence": {
+      "sha256": "7ec29604b5e4a94b229a49541d28863e997ca99e3f407e61c0157594bbd01807",
+      "characters": 11498,
+      "source_url": "https://api.github.com/repos/jwilling/JNWSpringAnimation/contents/JNWSpringAnimation.m",
+      "local_archive": "verification/research-source-archive-20261029/damping-story-2026-10-29.json",
+      "json_pointer": "/source/content"
+    },
+    "title": "JNWSpringAnimation.m",
+    "modified_date": null,
+    "url": "https://api.github.com/repos/jwilling/JNWSpringAnimation/contents/JNWSpringAnimation.m",
+    "display_url": "https://api.github.com/repos/jwilling/JNWSpringAnimation/contents/JNWSpringAnimation.m",
+    "display_title": "JNWSpringAnimation.m",
+    "structuredContent": {
+      "title": "JNWSpringAnimation.m",
+      "content_evidence": {
+        "sha256": "7ec29604b5e4a94b229a49541d28863e997ca99e3f407e61c0157594bbd01807",
+        "characters": 11498,
+        "source_url": "https://api.github.com/repos/jwilling/JNWSpringAnimation/contents/JNWSpringAnimation.m",
+        "local_archive": "verification/research-source-archive-20261029/damping-story-2026-10-29.json",
+        "json_pointer": "/source/structuredContent/content"
+      },
+      "display_url": "https://api.github.com/repos/jwilling/JNWSpringAnimation/contents/JNWSpringAnimation.m"
+    }
+  },
+  "source_blob_sha": "2ac6c2ea9294d9a6ef2aa1c87565e8918a318a7b",
+  "assessment": "JNWSpringAnimation README declares MIT; source includes MIT. Its exp*cos displacement uses zero phase but does not model release from rest for positive damping. Original scene uses analytic underdamped solution with zero initial velocity, not copied code. React-spring README only; runtime and license not verified this round."
+}

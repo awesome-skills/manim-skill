@@ -1,0 +1,379 @@
+{
+  "before": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/state-refinement/baseline-media/videos/baseline/720p30/StateWithLabels.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 5.0,
+    "decoded_frames": 150,
+    "bytes": 82218,
+    "video_sha256": "3f0d5fe1a0ded98c07a9b43ed053289b30245d5b090d81378735b574430c3399",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/state-refinement/before-review/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 4.5,
+        "actual_seconds": 4.5,
+        "frame_index": 135,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/state-refinement/before-review/frame-000135.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/state-refinement/before-review/review.html"
+  },
+  "after": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/state-refinement/final-media/videos/state_diagram/720p30/StateWithLabels.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 16.498697916666668,
+    "decoded_frames": 495,
+    "bytes": 895803,
+    "video_sha256": "dd47ebc03bbf9c0c7017435a62838820d52fadc2298db1ba75b8884292e055fb",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/state-refinement/after-review/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 2.0,
+        "actual_seconds": 2.0,
+        "frame_index": 60,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/state-refinement/after-review/frame-000060.png"
+      },
+      {
+        "requested_seconds": 5.5,
+        "actual_seconds": 5.499348958333333,
+        "frame_index": 165,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/state-refinement/after-review/frame-000165.png"
+      },
+      {
+        "requested_seconds": 8.0,
+        "actual_seconds": 7.999348958333333,
+        "frame_index": 240,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/state-refinement/after-review/frame-000240.png"
+      },
+      {
+        "requested_seconds": 9.0,
+        "actual_seconds": 8.999348958333334,
+        "frame_index": 270,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/state-refinement/after-review/frame-000270.png"
+      },
+      {
+        "requested_seconds": 10.5,
+        "actual_seconds": 10.499348958333334,
+        "frame_index": 315,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/state-refinement/after-review/frame-000315.png"
+      },
+      {
+        "requested_seconds": 14.0,
+        "actual_seconds": 13.998697916666666,
+        "frame_index": 420,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/state-refinement/after-review/frame-000420.png"
+      },
+      {
+        "requested_seconds": 16.2,
+        "actual_seconds": 16.198697916666667,
+        "frame_index": 486,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/state-refinement/after-review/frame-000486.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/state-refinement/after-review/review.html"
+  },
+  "smoke": {
+    "manim_version": "0.22.0",
+    "python": "3.13.16 (main, Sep 30 2026, 18:57:20) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "renderer": "cairo",
+    "visual_review": "not performed",
+    "results": [
+      {
+        "scene": "SimpleStates",
+        "source": "examples/state_diagram.py",
+        "source_sha256": "d6e48761fd882545f781c8d51f036782cbd745da268f271a485779f83f4eaf24",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/state-refinement/smoke/SimpleStates",
+          "/Users/tsk/code/manim-skill/examples/state_diagram.py",
+          "SimpleStates"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/state-refinement/smoke/SimpleStates/videos/state_diagram/360p15/SimpleStates.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 6.266666666666667,
+        "decoded_frames": 94,
+        "bytes": 53391,
+        "video_sha256": "eaa8829ab66fcc591950ea573d4da67c38f078f5e3b2bd16f111351f86ae6914",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/state-refinement/smoke/SimpleStates/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 1.5666666666666667,
+            "actual_seconds": 1.5333333333333334,
+            "frame_index": 23
+          },
+          {
+            "requested_seconds": 3.1333333333333333,
+            "actual_seconds": 3.1333333333333333,
+            "frame_index": 47
+          },
+          {
+            "requested_seconds": 4.7,
+            "actual_seconds": 4.666666666666667,
+            "frame_index": 70
+          },
+          {
+            "requested_seconds": 6.266666666666667,
+            "actual_seconds": 6.2,
+            "frame_index": 93
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      },
+      {
+        "scene": "StateWithLabels",
+        "source": "examples/state_diagram.py",
+        "source_sha256": "d6e48761fd882545f781c8d51f036782cbd745da268f271a485779f83f4eaf24",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/state-refinement/smoke/StateWithLabels",
+          "/Users/tsk/code/manim-skill/examples/state_diagram.py",
+          "StateWithLabels"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/state-refinement/smoke/StateWithLabels/videos/state_diagram/360p15/StateWithLabels.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 16.73203125,
+        "decoded_frames": 251,
+        "bytes": 385247,
+        "video_sha256": "17e7d34bca5020108626f2aa3fdf6f01231d8e65feb7a2f2f0174ab0745fc0b9",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/state-refinement/smoke/StateWithLabels/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 4.1830078125,
+            "actual_seconds": 4.1330078125,
+            "frame_index": 62
+          },
+          {
+            "requested_seconds": 8.366015625,
+            "actual_seconds": 8.332682291666666,
+            "frame_index": 125
+          },
+          {
+            "requested_seconds": 12.549023437499999,
+            "actual_seconds": 12.532356770833333,
+            "frame_index": 188
+          },
+          {
+            "requested_seconds": 16.73203125,
+            "actual_seconds": 16.665364583333332,
+            "frame_index": 250
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      },
+      {
+        "scene": "LinkedListMismatch",
+        "source": "examples/state_diagram.py",
+        "source_sha256": "d6e48761fd882545f781c8d51f036782cbd745da268f271a485779f83f4eaf24",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/state-refinement/smoke/LinkedListMismatch",
+          "/Users/tsk/code/manim-skill/examples/state_diagram.py",
+          "LinkedListMismatch"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/state-refinement/smoke/LinkedListMismatch/videos/state_diagram/360p15/LinkedListMismatch.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 6.933333333333334,
+        "decoded_frames": 104,
+        "bytes": 70867,
+        "video_sha256": "48a95cf63f423e3c1b893a411c585d82bff80537c61992cf19da407e14b1e0e7",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/state-refinement/smoke/LinkedListMismatch/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 1.7333333333333334,
+            "actual_seconds": 1.7333333333333334,
+            "frame_index": 26
+          },
+          {
+            "requested_seconds": 3.466666666666667,
+            "actual_seconds": 3.466666666666667,
+            "frame_index": 52
+          },
+          {
+            "requested_seconds": 5.2,
+            "actual_seconds": 5.2,
+            "frame_index": 78
+          },
+          {
+            "requested_seconds": 6.933333333333334,
+            "actual_seconds": 6.866666666666666,
+            "frame_index": 103
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      },
+      {
+        "scene": "CyclicStates",
+        "source": "examples/state_diagram.py",
+        "source_sha256": "d6e48761fd882545f781c8d51f036782cbd745da268f271a485779f83f4eaf24",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/state-refinement/smoke/CyclicStates",
+          "/Users/tsk/code/manim-skill/examples/state_diagram.py",
+          "CyclicStates"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/state-refinement/smoke/CyclicStates/videos/state_diagram/360p15/CyclicStates.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 10.8,
+        "decoded_frames": 162,
+        "bytes": 135237,
+        "video_sha256": "ddadabd46a86562be3c222e51dc45259c2f48aaef32935b07103987258458007",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/state-refinement/smoke/CyclicStates/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 2.7,
+            "actual_seconds": 2.6666666666666665,
+            "frame_index": 40
+          },
+          {
+            "requested_seconds": 5.4,
+            "actual_seconds": 5.4,
+            "frame_index": 81
+          },
+          {
+            "requested_seconds": 8.100000000000001,
+            "actual_seconds": 8.066666666666666,
+            "frame_index": 121
+          },
+          {
+            "requested_seconds": 10.8,
+            "actual_seconds": 10.733333333333333,
+            "frame_index": 161
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      }
+    ],
+    "skipped": []
+  },
+  "source_sha256": {
+    "baseline.py": "8315e139d38ff7ec2a7891ddfa151cf9c646341a947dea8f6abce94b2eb10176",
+    "state_diagram.py": "d6e48761fd882545f781c8d51f036782cbd745da268f271a485779f83f4eaf24"
+  }
+}

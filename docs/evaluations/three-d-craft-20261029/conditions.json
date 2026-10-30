@@ -1,0 +1,144 @@
+{
+  "report": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/exploded-layers-final/videos/exploded_layers/720p30/ExplodedLayers.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 15.4,
+    "decoded_frames": 462,
+    "bytes": 480790,
+    "video_sha256": "9a67a31c13cba6f6332415ff65f8eb2fb1e28460094a36ab7bb1087c77ee1d6d",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/exploded-layers-final/review/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 2.0,
+        "actual_seconds": 2.0,
+        "frame_index": 60,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/exploded-layers-final/review/frame-000060.png"
+      },
+      {
+        "requested_seconds": 3.5,
+        "actual_seconds": 3.5,
+        "frame_index": 105,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/exploded-layers-final/review/frame-000105.png"
+      },
+      {
+        "requested_seconds": 5.5,
+        "actual_seconds": 5.5,
+        "frame_index": 165,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/exploded-layers-final/review/frame-000165.png"
+      },
+      {
+        "requested_seconds": 7.0,
+        "actual_seconds": 7.0,
+        "frame_index": 210,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/exploded-layers-final/review/frame-000210.png"
+      },
+      {
+        "requested_seconds": 9.0,
+        "actual_seconds": 9.0,
+        "frame_index": 270,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/exploded-layers-final/review/frame-000270.png"
+      },
+      {
+        "requested_seconds": 11.5,
+        "actual_seconds": 11.5,
+        "frame_index": 345,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/exploded-layers-final/review/frame-000345.png"
+      },
+      {
+        "requested_seconds": 14.5,
+        "actual_seconds": 14.5,
+        "frame_index": 435,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/exploded-layers-final/review/frame-000435.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/exploded-layers-final/review/review.html"
+  },
+  "smoke": {
+    "manim_version": "0.22.0",
+    "python": "3.13.16 (main, Sep 30 2026, 18:57:20) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "renderer": "cairo",
+    "visual_review": "not performed",
+    "results": [
+      {
+        "scene": "ExplodedLayers",
+        "source": "examples/exploded_layers.py",
+        "source_sha256": "6237a00b8ae9cd8796a2661f32029e9fd1bb9d1b2d085115ce23728fac0f4e79",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/exploded-smoke/ExplodedLayers",
+          "/Users/tsk/code/manim-skill/examples/exploded_layers.py",
+          "ExplodedLayers"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/exploded-smoke/ExplodedLayers/videos/exploded_layers/360p15/ExplodedLayers.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 15.333333333333334,
+        "decoded_frames": 230,
+        "bytes": 181541,
+        "video_sha256": "8e6a01015ececae5ff5c26255438dd13a9fa45304f15a2b667448b14b1774b0c",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/exploded-smoke/ExplodedLayers/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 3.8333333333333335,
+            "actual_seconds": 3.8,
+            "frame_index": 57
+          },
+          {
+            "requested_seconds": 7.666666666666667,
+            "actual_seconds": 7.666666666666667,
+            "frame_index": 115
+          },
+          {
+            "requested_seconds": 11.5,
+            "actual_seconds": 11.466666666666667,
+            "frame_index": 172
+          },
+          {
+            "requested_seconds": 15.333333333333334,
+            "actual_seconds": 15.266666666666667,
+            "frame_index": 229
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      }
+    ],
+    "skipped": []
+  },
+  "source_sha256": "6237a00b8ae9cd8796a2661f32029e9fd1bb9d1b2d085115ce23728fac0f4e79",
+  "review": "Seven sampled camera states at 360px; Cairo only. No full-speed aesthetic acceptance."
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "repository": "heygen-com/hyperframes",
+    "path": "skills/hyperframes/references/look.md",
+    "sha": "b20dc1480e3e1c22e05d8237ea12ca67409178ca",
+    "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/references/look.md"
+  },
+  {
+    "repository": "heygen-com/hyperframes",
+    "path": "skills/hyperframes/references/review.md",
+    "sha": "9dcef20320703ca2d65877949e3ae6d23552e719",
+    "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/references/review.md"
+  },
+  {
+    "repository": "d3/d3-transition",
+    "path": "src/transition/attrTween.js",
+    "sha": "0dd4a0058a265277e46796ad97dd3cda0e4eb7c5",
+    "url": "https://github.com/d3/d3-transition/blob/main/src/transition/attrTween.js"
+  },
+  {
+    "repository": "popmotion/popmotion",
+    "path": "packages/popmotion/src/animations/generators/spring.ts",
+    "sha": "8cc9d4923ebdd5b307a83412c7e6e5db277f6cab",
+    "url": "https://github.com/Popmotion/popmotion/blob/master/packages/popmotion/src/animations/generators/spring.ts"
+  }
+]

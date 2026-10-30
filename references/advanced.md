@@ -22,6 +22,37 @@ class Focus(MovingCameraScene):
 
 Keep text readable at both zoom levels. Zooming changes which scene-unit bounds are visible; checks against the initial frame alone are insufficient. Use `ZoomedScene` for an inset, and verify that the inset does not cover important content.
 
+## Camera-led explanation
+
+Use a camera move when changing the visible scale reveals something the wide shot cannot.
+`examples/local_linearity.py` preserves one curve and tangent through two close views,
+then restores the overview. It uses `MovingCameraScene` under Cairo and ordinary public
+frame animations; no second scene or substitute geometry is introduced.
+
+- Establish the wide view and the target before moving. A brief framing rectangle can
+  connect the forthcoming close view to the overview.
+- Save the overview frame once. Pan/zoom to the same world-space target and use `Restore`
+  to return to that exact context rather than estimating the old position.
+- Place annotations for the current view. Wide-shot text can leave before the move;
+  introduce local labels after the camera settles, then remove them before changing scale.
+  To keep their apparent size, scale world text by `current_frame_width / overview_width`.
+  This is for labels created at a settled camera state, not a screen-fixed text API.
+- Check the smallest frame bounds as well as the transition midpoint. Geometry may
+  intentionally extend beyond a close crop; essential labels and focal objects should fit.
+- Keep what is being measured fixed. A camera zoom must not rescale a curve independently
+  of its tangent, or move the point while claiming to examine the same neighborhood.
+
+CE `self.camera.auto_zoom(group, margin=...)` fits a group using its bounding box and the
+current frame aspect. Include essential labels in the group if they must remain visible.
+In the inspected 0.22 implementation, margin is added to the chosen fitted dimension;
+it is not an explicit per-edge padding parameter. It applies to unrotated XY geometry.
+For a deliberate constant target and two known scales, direct frame animation is clearer.
+
+Source comparisons: [Motion Canvas Camera](https://github.com/motion-canvas/motion-canvas/blob/main/packages/2d/src/lib/components/Camera.ts)
+separates center, zoom and reset and converts world coordinates to its scene; [CE moving-camera examples](https://github.com/ManimCommunity/manim/blob/main/manim/scene/moving_camera_scene.py)
+show save/restore and group fitting. Their APIs differ; borrow the continuity principle,
+not the engine-specific calls. This example uses original CE code.
+
 ## 3D
 
 ```python
@@ -39,6 +70,20 @@ class Orbit(ThreeDScene):
 ```
 
 Start with modest surface resolution. Use `add_fixed_in_frame_mobjects` for screen-space labels. `ThreeDScene` and OpenGL camera APIs differ; do not substitute a ManimGL camera snippet into a CE scene. Cairo 3D is a useful portable check, not proof of OpenGL behavior.
+
+For an explanatory 3D composition, establish the assembled object before separating
+parts. `examples/exploded_layers.py` uses opaque equal-sized prisms, moves only their
+centers, changes the camera angle while they are separated, and returns them to the
+same stack. Text and the color legend remain in screen space. Keep a comparable
+assembled view at both ends so an exploded diagram does not imply resized parts.
+
+Check projected bounds at every planned camera angle. The first exploded-layer draft
+overlapped its bottom legend after the camera turned; moving the legend to the side
+resolved this without shrinking the main object. A world-space bounding box alone
+does not catch that overlap. Use transparency only when it conveys something needed,
+and inspect intersecting surfaces in the actual renderer. Pygfx's transparency demo
+explicitly exercises intersecting planes where sorting is insufficient; that engine's
+blend modes are not an API or guarantee supplied by Manim Cairo.
 
 ## Derived geometry
 

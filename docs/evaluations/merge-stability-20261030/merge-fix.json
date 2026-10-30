@@ -1,0 +1,50 @@
+{
+  "artifact": "/Users/tsk/code/manim-skill/verification/merge-stability-20261030/final-media/videos/merge_step/720p30/MergeStep.mp4",
+  "width": 1280,
+  "height": 720,
+  "duration_seconds": 16.598046875,
+  "decoded_frames": 498,
+  "bytes": 742216,
+  "video_sha256": "8d0b17d3d2b48413f40f18d3943731ee48628a791e690c7ad60fa8b9425c5a57",
+  "contact_sheet": "/Users/tsk/code/manim-skill/verification/pr-playback/merge-fix/contact.png",
+  "samples": [
+    {
+      "requested_seconds": 11.7,
+      "actual_seconds": 11.699348958333333,
+      "frame_index": 351,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/pr-playback/merge-fix/frame-000351.png"
+    },
+    {
+      "requested_seconds": 11.85,
+      "actual_seconds": 11.83203125,
+      "frame_index": 355,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/pr-playback/merge-fix/frame-000355.png"
+    },
+    {
+      "requested_seconds": 12.0,
+      "actual_seconds": 11.998697916666666,
+      "frame_index": 360,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/pr-playback/merge-fix/frame-000360.png"
+    },
+    {
+      "requested_seconds": 12.149999999999999,
+      "actual_seconds": 12.13203125,
+      "frame_index": 364,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/pr-playback/merge-fix/frame-000364.png"
+    },
+    {
+      "requested_seconds": 12.299999999999999,
+      "actual_seconds": 12.298697916666667,
+      "frame_index": 369,
+      "frame_path": "/Users/tsk/code/manim-skill/verification/pr-playback/merge-fix/frame-000369.png"
+    }
+  ],
+  "contact_preview": {
+    "width": 360,
+    "height": 202,
+    "mode": "exact width"
+  },
+  "sampling": "displayed frame at requested time (presentation timestamps)",
+  "visual_review": "not performed",
+  "review_player": "/Users/tsk/code/manim-skill/verification/pr-playback/merge-fix/review.html"
+}

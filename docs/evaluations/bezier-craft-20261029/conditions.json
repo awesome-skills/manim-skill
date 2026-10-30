@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-29",
+  "report": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/bezier-construction-final/videos/bezier_construction/720p30/BezierConstruction.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 19.033333333333335,
+    "decoded_frames": 571,
+    "bytes": 609998,
+    "video_sha256": "31413bfde52d3232253398ffac94cfed210fbc548d72b9e4dfe7cc6760bf5743",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/bezier-construction-final/review/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 2.0,
+        "actual_seconds": 2.0,
+        "frame_index": 60,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/bezier-construction-final/review/frame-000060.png"
+      },
+      {
+        "requested_seconds": 5.5,
+        "actual_seconds": 5.5,
+        "frame_index": 165,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/bezier-construction-final/review/frame-000165.png"
+      },
+      {
+        "requested_seconds": 8.5,
+        "actual_seconds": 8.5,
+        "frame_index": 255,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/bezier-construction-final/review/frame-000255.png"
+      },
+      {
+        "requested_seconds": 10.5,
+        "actual_seconds": 10.5,
+        "frame_index": 315,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/bezier-construction-final/review/frame-000315.png"
+      },
+      {
+        "requested_seconds": 13.0,
+        "actual_seconds": 13.0,
+        "frame_index": 390,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/bezier-construction-final/review/frame-000390.png"
+      },
+      {
+        "requested_seconds": 15.5,
+        "actual_seconds": 15.5,
+        "frame_index": 465,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/bezier-construction-final/review/frame-000465.png"
+      },
+      {
+        "requested_seconds": 18.0,
+        "actual_seconds": 18.0,
+        "frame_index": 540,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/bezier-construction-final/review/frame-000540.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/bezier-construction-final/review/review.html"
+  },
+  "smoke": {
+    "manim_version": "0.22.0",
+    "python": "3.13.16 (main, Sep 30 2026, 18:57:20) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "renderer": "cairo",
+    "visual_review": "not performed",
+    "results": [
+      {
+        "scene": "BezierConstruction",
+        "source": "examples/bezier_construction.py",
+        "source_sha256": "fa31faf7a5dc08c8ad7c3c287f088c9fd448e9d5405fd97fa14ea2d06764cdf1",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/bezier-smoke/BezierConstruction",
+          "/Users/tsk/code/manim-skill/examples/bezier_construction.py",
+          "BezierConstruction"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/bezier-smoke/BezierConstruction/videos/bezier_construction/360p15/BezierConstruction.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 19.132682291666665,
+        "decoded_frames": 287,
+        "bytes": 253080,
+        "video_sha256": "cea944e23f0de03ef651071405f2422c8090126c5170e8986748ce98354ae85f",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/bezier-smoke/BezierConstruction/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 4.783170572916666,
+            "actual_seconds": 4.7330078125,
+            "frame_index": 71
+          },
+          {
+            "requested_seconds": 9.566341145833333,
+            "actual_seconds": 9.5330078125,
+            "frame_index": 143
+          },
+          {
+            "requested_seconds": 14.349511718749998,
+            "actual_seconds": 14.3330078125,
+            "frame_index": 215
+          },
+          {
+            "requested_seconds": 19.132682291666665,
+            "actual_seconds": 19.066015625,
+            "frame_index": 286
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      }
+    ],
+    "skipped": []
+  },
+  "source_sha256": "fa31faf7a5dc08c8ad7c3c287f088c9fd448e9d5405fd97fa14ea2d06764cdf1",
+  "tests": "15 unit tests passed; Skill valid; diff check passed",
+  "review": "Seven sampled 360px frames, not full-speed aesthetic or audience acceptance"
+}

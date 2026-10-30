@@ -1,0 +1,29 @@
+[
+  {
+    "repository": "Matheart/manim-physics",
+    "path": "README.md",
+    "sha": "3c9b454272bd38422cf3c2e92246dd4e7cb465f4",
+    "url": "https://github.com/Matheart/manim-physics/blob/main/README.md",
+    "scope": "README screening only; no runtime verification"
+  },
+  {
+    "repository": "johnhenry/ecmanim",
+    "path": "README.md",
+    "sha": "bac008ea7eaddd122d9a5dc9eefb2e374875e669",
+    "url": "https://github.com/johnhenry/ecmanim/blob/main/README.md",
+    "scope": "README screening only; no runtime verification"
+  },
+  {
+    "repository": "hartnady/manim-skill",
+    "path": "README.md",
+    "sha": "8ef3fa454696f7c9fca7e6ed85765e7322542c7d",
+    "url": "https://github.com/hartnady/manim-skill/blob/main/README.md",
+    "scope": "README screening only; no runtime verification"
+  },
+  {
+    "repository": "TarekShehata/alkashi",
+    "path": "README.md",
+    "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}",
+    "scope": "README screening only; no runtime verification"
+  }
+]

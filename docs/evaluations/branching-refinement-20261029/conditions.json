@@ -1,0 +1,373 @@
+{
+  "before": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/branching-refinement/baseline-media/videos/baseline/720p30/BranchingFlow.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 5.0,
+    "decoded_frames": 150,
+    "bytes": 98202,
+    "video_sha256": "be9d3a17a36760561ecd07f8586bba7c77883d20d932141301606e683b45b899",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/branching-refinement/before-review/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 4.5,
+        "actual_seconds": 4.5,
+        "frame_index": 135,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/branching-refinement/before-review/frame-000135.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/branching-refinement/before-review/review.html"
+  },
+  "after": {
+    "artifact": "/Users/tsk/code/manim-skill/verification/branching-refinement/final-media/videos/flowchart/720p30/BranchingFlow.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 18.358203125,
+    "decoded_frames": 551,
+    "bytes": 1111171,
+    "video_sha256": "a6a29fa5bd409cd55582222dd7762d773b3dbaa48d71a728671617abbe75f771",
+    "contact_sheet": "/Users/tsk/code/manim-skill/verification/branching-refinement/after-review/contact.png",
+    "samples": [
+      {
+        "requested_seconds": 1.5,
+        "actual_seconds": 1.5,
+        "frame_index": 45,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/branching-refinement/after-review/frame-000045.png"
+      },
+      {
+        "requested_seconds": 4.8,
+        "actual_seconds": 4.798697916666667,
+        "frame_index": 144,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/branching-refinement/after-review/frame-000144.png"
+      },
+      {
+        "requested_seconds": 6.5,
+        "actual_seconds": 6.497395833333333,
+        "frame_index": 195,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/branching-refinement/after-review/frame-000195.png"
+      },
+      {
+        "requested_seconds": 9.0,
+        "actual_seconds": 8.99609375,
+        "frame_index": 270,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/branching-refinement/after-review/frame-000270.png"
+      },
+      {
+        "requested_seconds": 13.0,
+        "actual_seconds": 12.994140625,
+        "frame_index": 390,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/branching-refinement/after-review/frame-000390.png"
+      },
+      {
+        "requested_seconds": 16.5,
+        "actual_seconds": 16.491536458333332,
+        "frame_index": 495,
+        "frame_path": "/Users/tsk/code/manim-skill/verification/branching-refinement/after-review/frame-000495.png"
+      }
+    ],
+    "contact_preview": {
+      "width": 360,
+      "height": 202,
+      "mode": "exact width"
+    },
+    "sampling": "displayed frame at requested time (presentation timestamps)",
+    "visual_review": "not performed",
+    "review_player": "/Users/tsk/code/manim-skill/verification/branching-refinement/after-review/review.html"
+  },
+  "smoke": {
+    "manim_version": "0.22.0",
+    "python": "3.13.16 (main, Sep 30 2026, 18:57:20) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "renderer": "cairo",
+    "visual_review": "not performed",
+    "results": [
+      {
+        "scene": "SimpleFlow",
+        "source": "examples/flowchart.py",
+        "source_sha256": "aa64afeb0e73a07c62bd550f4dc289417d013f9760f08b27e692f9cc0af2bb88",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/branching-refinement/smoke/SimpleFlow",
+          "/Users/tsk/code/manim-skill/examples/flowchart.py",
+          "SimpleFlow"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/branching-refinement/smoke/SimpleFlow/videos/flowchart/360p15/SimpleFlow.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 4.0,
+        "decoded_frames": 60,
+        "bytes": 20407,
+        "video_sha256": "ccfbeefa2f752067fe90185dccd2cdf58e35685e76cc8f6ff9d4fe62f6276568",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/branching-refinement/smoke/SimpleFlow/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 1.0,
+            "actual_seconds": 1.0,
+            "frame_index": 15
+          },
+          {
+            "requested_seconds": 2.0,
+            "actual_seconds": 2.0,
+            "frame_index": 30
+          },
+          {
+            "requested_seconds": 3.0,
+            "actual_seconds": 3.0,
+            "frame_index": 45
+          },
+          {
+            "requested_seconds": 4.0,
+            "actual_seconds": 3.933333333333333,
+            "frame_index": 59
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      },
+      {
+        "scene": "BranchingFlow",
+        "source": "examples/flowchart.py",
+        "source_sha256": "aa64afeb0e73a07c62bd550f4dc289417d013f9760f08b27e692f9cc0af2bb88",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/branching-refinement/smoke/BranchingFlow",
+          "/Users/tsk/code/manim-skill/examples/flowchart.py",
+          "BranchingFlow"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/branching-refinement/smoke/BranchingFlow/videos/flowchart/360p15/BranchingFlow.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 18.866666666666667,
+        "decoded_frames": 283,
+        "bytes": 512391,
+        "video_sha256": "58987baab30771fa30898485e4c64987e673e413df34effd0e8eb87d598d695b",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/branching-refinement/smoke/BranchingFlow/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 4.716666666666667,
+            "actual_seconds": 4.666666666666667,
+            "frame_index": 70
+          },
+          {
+            "requested_seconds": 9.433333333333334,
+            "actual_seconds": 9.4,
+            "frame_index": 141
+          },
+          {
+            "requested_seconds": 14.15,
+            "actual_seconds": 14.133333333333333,
+            "frame_index": 212
+          },
+          {
+            "requested_seconds": 18.866666666666667,
+            "actual_seconds": 18.8,
+            "frame_index": 282
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      },
+      {
+        "scene": "VerticalFlow",
+        "source": "examples/flowchart.py",
+        "source_sha256": "aa64afeb0e73a07c62bd550f4dc289417d013f9760f08b27e692f9cc0af2bb88",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/branching-refinement/smoke/VerticalFlow",
+          "/Users/tsk/code/manim-skill/examples/flowchart.py",
+          "VerticalFlow"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/branching-refinement/smoke/VerticalFlow/videos/flowchart/360p15/VerticalFlow.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 4.333333333333333,
+        "decoded_frames": 65,
+        "bytes": 33261,
+        "video_sha256": "4a93d3cdebffbf9f48a8746074325156e2100107111f8283bec32de72a1c219d",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/branching-refinement/smoke/VerticalFlow/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 1.0833333333333333,
+            "actual_seconds": 1.0666666666666667,
+            "frame_index": 16
+          },
+          {
+            "requested_seconds": 2.1666666666666665,
+            "actual_seconds": 2.1333333333333333,
+            "frame_index": 32
+          },
+          {
+            "requested_seconds": 3.25,
+            "actual_seconds": 3.2,
+            "frame_index": 48
+          },
+          {
+            "requested_seconds": 4.333333333333333,
+            "actual_seconds": 4.266666666666667,
+            "frame_index": 64
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      },
+      {
+        "scene": "ProcessHighlight",
+        "source": "examples/flowchart.py",
+        "source_sha256": "aa64afeb0e73a07c62bd550f4dc289417d013f9760f08b27e692f9cc0af2bb88",
+        "command": [
+          "/Users/tsk/code/manim-skill/.venv/bin/python",
+          "-m",
+          "manim",
+          "render",
+          "-ql",
+          "--renderer",
+          "cairo",
+          "--format",
+          "mp4",
+          "--resolution",
+          "640,360",
+          "--fps",
+          "15",
+          "--disable_caching",
+          "--media_dir",
+          "/Users/tsk/code/manim-skill/verification/branching-refinement/smoke/ProcessHighlight",
+          "/Users/tsk/code/manim-skill/examples/flowchart.py",
+          "ProcessHighlight"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "artifact": "/Users/tsk/code/manim-skill/verification/branching-refinement/smoke/ProcessHighlight/videos/flowchart/360p15/ProcessHighlight.mp4",
+        "width": 640,
+        "height": 360,
+        "duration_seconds": 5.733333333333333,
+        "decoded_frames": 86,
+        "bytes": 54552,
+        "video_sha256": "bd3a81c9dd75197b17d3a7d16b60465ee268599490e9eeffb20485ce47119bb6",
+        "contact_sheet": "/Users/tsk/code/manim-skill/verification/branching-refinement/smoke/ProcessHighlight/contact.png",
+        "samples": [
+          {
+            "requested_seconds": 0,
+            "actual_seconds": 0.0,
+            "frame_index": 0
+          },
+          {
+            "requested_seconds": 1.4333333333333333,
+            "actual_seconds": 1.4,
+            "frame_index": 21
+          },
+          {
+            "requested_seconds": 2.8666666666666667,
+            "actual_seconds": 2.8666666666666667,
+            "frame_index": 43
+          },
+          {
+            "requested_seconds": 4.3,
+            "actual_seconds": 4.266666666666667,
+            "frame_index": 64
+          },
+          {
+            "requested_seconds": 5.733333333333333,
+            "actual_seconds": 5.666666666666667,
+            "frame_index": 85
+          }
+        ],
+        "contact_preview": {
+          "width": 640,
+          "height": 360,
+          "mode": "fit 640x360"
+        },
+        "sampling": "displayed frame at requested time (presentation timestamps)",
+        "visual_review": "not performed"
+      }
+    ],
+    "skipped": []
+  },
+  "source_sha256": {
+    "baseline.py": "53453bf43ca2948fc3a03bd1c36f0ae0f58868a951bcd4aa9c6a39c41dd86241",
+    "flowchart.py": "aa64afeb0e73a07c62bd550f4dc289417d013f9760f08b27e692f9cc0af2bb88"
+  }
+}

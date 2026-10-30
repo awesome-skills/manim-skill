@@ -1,0 +1,17 @@
+{
+  "sources": [
+    {
+      "repository": "ManimCommunity/manim",
+      "path": "manim/scene/moving_camera_scene.py",
+      "sha": "70157898eff88f895b95ff4578eed852c167ed32",
+      "url": "https://github.com/ManimCommunity/manim/blob/main/manim/scene/moving_camera_scene.py"
+    },
+    {
+      "repository": "motion-canvas/motion-canvas",
+      "path": "packages/2d/src/lib/components/Camera.ts",
+      "sha": "f319455236e95084dab3a11772b1b1acc4c88c23",
+      "url": "https://github.com/motion-canvas/motion-canvas/blob/main/packages/2d/src/lib/components/Camera.ts"
+    }
+  ],
+  "scope": "Selected source inspection; CE 0.22 local auto_zoom implementation also inspected. No upstream source copied."
+}

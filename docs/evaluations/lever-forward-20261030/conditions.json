@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-30",
+  "records": [
+    {
+      "version": "independent first pass",
+      "artifact": "/Users/tsk/code/manim-skill/verification/lever-forward-20261030/final-media/videos/lever/720p30/Lever.mp4",
+      "sha256": "1118d24ed156a70fdd86801e7496544d128bc543a6e0472a8f56c9d33abc08c5",
+      "frames": 627,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "version": "after parent feedback",
+      "artifact": "/Users/tsk/code/manim-skill/verification/lever-forward-20261030/revision/final-media/videos/lever/720p30/Lever.mp4",
+      "sha256": "4d7647a2028414899581198715010e1ad6ced6f6647b84e6825a4122b81f5162",
+      "frames": 621,
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "source_hashes": {
+    "first-pass.py": "960d4e27627ec66f57fc2a37b1bbba66165328595b6120ab41f477410052d053",
+    "revision.py": "41ca7aaad42f78c3f86ae00f507474190f5a77cb687548722fb8d2545e246a7b"
+  },
+  "review": "Parent inspected first-pass and revised source and 360px frame sheets. Revised samples at 6,9,11,13,16,20 seconds. No full-speed playback aesthetic acceptance.",
+  "transfer": "Independent agent used Skill with a new Chinese lever request. Final revision includes parent feedback and is not first-pass success.",
+  "font": "Hiragino Sans GB, installed locally, not bundled; this fixture is not promoted to default examples."
+}
